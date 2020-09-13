@@ -1,0 +1,308 @@
+# ## Basic Configuration
+baseURL                 = "https://ingo-richter.io/"
+DefaultContentLanguage  = "en"
+title                   = "today is tomorrow's past"
+theme                   = "hugo-future-imperfect-slim"
+paginate                = 5
+pluralizeListTitles     = false
+disableLanguages        = []
+# languageCode = "en-us"
+
+# # Set the followings to true as part of your site SEO
+enableRobotsTXT = true
+canonifyURLs = true
+disqusShortname = "ingorichterio"
+googleAnalytics = "UA-78867595-1"
+
+[outputs]
+  home                  = ["html", "json", "rss"]
+
+[params]
+  # Add additional section names to mainSections to include posts from
+  # those sections on the homepage.
+  # TODO(Ingo) probier mal aus
+  enableCDN             = false
+
+  # Loads CSS and JavaScript files. The variable is an array so that you can load
+  # multiple/additional files if necessary. The standard theme files can be loaded
+  # by adding the value, "default". Default includes the add-on.css and and-on.js.
+  # Example: ["default", "/path/to/file"]
+  cssFiles              = ["default"]
+  jsFiles               = ["default"]
+  # Sets options for highlight.js
+  highlightjs           = true
+  highlightjsTheme      = "github"
+  highlightjsLang       = ["html", "css", "js", "toml", "crystal", "bash"]
+  # Sets where "View More Posts" links to
+  viewMorePostsLink     = "/post/"
+  # Activate Estimated Reading Times, which appear in the post headers
+  readingTime           = true
+  # Sets which Social Share links appear in posts.
+  # Options are twitter, facebook, reddit, linkedin, pinterest, email
+  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
+
+  [params.meta]
+    # Sets the meta tag description
+    description         = "random thoughts about computer tech, web technologies, iOS, macOS, javascript, reactjs, nodejs, electron shell, webdev, process automation, jenkins and stuff that worked for me."
+    # Sets the meta tag author
+    author              = "Ingo Richter"
+    # If you would like to add more comprehensive favicon support passed root
+    # directory favicon.ico, utlize this funtion. It is recommened to use
+    # https://realfavicongenerator.net to generate your icons as that is the basis
+    # for the theme's naming.
+    favicon             = false
+    svg                 = true
+    faviconVersion      = "1"
+    msColor             = "#ffffff" # Copy from the https://realfavicongenerator.net
+    iOSColor            = "#ffffff" # Copy from the https://realfavicongenerator.net
+    # sidebar, copyright & license
+    copyright = "Ingo Richter"
+    showBuiltWith = true
+    dateformat = "Jan 2, 2006"
+
+  [params.header]
+    # Sets the navbarTitle that appears in the top left of the navigation bar
+    navbarTitle         = "today is tomorrow's past"
+    # Sets navbarTitle to match the section of the website
+    dynamicTitles       = true
+    searchMenu          = true
+    shareMenu           = true
+    languageMenu        = true
+
+  # These are optional params related to the sidebar. They are recommended, but not
+  # required for proper functionality. HTML is supported within the params.
+  [params.intro]
+    header                = "today is tomorrow's past"
+    paragraph = "I help people create remarkable things. I'm a senior computer scientist at <a href=\"https://www.adobe.com\">Adobe</a>, working on <a href=\"https://www.adobe.com/products/experience-design.html\">Adobe Experience Design CC (Adobe XD)</a>. Formerly working on Adobe Photoshop Device Preview. I contribute to <a href=\"https://brackets.io\">Brackets</a> and <a href=\"https://github.com/tabwrangler/tabwrangler\">TabWrangler</a>. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
+    rssIntro              = true
+    socialIntro           = true
+    # single column layout used on smaller screens.
+    hideWhenSingleColumn  = false
+    # But you may want to always display the intro on the homepage.
+    alwaysOnHomepage      = false
+
+    # This appears at the top of the sidebar above params.intro.header.
+    # A width of less than 100px is recommended from a design perspective.
+    [params.intro.pic]
+      src                 = "/img/main/logo.jpg"
+      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
+      shape               = "hexagon"
+      width               = ""
+      imperfect           = true
+      alt                 = "today is tomorrow's past"
+
+  [params.sidebar]
+    about               = "Always something to think about"
+    # Sets the number of recent posts to show in the sidebar. The default value is 5.
+    postAmount          = 5
+    # set to show or to hide categories in the sidebar
+    categories          = true
+    # Sets Categories to sort by number of posts instead of alphabetical
+    categoriesByCount   = true
+
+  [params.footer]
+    # Sets RSS icons to appear on the sidebar with the social media buttons
+    rssFooter           = true
+    # Sets Social Media icons to appear on the sidebar
+    socialFooter        = true
+
+  # Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
+  # due to its ease of use. Feel free to check out both and decide which you would
+  # prefer to use. See staticman.yml for additional settings.
+  [params.staticman]
+    # If using GitHub, go to https://github.com/apps/staticman-net
+    # If using GitLab, just add the GitLab bot, NO need to hit `/connect/v3/...`
+    enabled             = false
+    api                 = ""  # without trailing slash, defaults to "staticman3.herokuapp.com"
+    gitProvider         = "github"  # either "github" or "gitlab"
+    username            = ""
+    repo                = ""
+    branch              = ""
+
+    [params.staticman.recaptcha]
+      # Both keys must be present to enable recaptcha
+      siteKey           = "" # Site Key
+      encryptedKey      = ""
+
+[menu]
+  # Sets the menu items in the navigation bar
+  # Identifier prepends a Font Awesome icon to the menu item
+  [[menu.main]]
+    name              = "Home"
+    identifier        = "home"
+    url               = "/"
+    pre               = "<i class='fa fa-home'></i>"
+    weight            = 1
+
+  [[menu.main]]
+    name              = "About"
+    identifier        = "about"
+    url               = "/about/"
+    pre               = "<i class='far fa-id-card'></i>"
+    weight            = 2
+
+  [[menu.main]]
+    name              = "Posts"
+    identifier        = "post"
+    url               = "/post/"
+    pre               = "<i class='far fa-newspaper'></i>"
+    weight            = 3
+
+  [[menu.main]]
+    name              = "Wallpaper"
+    identifier        = "wallpaper"
+    url               = "/wallpaper/"
+    pre               = "<i class='fa fa-camera-retro'></i>"
+    weight            = 4
+
+  [[menu.main]]
+    name              = "Categories"
+    identifier        = "categories"
+    url               = "/categories/"
+    pre               = "<i class='fas fa-sitemap'></i>"
+    weight            = 5
+
+#   [[menu.main]]
+#     name              = "Contact"
+#     identifier        = "contact"
+#     url               = "/contact/"
+#     pre               = "<i class='far fa-envelope'></i>"
+#     weight            = 6
+
+  [[menu.main]]
+    name              = "Resume"
+    identifier        = "resume"
+    url               = "/resume/resume.pdf"
+    pre               = "<i class='far fa-file'></i>"
+    weight            = 7
+
+  [[menu.main]]
+    name              = "CV19WFH"
+    identifier        = "CV19WFH"
+    url               = "/CV19WFH/"
+    pre               = "<i class='fas fa-house-damage'></i>"
+    weight            = 8
+
+[Languages]
+  # Each language has its own menu.
+  [Languages.en]
+    LanguageCode        = "en"
+    LanguageName        = "English"
+    weight              = 1
+
+    [Languages.en.params]
+      resume = "Resume"
+      description = "random thoughts about computer tech, web technologies, javascript, reactjs, nodejs, electron shell, webdev, process automation, jenkins and stuff that worked for me."
+
+  [Languages.de]
+    LanguageCode        = "de"
+    LanguageName        = "Deutsch"
+    title               = "today is tomorrow's past"
+    # description         = "Ein Thema von HTML5 UP, portiert von Julio Pescador.  Vereinfacht und verbessert von Patrick Collins. Mehrsprachig von StatnMap. Unterstützt von: Hugo. "
+    weight              = 2
+
+    [Languages.de.params]
+      resume = "Lebenslauf"
+
+    [[Languages.de.menu.main]]
+      name              = "Startseite"
+      identifier        = "home"
+      url               = "/"
+      pre               = "<i class='fas fa-home'></i>"
+      weight            = 1
+
+    [[Languages.de.menu.main]]
+      name              = "Über mich"
+      identifier        = "about"
+      url               = "/about/"
+      pre               = "<i class='far fa-id-card'></i>"
+      weight            = 2
+
+    [[Languages.de.menu.main]]
+      name              = "Posts"
+      identifier        = "post"
+      url               = "/post/"
+      pre               = "<i class='far fa-newspaper'></i>"
+      weight            = 3
+
+    [[Languages.de.menu.main]]
+      name              = "Bildschirmhintergründe"
+      identifier        = "wallpaper"
+      url               = "/categories/wallpaper/"
+      pre               = "<i class='fa fa-camera-retro'></i>"
+      weight            = 4
+
+    [[Languages.de.menu.main]]
+      name              = "Kategorien"
+      identifier        = "categories"
+      url               = "/categories/"
+      pre               = "<i class='fas fa-sitemap'></i>"
+      weight            = 5
+
+    # [[Languages.de.menu.main]]
+    #   name              = "Kontakt"
+    #   identifier        = "contact"
+    #   url               = "/contact/"
+    #   pre               = "<i class='far fa-envelope'></i>"
+    #   weight            = 6
+
+    [[Languages.de.menu.main]]
+      name              = "Lebenslauf"
+      identifier        = "resume"
+      url               = "/resume/resume.pdf"
+      pre               = "<i class='far fa-file'></i>"
+      weight            = 7
+
+# Sets Social Media icons to appear and link to your account. Value should be your
+# username unless otherwise noted. These are the icons affected by socialAppearAtTop
+# and socialAppearAtBottom.
+# # The social media icons will appear on the sidebar
+
+[social]
+  # Coding Communities
+  github                = "ingorichter"
+  gitlab                = "ingorichter"
+  stackoverflow         = "175020/ingorichter" # User Number
+  bitbucket             = "ingorichter"
+  jsfiddle              = ""
+  codepen               = ""
+  # Visual Art Communities
+  deviantart            = ""
+  flickr                = "ingorichter"
+  behance               = ""
+  dribbble              = ""
+  # Publishing Communities
+  wordpress             = ""
+  medium                = "ingorichter"
+  # Professional/Business Oriented Communities
+  linkedin              = "ingorichter"
+  linkedin_company      = ""
+  foursquare            = ""
+  xing                  = "Ingo_Richter"
+  slideshare            = ""
+  # Social Networks
+  facebook              = ""
+  googleplus            = ""
+  reddit                = "irichter"
+  quora                 = ""
+  youtube               = ""
+  vimeo                 = ""
+  whatsapp              = "" # WhatsApp Number
+    # WeChat and QQ need testing.
+    wechat              = ""
+    qq                  = "" # User ID Number
+  instagram             = "wayne.schlegel"
+  tumblr                = ""
+  twitter               = "ingorichter"
+  skype                 = ""
+  snapchat              = ""
+  pinterest             = "ingorichter"
+  telegram              = "ingorichter"
+  vine                  = ""
+  googlescholar         = ""
+  orcid                 = ""
+  researchgate          = ""
+  keybase               = "ingorichter"
+  mastodon              = "mastodon.social/@ingorichter"
+  # Email
+  email                 = "ingo+blog@ingo-richter.io"

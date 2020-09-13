@@ -1,0 +1,33 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+
+<h3>{{ .Content }}</h3>
+
+{{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
+{{ $.Scratch.Set "lastYear" ""}}
+
+{{ range .Pages.GroupByDate "2006-01-02" "asc" }}
+
+<ul>
+  {{ range .Pages }}
+  {{ $year := .Date.Year }}
+  {{ $lastYear := $.Scratch.Get "lastYear"}}
+
+    {{ if ne $year $lastYear }}
+  <div class="row mt-2">
+    <div class="d-none d-sm-block col-sm-2 offset-sm-2 text-right align-top">
+    </div>
+    <div class="col">
+      <p class="text-muted mt-5 text-body">{{ $year }}</p>
+      {{ $.Scratch.Set "lastYear" $year }}
+    </div>
+  </div>
+  {{ end }}
+
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+
+    {{ .Content }}
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

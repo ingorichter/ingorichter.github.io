@@ -1,0 +1,21 @@
++++
+date = "2016-08-24T23:15:51-07:00"
+draft = false
+title = "Don't say it. Do it!"
+tags  = [ "Motivation", "Thoughts", "Encouragement", "Doit" ]
+categories = ["Motivation", "Thoughts", "Encouragement", "Doit"]
++++
+
+# Don't say it. Do it!
+
+- Don’t talk too much about the things you want to do.
+- Don’t overthink everything.
+- Don’t make it more complicated than it has to be.
+- Don’t stop learning.
+- Don’t stop trying.
+- Try harder.
+- Try smarter.
+- Don’t say “it’s impossible”.
+- Move faster.
+
+Do it!
