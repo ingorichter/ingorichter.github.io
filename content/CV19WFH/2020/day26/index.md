@@ -1,13 +1,11 @@
----
-title: "Day26"
-categories:
-- CV19WFH
-tags:
-- WFH
-- Corona
++++
+title = "Day26"
+categories = ["CV19WFH"]
+tags = ["WFH", "Corona", "COVID19"]
+date = 2020-04-11
+draft = false
++++
 
-draft: false
----
 
 ## WFH Day #26
 
