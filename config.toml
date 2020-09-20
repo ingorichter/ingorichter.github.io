@@ -73,7 +73,7 @@ googleAnalytics = "UA-78867595-1"
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "today is tomorrow's past"
-    paragraph = "I help people create remarkable things. I'm a senior computer scientist at <a href=\"https://www.adobe.com\">Adobe</a>, working on <a href=\"https://www.adobe.com/products/experience-design.html\">Adobe Experience Design CC (Adobe XD)</a>. Formerly working on Adobe Photoshop Device Preview. I contribute to <a href=\"https://brackets.io\">Brackets</a> and <a href=\"https://github.com/tabwrangler/tabwrangler\">TabWrangler</a>. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
+    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
     rssIntro              = true
     socialIntro           = true
     # single column layout used on smaller screens.
