@@ -9,7 +9,7 @@ topics = [ "Learn", "Motivation", "LearnToLearn" ]
 
 *Happy New Year!*
 
-In my last http://ingo-richter.io/post/Get%20Up%20And%20Start%20Walking/[blog post] (already from last year), I was talking about making changes in your life to achieve those changes. I asked you to create a plan and start following the required steps to reach your goal(s).
+In my last https://ingo-richter.io/post/Get%20Up%20And%20Start%20Walking/[blog post] (already from last year), I was talking about making changes in your life to achieve those changes. I asked you to create a plan and start following the required steps to reach your goal(s).
 
 You don't have to wait until the start of a new year. For a bunch of people this date has some symbolic meaning. It seems to be a good starting point to reset and re-evaluate your goals. It doesn't matter what time of year you make a plan and start following your goals.
 
