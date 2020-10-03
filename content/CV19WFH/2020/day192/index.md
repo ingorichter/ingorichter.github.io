@@ -12,5 +12,4 @@ We are approaching the final days of our Sprint. The majority of our clients are
 
 The picture shows what I'm sometimes doing for my afternoon break after I finished some work. Brewing coffee the old fashioned way. Beans, Grinder, Paper filter, Chemex, and hot water. And don't forget the scale and the timer. This ritual shifts the focus towards the coffee smell and the great taste of a freshly made coffee.
 
-
 {{< imgproc Chemex.jpg Resize "1600x" >}}Chemex. Not Chemical
