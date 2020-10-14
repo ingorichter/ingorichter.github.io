@@ -142,25 +142,39 @@ googleAnalytics = "UA-78867595-1"
     weight            = 2
 
   [[menu.main]]
+    name              = "Resume"
+    identifier        = "resume"
+    url               = "/resume/resume.pdf"
+    pre               = "<i class='far fa-file'></i>"
+    weight            = 3
+
+  [[menu.main]]
     name              = "Posts"
     identifier        = "post"
     url               = "/post/"
     pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 3
+    weight            = 4
+
+  [[menu.main]]
+    name              = "CV19WFH"
+    identifier        = "CV19WFH"
+    url               = "/CV19WFH/"
+    pre               = "<i class='fas fa-house-damage'></i>"
+    weight            = 5
 
   [[menu.main]]
     name              = "Wallpaper"
     identifier        = "wallpaper"
     url               = "/wallpaper/"
     pre               = "<i class='fa fa-camera-retro'></i>"
-    weight            = 4
+    weight            = 6
 
   [[menu.main]]
     name              = "Categories"
     identifier        = "categories"
     url               = "/categories/"
     pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 5
+    weight            = 7
 
 #   [[menu.main]]
 #     name              = "Contact"
@@ -168,20 +182,6 @@ googleAnalytics = "UA-78867595-1"
 #     url               = "/contact/"
 #     pre               = "<i class='far fa-envelope'></i>"
 #     weight            = 6
-
-  [[menu.main]]
-    name              = "Resume"
-    identifier        = "resume"
-    url               = "/resume/resume.pdf"
-    pre               = "<i class='far fa-file'></i>"
-    weight            = 7
-
-  [[menu.main]]
-    name              = "CV19WFH"
-    identifier        = "CV19WFH"
-    url               = "/CV19WFH/"
-    pre               = "<i class='fas fa-house-damage'></i>"
-    weight            = 8
 
 [Languages]
   # Each language has its own menu.
