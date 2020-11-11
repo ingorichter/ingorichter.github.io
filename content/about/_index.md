@@ -1,5 +1,5 @@
 +++
-date = "2020-101-20T17:45:25-09:00"
+date = "2020-10-20T17:45:25-09:00"
 title = "About Ingo Richter (me)"
 tags = ["about"]
 id = "about"
