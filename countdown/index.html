@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js" async >
+    </script>
+
+    <style>
+      .parent {
+        height: 100vh;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+      }
+
+      #header {
+        font-size: 5vw;
+        text-align: center;
+      }
+
+      .rainbow-text {
+        background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow 8s ease infinite;
+      }
+
+      @keyframes rainbow { 
+          0%{background-position:0% 50%}
+          50%{background-position:100% 25%}
+          100%{background-position:0% 50%}
+      }
+
+      .time {
+        font-size: 5vw;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      function updateTime() {
+        const textElem = document.getElementById("time");
+        const now = luxon.DateTime.fromObject(Date.now());
+
+        const endDate = luxon.DateTime.fromISO("2020-12-19T17:30:00");
+        const dur = endDate.diff(now);
+
+        const delta = dur.shiftTo('days', 'hours', 'minutes', 'seconds').toObject();
+        textElem.innerHTML = `Papa kommt in ${delta.days} Days, ${delta.hours} hours, ${delta.minutes} minutes and ${Math.floor(delta.seconds)} seconds zurück`;//delta.toFormat("HH 'hours and' mm 'minutes'");
+      }
+
+      function stopTimer() {
+        clearInterval(intervalId);
+      }
+
+      const intervalId = setInterval(updateTime, 1000);
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div class="parent">
+      <p id="header" class="rainbow-text">
+        The most important timer in the world!
+      </p>
+      <p id="time" class="time">
+      </p>
+    </div>
+  </body>
+</html>
