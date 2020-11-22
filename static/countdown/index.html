@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
 
-    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js" async >
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js" async="true" >
     </script>
 
     <style>
@@ -49,6 +49,11 @@
     </style>
 
     <script>
+      let intervalId;
+      window.addEventListener('DOMContentLoaded', (event) => {
+        intervalId = setInterval(updateTime, 1000);
+      });
+
       function updateTime() {
         const textElem = document.getElementById("time");
         const now = luxon.DateTime.fromObject(Date.now());
@@ -63,8 +68,6 @@
       function stopTimer() {
         clearInterval(intervalId);
       }
-
-      const intervalId = setInterval(updateTime, 1000);
     </script>
   </head>
   <body>
