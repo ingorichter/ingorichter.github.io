@@ -30,16 +30,17 @@
 
       .rainbow-text {
         background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-        -webkit-background-clip: text;
+        background-clip: text;
+        background-size: 400% 400%;
         color: transparent;
         -webkit-text-fill-color: transparent;
         animation: rainbow 8s ease infinite;
       }
 
       @keyframes rainbow { 
-          0%{background-position:0% 50%}
-          50%{background-position:100% 25%}
-          100%{background-position:0% 50%}
+          0% {background-position:0% 50%}
+          50% {background-position:100% 25%}
+          100% {background-position:0% 50%}
       }
 
       .time {
@@ -77,7 +78,7 @@
     
     <div class="parent">
       <p id="header" class="rainbow-text">
-        The most important timer in the world!
+        Happy First Advent!
       </p>
       <p id="time" class="time">
       </p>
