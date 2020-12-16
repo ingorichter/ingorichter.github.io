@@ -23,17 +23,14 @@
         justify-content: center;
       }
 
-      #header {
+      #greeting {
         font-size: 5vw;
         text-align: center;
       }
 
       .rainbow-text {
         background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
-        background-clip: text;
-        background-size: 400% 400%;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
+        background-size: 1000% 1000%;
         animation: rainbow 8s ease infinite;
       }
 
@@ -43,27 +40,66 @@
           100% {background-position:0% 50%}
       }
 
-      .time {
+      .timerMessage {
         font-size: 5vw;
         text-align: center;
       }
     </style>
 
     <script>
+      const timerEndDate = "2020-12-20T17:30:00";
+
+      const textMessage = {
+        "2020-11-29T00:00:00": "Happy 1st Advent 🕯️",
+        "2020-12-06T00:00:00": "Happy 2nd Advent 🕯️🕯️",
+        "2020-12-13T00:00:00": "Happy 3rd Advent 🕯️🕯️🕯️",
+        "2020-12-20T00:00:00": "Happy 4th Advent 🕯️🕯️🕯️🕯️"
+      };
+
       let intervalId;
       window.addEventListener('DOMContentLoaded', (event) => {
-        intervalId = setInterval(updateTime, 1000);
+        intervalId = setInterval(updateContent, 1000);
       });
 
-      function updateTime() {
-        const textElem = document.getElementById("time");
+      function updateContent() {
+        const timerMessageElement = document.getElementById("timerMessage");
+        const greetingMessageElement = document.getElementById("greeting");
         const now = luxon.DateTime.fromObject(Date.now());
+        <!-- const now = luxon.DateTime.fromISO("2020-12-20T17:29:59") -->
+        const endDate = luxon.DateTime.fromISO(timerEndDate);
 
-        const endDate = luxon.DateTime.fromISO("2020-12-19T17:30:00");
-        const dur = endDate.diff(now);
+        timerMessageElement.innerHTML = timerMessage(now, endDate);
+        greetingMessageElement.innerHTML = updateTextMessage();
+      }
 
-        const delta = dur.shiftTo('days', 'hours', 'minutes', 'seconds').toObject();
-        textElem.innerHTML = `Papa kommt in ${delta.days} Days, ${delta.hours} hours, ${delta.minutes} minutes and ${Math.floor(delta.seconds)} seconds zurück`;//delta.toFormat("HH 'hours and' mm 'minutes'");
+      function updateTextMessage() {
+        const now = luxon.DateTime.fromObject(Date.now());
+        const message = Object.keys(textMessage).filter(timeStamp => {
+          const startDate = luxon.DateTime.fromISO(timeStamp);
+          const interval = luxon.Interval.after(startDate, {days: 6, hours: 23, minutes: 59, seconds: 59});
+
+          return interval.contains(now);
+        });
+
+        if (message.length === 0) {
+          text = "Greetings";
+        } else {
+          text = textMessage[message[0]];
+        }
+
+        return text;
+      }
+
+      function timerMessage(currentDate, timerEndDate) {
+        if (currentDate < timerEndDate) {
+          const dur = timerEndDate.diff(currentDate);
+
+          const delta = dur.shiftTo('days', 'hours', 'minutes', 'seconds').toObject();
+          return `Papa kommt in ${delta.days} Days, ${delta.hours} hours, ${delta.minutes} minutes and ${Math.floor(delta.seconds)} seconds zurück`;//delta.toFormat("HH 'hours and' mm 'minutes'");
+        }
+        else {
+          return "The wait is over";
+        }
       }
 
       function stopTimer() {
@@ -77,10 +113,9 @@
     <![endif]-->
     
     <div class="parent">
-      <p id="header" class="rainbow-text">
-        Happy First Advent!
+      <p id="greeting" class="rainbow-text">
       </p>
-      <p id="time" class="time">
+      <p id="timerMessage" class="timerMessage">
       </p>
     </div>
   </body>
