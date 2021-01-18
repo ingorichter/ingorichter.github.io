@@ -65,7 +65,6 @@
         const timerMessageElement = document.getElementById("timerMessage");
         const greetingMessageElement = document.getElementById("greeting");
         const now = luxon.DateTime.fromObject(Date.now());
-        <!-- const now = luxon.DateTime.fromISO("2020-12-20T17:29:59") -->
         const endDate = luxon.DateTime.fromISO(timerEndDate);
 
         timerMessageElement.innerHTML = timerMessage(now, endDate);
