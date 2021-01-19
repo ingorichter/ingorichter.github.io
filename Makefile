@@ -14,5 +14,6 @@ newpost:
 STARTDATE="2020-16-03"
 .PHONY: cv19
 cv19:
-	$(eval DAYS=$(shell echo "($(shell date +%s) - $(shell date -jf "%Y-%d-%m" "2020-16-03" +%s)) / 86400" | bc))
-	hugo new cv19wfh/$$(date +"%Y")/day$(DAYS)/index.md
+# add 1 day to include the current day
+	$(eval DAYS=$(shell echo "($(shell date +%s) - $(shell date -jf "%Y-%d-%m" "2020-16-03" +%s)) / 86400 + 1" | bc))
+	hugo new cv19wfh/$$(date +"%Y")/$$(date +"%m")/day$(DAYS)/index.md
