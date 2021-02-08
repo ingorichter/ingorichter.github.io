@@ -27,8 +27,8 @@ googleAnalytics = "UA-78867595-1"
   # multiple/additional files if necessary. The standard theme files can be loaded
   # by adding the value, "default". Default includes the add-on.css and and-on.js.
   # Example: ["default", "/path/to/file"]
-  cssFiles              = ["default"]
-  jsFiles               = ["default"]
+  cssFiles              = ["default", "css/img.css", "css/baguetteBox.min.cs"]
+  jsFiles               = ["default", "js/lazysizes.min.js", "js/baguetteBox.min.js"]
   # Sets options for highlight.js
   highlightjs           = true
   highlightjsTheme      = "github"

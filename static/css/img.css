@@ -1,0 +1,24 @@
+.img svg,
+.img img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.img {
+  position: relative;
+}
+
+.img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nojs .img .lazyload {
+  display: none;
+}
+
+figcaption {
+  text-align: center;
+}
