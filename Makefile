@@ -17,3 +17,8 @@ cv19:
 # add 1 day to include the current day
 	$(eval DAYS=$(shell echo "($(shell date +%s) - $(shell date -jf "%Y-%d-%m" "2020-16-03" +%s)) / 86400 + 1" | bc))
 	hugo new cv19wfh/$$(date +"%Y")/$$(date +"%m")/day$(DAYS)/index.md
+
+.PHONY: updateLazysize
+updateLazysize:
+# download the javascript library
+curl -v -L https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.js -o static/js/lazysizes.js
