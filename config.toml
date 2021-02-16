@@ -27,12 +27,12 @@ googleAnalytics = "UA-78867595-1"
   # multiple/additional files if necessary. The standard theme files can be loaded
   # by adding the value, "default". Default includes the add-on.css and and-on.js.
   # Example: ["default", "/path/to/file"]
-  cssFiles              = ["default", "css/img.css", "css/baguetteBox.min.cs"]
-  jsFiles               = ["default", "js/lazysizes.min.js", "js/baguetteBox.min.js"]
+  cssFiles              = ["default", "css/img.css", "css/baguetteBox.min.css"]
+  jsFiles               = ["default"]
   # Sets options for highlight.js
   highlightjs           = true
   highlightjsTheme      = "github"
-  highlightjsLang       = ["html", "css", "js", "toml", "crystal", "bash"]
+  highlightjsLang       = ["xml", "css", "javascript", "ini", "crystal", "bash"]
   # Sets where "View More Posts" links to
   viewMorePostsLink     = "/post/"
   # Activate Estimated Reading Times, which appear in the post headers
