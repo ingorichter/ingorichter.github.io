@@ -14,6 +14,8 @@ canonifyURLs = true
 disqusShortname = "ingorichterio"
 googleAnalytics = "UA-78867595-1"
 
+timeout = 60000
+
 [outputs]
   home                  = ["html", "json", "rss"]
 
