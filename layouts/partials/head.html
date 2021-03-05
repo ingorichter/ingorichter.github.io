@@ -18,7 +18,8 @@
   {{ end }}
   {{ with .Site.Params.Social.twitter}}<meta property="twitter:site" content="{{ . }}">{{ end }}
 
-  <script async defer data-website-id="f958c0ef-51fe-4b28-8202-f8aac20d92e2" src="https://umami.familie-richter.synology.me/umami.js"></script>
+  <script async defer data-website-id="f958c0ef-51fe-4b28-8202-f8aac20d92e2" src="https://umami.familie-richter.synology.me/umami.js" data-do-not-track="true" data-domains="ingo-richter.io"></script>
+
   {{- if .Site.Params.enableCDN -}}
     {{- if .Site.Params.highlightjs -}}<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/{{ .Site.Params.highlightjsTheme | default "default" }}.min.css">{{- end -}}
     {{- range .Site.Params.cssFiles -}}
