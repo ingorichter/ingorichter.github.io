@@ -1,9 +1,9 @@
 +++
-title = "{{ replace .Name "-" " " | title }}"
+title = "WFH Day {{ index (split .Name "day") 1 | title }}"
 categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
-date = {{ .Date }}
+date = {{ dateFormat "2006-01-02" .Date }}
 draft = false
 +++
 
-## WFH Day XXX
+## WFH Day {{ index (split .Name "day") 1 | title }}
