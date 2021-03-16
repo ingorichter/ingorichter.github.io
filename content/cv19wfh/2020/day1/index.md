@@ -8,4 +8,4 @@ draft = false
 
 ## WFH Day 001
 
-Today we got the notification from Adobe that we will close all the offices for all employees in north America. we were told to work from home for the next 30 days. After that period the situation will be evaluated and further decisions will be communicated by then. Let's see what is going to happen.
+Today we got the notification from Adobe that we will close all the offices for all employees in north America. We were told to work from home for the next 30 days. After that period the situation will be evaluated and further decisions will be communicated by then. Let's see what is going to happen.
