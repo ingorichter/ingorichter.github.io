@@ -3,7 +3,7 @@ title = "TIL - Organize a Folder of Thousands of Images Into Subfolders"
 categories = ["TIL"]
 tags = ["exiftool", "organisation", "TIL", "notetomyself", "shell"]
 date = 2021-08-05
-draft = true
+draft = false
 +++
 [1]: https://www.exiftool.org/ "ExifTool"
 [2]: https://www.exiftool.org/filename.html "ExifTool Examples"
