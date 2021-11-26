@@ -12,7 +12,7 @@
 <meta name=msapplication-config content="/favicon/browserconfig.xml?v=1">
 <meta name=msapplication-TileColor content="#ffffff">
 <meta name=theme-color content="#ffffff">
-<meta name=generator content="Hugo 0.88.1"><meta property="og:site_name" content="today is tomorrow's past">
+<meta name=generator content="Hugo 0.89.4"><meta property="og:site_name" content="today is tomorrow's past">
 <meta property="og:title" content="Efficient JavaScript Unit Testing with Jest and Snapshots">
 <meta property="og:description" content="Make your software testing life easier with Jest and Snapshots to test your javascript code">
 <meta property="description" content="Make your software testing life easier with Jest and Snapshots to test your javascript code">
@@ -217,10 +217,10 @@ Writing unit tests for my code mostly follows this pattern</p>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28</span>    <span style=color:#f92672>+</span>  <span style=color:#e6db74>&#34;subject&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;New Task&#34;</span>,
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29</span>    <span style=color:#f92672>+</span>}
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">30</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31</span>      <span style=color:#a6e22e>at</span> Object.<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>anonymous</span><span style=color:#f92672>&gt;</span>.<span style=color:#a6e22e>test</span> (<span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span><span style=color:#f92672>:</span><span style=color:#ae81ff>25</span>)
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32</span>      <span style=color:#a6e22e>at</span> <span style=color:#a6e22e>process</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>tickCallback</span> (<span style=color:#a6e22e>internal</span><span style=color:#f92672>/</span><span style=color:#a6e22e>process</span><span style=color:#f92672>/</span><span style=color:#a6e22e>next_tick</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>109</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">31</span>      <span style=color:#a6e22e>at</span> Object.<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>anonymous</span><span style=color:#f92672>&gt;</span>.<span style=color:#a6e22e>test</span> (<span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span><span style=color:#f92672>:</span><span style=color:#ae81ff>25</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">32</span>      <span style=color:#a6e22e>at</span> <span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>_tickCallback</span> (<span style=color:#a6e22e>internal</span><span style=color:#f92672>/</span><span style=color:#a6e22e>process</span><span style=color:#f92672>/</span><span style=color:#a6e22e>next_tick</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>109</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span>)
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">33</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">34</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">35</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">36</span><span style=color:#a6e22e>Test</span> <span style=color:#a6e22e>Suites</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>failed</span>, <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>passed</span>, <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>total</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">37</span><span style=color:#a6e22e>Tests</span><span style=color:#f92672>:</span>       <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>failed</span>, <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>passed</span>, <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>total</span>
@@ -246,8 +246,8 @@ Writing unit tests for my code mostly follows this pattern</p>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16</span>    <span style=color:#a6e22e>expect</span>(<span style=color:#a6e22e>newTodoItem</span>).<span style=color:#a6e22e>toMatchSnapshot</span>();
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17</span>});</code></pre></div>
 <p>And here the result.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span><span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2</span><span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4</span><span style=color:#a6e22e>Test</span> <span style=color:#a6e22e>Suites</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>passed</span>, <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>total</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5</span><span style=color:#a6e22e>Tests</span><span style=color:#f92672>:</span>       <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>passed</span>, <span style=color:#ae81ff>2</span> <span style=color:#a6e22e>total</span>
@@ -281,7 +281,7 @@ Writing unit tests for my code mostly follows this pattern</p>
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18</span><span style=color:#e6db74>`</span>;</code></pre></div>
 <p>The key of the exports object is the name of the test itself. The value of it is the result from <code>createTodoItem("New Task", ["blog"], ["learn", "programming"], "2017-04-17")</code>. That is great. I didn’t have to type a line of code for the expected result of this function. By doing a quick visual inspection of the output, I can confirm that this is the expected output.</p>
 <p>Now it gets interesting. I’m going to change the return object of the function. The result object will have a new key <code>completedDate</code> and the <code>completed</code> flag will be removed. Let’s see how Jest handles the situation without making any change to the existing, and currently passing, test.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span> <span style=color:#a6e22e>FAIL</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span> <span style=color:#a6e22e>FAIL</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>  <span style=color:#960050;background-color:#1e0010>●</span> <span style=color:#a6e22e>Verify</span> <span style=color:#a6e22e>that</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>todo</span> <span style=color:#a6e22e>item</span> <span style=color:#a6e22e>has</span> <span style=color:#a6e22e>all</span> <span style=color:#a6e22e>required</span> <span style=color:#a6e22e>fields</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span>    <span style=color:#a6e22e>expect</span>(<span style=color:#a6e22e>value</span>).<span style=color:#a6e22e>toMatchSnapshot</span>()
@@ -302,10 +302,10 @@ Writing unit tests for my code mostly follows this pattern</p>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19</span>       ],
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20</span>       <span style=color:#e6db74>&#34;due&#34;</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;2017-04-17&#34;</span>,
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>      <span style=color:#a6e22e>at</span> Object.<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>anonymous</span><span style=color:#f92672>&gt;</span>.<span style=color:#a6e22e>test</span> (<span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>8</span><span style=color:#f92672>:</span><span style=color:#ae81ff>25</span>)
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>      <span style=color:#a6e22e>at</span> <span style=color:#a6e22e>process</span>.<span style=color:#ae81ff>_</span><span style=color:#a6e22e>tickCallback</span> (<span style=color:#a6e22e>internal</span><span style=color:#f92672>/</span><span style=color:#a6e22e>process</span><span style=color:#f92672>/</span><span style=color:#a6e22e>next_tick</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>109</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22</span>      <span style=color:#a6e22e>at</span> Object.<span style=color:#f92672>&lt;</span><span style=color:#a6e22e>anonymous</span><span style=color:#f92672>&gt;</span>.<span style=color:#a6e22e>test</span> (<span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>8</span><span style=color:#f92672>:</span><span style=color:#ae81ff>25</span>)
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23</span>      <span style=color:#a6e22e>at</span> <span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>_tickCallback</span> (<span style=color:#a6e22e>internal</span><span style=color:#f92672>/</span><span style=color:#a6e22e>process</span><span style=color:#f92672>/</span><span style=color:#a6e22e>next_tick</span>.<span style=color:#a6e22e>js</span><span style=color:#f92672>:</span><span style=color:#ae81ff>109</span><span style=color:#f92672>:</span><span style=color:#ae81ff>7</span>)
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27</span><span style=color:#a6e22e>Snapshot</span> <span style=color:#a6e22e>Summary</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28</span> <span style=color:#960050;background-color:#1e0010>›</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>snapshot</span> <span style=color:#a6e22e>test</span> <span style=color:#a6e22e>failed</span> <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>test</span> <span style=color:#a6e22e>suite</span>. <span style=color:#a6e22e>Inspect</span> <span style=color:#a6e22e>your</span> <span style=color:#a6e22e>code</span> <span style=color:#a6e22e>changes</span> <span style=color:#a6e22e>or</span> <span style=color:#a6e22e>run</span> <span style=color:#66d9ef>with</span> <span style=color:#e6db74>`npm test -- -u`</span> <span style=color:#a6e22e>to</span> <span style=color:#a6e22e>update</span> <span style=color:#a6e22e>them</span>.
@@ -318,8 +318,8 @@ Writing unit tests for my code mostly follows this pattern</p>
 <p>The output of the test run informs me that the <code>Received value does not match stored snapshot 1</code>. That is correct, and it was expected. But more importantly, Jest tells me to inspect my code changes or run the tests again with a specific flag to update the snapshot. Since it was an intentional change, I’m going to run the test again with <code>npm test -- -u</code> to update the Snapshot.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>jest</span> <span style=color:#e6db74>&#34;-u&#34;</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
-<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#ae81ff>__</span><span style=color:#a6e22e>tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>newTask</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
+<span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4</span> <span style=color:#a6e22e>PASS</span>  <span style=color:#a6e22e>__tests__</span><span style=color:#f92672>/</span><span style=color:#a6e22e>add</span><span style=color:#f92672>-</span><span style=color:#a6e22e>test</span>.<span style=color:#a6e22e>js</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6</span><span style=color:#a6e22e>Snapshot</span> <span style=color:#a6e22e>Summary</span>
 <span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7</span> <span style=color:#960050;background-color:#1e0010>›</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>snapshot</span> <span style=color:#a6e22e>updated</span> <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1</span> <span style=color:#a6e22e>test</span> <span style=color:#a6e22e>suite</span>.
@@ -374,6 +374,15 @@ Writing unit tests for my code mostly follows this pattern</p>
 <h1>Recent Posts</h1>
 </header>
 <article class=mini-post>
+<a href=https://ingo-richter.io/cv19wfh/2021/11/day616/ class=image style="--bg-image:url('https://ingo-richter.io/cv19wfh/2021/11/day616/aussenmuehle.jpg')">
+<img class=stretchH src=https://ingo-richter.io/cv19wfh/2021/11/day616/aussenmuehle.jpg alt=Aussenmühle>
+</a>
+<header>
+<h2><a href=https://ingo-richter.io/cv19wfh/2021/11/day616/>WFH Day 616</a></h2>
+<time class=published datetime="2021-11-21 00:00:00 +0000 UTC">November 21, 2021</time>
+</header>
+</article>
+<article class=mini-post>
 <header>
 <h2><a href=https://ingo-richter.io/cv19wfh/2021/05/day438/>WFH Day 438</a></h2>
 <time class=published datetime="2021-05-27 00:00:00 +0000 UTC">May 27, 2021</time>
@@ -397,12 +406,6 @@ Writing unit tests for my code mostly follows this pattern</p>
 <time class=published datetime="2021-03-15 00:00:00 +0000 UTC">March 15, 2021</time>
 </header>
 </article>
-<article class=mini-post>
-<header>
-<h2><a href=https://ingo-richter.io/cv19wfh/2021/03/day353/>Day353</a></h2>
-<time class=published datetime="2021-03-03 00:00:00 +0000 UTC">March 3, 2021</time>
-</header>
-</article>
 <footer>
 <a href=https://ingo-richter.io/post/ class=button>See More</a>
 </footer>
@@ -413,7 +416,7 @@ Writing unit tests for my code mostly follows this pattern</p>
 </header>
 <ul>
 <li>
-<a href=https://ingo-richter.io/categories/cv19wfh/>cv19wfh<span class=count>23</span></a>
+<a href=https://ingo-richter.io/categories/cv19wfh/>cv19wfh<span class=count>24</span></a>
 <li>
 <a href=https://ingo-richter.io/categories/wallpaper/>wallpaper<span class=count>8</span></a>
 <li>
@@ -497,7 +500,7 @@ Writing unit tests for my code mostly follows this pattern</p>
 <p class=copyright>
 © 2021 today is tomorrow's past
 <br>
-Theme: <a href=https://github.com/pacollins/hugo-future-imperfect-slim target=_blank rel=noopener>Hugo Future Imperfect Slim</a><br>A <a href=https://html5up.net/future-imperfect target=_blank rel=noopener>HTML5 UP port</a> | Powered by <a href=https://gohugo.io/ title=0.88.1 target=_blank rel=noopener>Hugo</a>
+Theme: <a href=https://github.com/pacollins/hugo-future-imperfect-slim target=_blank rel=noopener>Hugo Future Imperfect Slim</a><br>A <a href=https://html5up.net/future-imperfect target=_blank rel=noopener>HTML5 UP port</a> | Powered by <a href=https://gohugo.io/ title=0.89.4 target=_blank rel=noopener>Hugo</a>
 </p>
 </footer>
 <a id=back-to-top href=# class="fas fa-arrow-up fa-2x"></a>
