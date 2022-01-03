@@ -42,10 +42,13 @@ timeout = 60000
   # Sets which Social Share links appear in posts.
   # Options are twitter, facebook, reddit, linkedin, pinterest, email
   socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
+  toc                   = true
+  tocWords              = 400
+  hideEmptyStats        = false
 
   [params.meta]
     # Sets the meta tag description
-    description         = "random thoughts about computer tech, web technologies, iOS, macOS, javascript, reactjs, nodejs, electron shell, webdev, process automation, jenkins and stuff that worked for me."
+    description         = "random thoughts about computer tech, web technologies, iOS, macOS, SwiftUI, javascript, reactjs, nodejs, process automation, jenkins and stuff that worked for me."
     # Sets the meta tag author
     author              = "Ingo Richter"
     # If you would like to add more comprehensive favicon support passed root
@@ -308,3 +311,15 @@ timeout = 60000
   mastodon              = "mastodon.social/@ingorichter"
   # Email
   email                 = "ingo+blog@ingo-richter.io"
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
