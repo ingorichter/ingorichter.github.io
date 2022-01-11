@@ -3,7 +3,7 @@ title = "Swiftui   Learn by Doing"
 categories = ["TIL", "tutorial"]
 tags = ["TIL", "swiftui", "learning", "tutorial"]
 date = 2022-01-10
-draft = true
+draft = false
 +++
 
 ## SwiftUI - Learn by doing
