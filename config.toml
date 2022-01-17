@@ -30,8 +30,7 @@ timeout = 60000
 [params]
   # Add additional section names to mainSections to include posts from
   # those sections on the homepage.
-  # TODO(Ingo) probier mal aus
-  enableCDN             = false 
+  enableCDN             = false
 
   # Loads CSS and JavaScript files. The variable is an array so that you can load
   # multiple/additional files if necessary. The standard theme files can be loaded
@@ -39,6 +38,7 @@ timeout = 60000
   # Example: ["default", "/path/to/file"]
   cssFiles              = ["default", "css/img.css", "css/baguetteBox.min.css"]
   jsFiles               = ["default"]
+  
   # Sets options for highlight.js
   highlightjs           = true
   highlightjsTheme      = "github"
@@ -171,7 +171,7 @@ timeout = 60000
   [[menu.main]]
     name              = "CV19WFH"
     identifier        = "CV19WFH"
-    url               = "CV19WFH"
+    url               = "cv19wfh"
     pre               = "<i class='fas fa-house-damage'></i>"
     weight            = 5
 
