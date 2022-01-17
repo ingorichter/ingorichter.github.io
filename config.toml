@@ -3,7 +3,7 @@ baseURL                 = "https://ingo-richter.io/"
 DefaultContentLanguage  = "en"
 title                   = "today is tomorrow's past"
 theme                   = "hugo-future-imperfect-slim"
-paginate                = 5
+paginate                = 3
 pluralizeListTitles     = false
 disableLanguages        = []
 # languageCode = "en-us"
@@ -16,6 +16,14 @@ googleAnalytics = "UA-78867595-1"
 
 timeout = 60000
 
+[markup.goldmark.renderer]
+  unsafe                = true
+
+[module]
+  [module.hugoVersion]
+  extended              = true
+  min                   = "0.62.0"
+
 [outputs]
   home                  = ["html", "json", "rss"]
 
@@ -23,7 +31,7 @@ timeout = 60000
   # Add additional section names to mainSections to include posts from
   # those sections on the homepage.
   # TODO(Ingo) probier mal aus
-  enableCDN             = true
+  enableCDN             = false 
 
   # Loads CSS and JavaScript files. The variable is an array so that you can load
   # multiple/additional files if necessary. The standard theme files can be loaded
@@ -36,7 +44,7 @@ timeout = 60000
   highlightjsTheme      = "github"
   highlightjsLang       = ["xml", "css", "javascript", "ini", "crystal", "bash"]
   # Sets where "View More Posts" links to
-  viewMorePostsLink     = "/post/"
+  viewMorePostsLink     = "post"
   # Activate Estimated Reading Times, which appear in the post headers
   readingTime           = true
   # Sets which Social Share links appear in posts.
@@ -135,14 +143,14 @@ timeout = 60000
   [[menu.main]]
     name              = "Home"
     identifier        = "home"
-    url               = "/"
+    url               = ""
     pre               = "<i class='fa fa-home'></i>"
     weight            = 1
 
   [[menu.main]]
     name              = "About"
     identifier        = "about"
-    url               = "/about/"
+    url               = "about"
     pre               = "<i class='far fa-id-card'></i>"
     weight            = 2
 
@@ -156,28 +164,28 @@ timeout = 60000
   [[menu.main]]
     name              = "Posts"
     identifier        = "post"
-    url               = "/post/"
+    url               = "post"
     pre               = "<i class='far fa-newspaper'></i>"
     weight            = 4
 
   [[menu.main]]
     name              = "CV19WFH"
     identifier        = "CV19WFH"
-    url               = "/CV19WFH/"
+    url               = "CV19WFH"
     pre               = "<i class='fas fa-house-damage'></i>"
     weight            = 5
 
   [[menu.main]]
     name              = "Wallpaper"
     identifier        = "wallpaper"
-    url               = "/wallpaper/"
+    url               = "wallpaper"
     pre               = "<i class='fa fa-camera-retro'></i>"
     weight            = 6
 
   [[menu.main]]
     name              = "Categories"
     identifier        = "categories"
-    url               = "/categories/"
+    url               = "categories"
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 7
 
@@ -212,35 +220,35 @@ timeout = 60000
     [[Languages.de.menu.main]]
       name              = "Startseite"
       identifier        = "home"
-      url               = "/"
+      url               = ""
       pre               = "<i class='fas fa-home'></i>"
       weight            = 1
 
     [[Languages.de.menu.main]]
       name              = "Über mich"
       identifier        = "about"
-      url               = "/about/"
+      url               = "about"
       pre               = "<i class='far fa-id-card'></i>"
       weight            = 2
 
     [[Languages.de.menu.main]]
       name              = "Posts"
       identifier        = "post"
-      url               = "/post/"
+      url               = "post"
       pre               = "<i class='far fa-newspaper'></i>"
       weight            = 3
 
     [[Languages.de.menu.main]]
       name              = "Bildschirmhintergründe"
       identifier        = "wallpaper"
-      url               = "/categories/wallpaper/"
+      url               = "wallpaper"
       pre               = "<i class='fa fa-camera-retro'></i>"
       weight            = 4
 
     [[Languages.de.menu.main]]
       name              = "Kategorien"
       identifier        = "categories"
-      url               = "/categories/"
+      url               = "categories"
       pre               = "<i class='fas fa-sitemap'></i>"
       weight            = 5
 
@@ -322,4 +330,3 @@ timeout = 60000
   [security.http]
     methods = ['(?i)GET|POST']
     urls = ['.*']
-

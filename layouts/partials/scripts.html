@@ -2,7 +2,7 @@
   {{- if .Site.Params.highlightjs -}}
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
     {{ with .Site.Params.highlightjsLang }}{{ range . }}<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/{{ . }}.min.js"></script>{{ end }}{{ end }}
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.highlightAll();</script>
   {{- end -}}
   {{- range .Site.Params.jsFiles -}}
     {{- if eq . "default" -}}
@@ -26,7 +26,7 @@
     {{- $hljs := resources.Get "js/highlight.js" -}}
     <script src="{{ $hljs.RelPermalink }}"></script>
     {{ with .Site.Params.highlightjsLang }}{{ range . }}<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/{{ . }}.min.js"></script>{{ end }}{{ end }}
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>hljs.highlightAll();</script>
   {{- end -}}
   {{- range .Site.Params.jsFiles -}}
     {{- $jsSlice := slice -}}
@@ -59,3 +59,4 @@
 {{ $main := resources.Get "js/main.js" }}
 {{ $scripts := slice $baguetteBox $lazysizes $main | resources.Concat "js/scripts.js" | resources.Minify }}
 <script src="{{ $scripts.RelPermalink }}"></script>
+<script async defer data-website-id="f958c0ef-51fe-4b28-8202-f8aac20d92e2" src="https://umami.familie-richter.synology.me/umami.js" data-do-not-track="true" data-domains="ingo-richter.io"></script>
