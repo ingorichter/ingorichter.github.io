@@ -21,4 +21,8 @@ cv19:
 .PHONY: updateLazysize
 updateLazysize:
 # download the javascript library
-curl -v -L https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.js -o static/js/lazysizes.js
+	curl -v -L https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.js -o assets/js/external/lazysizes.js
+
+.PHONY: updateSubmodules
+updateSubmodules:
+	git submodule update --remote
