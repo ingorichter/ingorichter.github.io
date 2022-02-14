@@ -3,7 +3,7 @@ title = "Adding Multiple Files to Macos Gatekeeper"
 categories = ["TIL", "macos", "security", "tips", "tricks"]
 tags = ["TIL"]
 date = 2022-02-10
-draft = true
+draft = false
 +++
 
 ## The Gatekeeper
