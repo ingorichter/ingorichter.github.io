@@ -1,7 +1,7 @@
 +++
 title = "TIL - Adding Swift Code to Objective-C Project"
-categories = ["TIL"]
-tags = ["TIL", "Swift", "Objective-C"]
+categories = ["TIL", "Programming"]
+tags = ["TIL", "Swift", "Objective-C", "iOS"]
 date = 2022-02-28
 draft = false
 [[images]]
