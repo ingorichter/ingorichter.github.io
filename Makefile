@@ -5,6 +5,10 @@
 preview:
 	hugo server -D --printI18nWarnings -v --templateMetrics --templateMetricsHints --disableFastRender
 
+.PHONY: previewlocal
+previewlocal:
+	hugo --printI18nWarnings --baseURL=http://localhost:8000
+
 # .PHONY: newpost
 # make newpost title="This is the title"
 newpost:
