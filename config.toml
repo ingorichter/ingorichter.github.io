@@ -30,6 +30,7 @@ timeout = 60000
 [params]
   # Add additional section names to mainSections to include posts from
   # those sections on the homepage.
+  mainSections          = ["post", "cv19wfh"]
   enableCDN             = false
 
   # Loads CSS and JavaScript files. The variable is an array so that you can load
