@@ -3,7 +3,7 @@ title = "3d Printed Axidraw Easel Spacer"
 categories = ["TIL", "3DPrinting"]
 tags = ["TIL", "OpenScad", "3DPrinting", "Axidraw", "Penplotter"]
 date = 2022-04-05
-draft = true
+draft = false
 [[images]]
   src = "post/2022/3d-printed-axidraw-easel-spacer/bixbybridge.jpeg"
   alt = "Bixby Bridge along Highway 1 south of Carmel"
@@ -15,6 +15,7 @@ draft = true
 [4]: http://www.hpmuseum.net/exhibit.php?class=4&cat=24 "HP Plotters"
 [5]: https://www.tuhh.de/tuhh/en/startpage.html "TUHH"
 [6]: https://shop.evilmadscientist.com/productsmenu/912 "Magnetic Easel"
+[7]: https://www.printables.com/model/172932-spacer-bracket-for-axidraw-v3a3-pen-plotter "Printables"
 
 ## Designing a Spacer for my AxiDraw Plotter
 
@@ -65,6 +66,8 @@ I printed the latest Design version that I am currently using on the Plotter in 
 ## Download
 
 If you are interested in the source code of the design, the STL, or both, then head over to my [github repo][2] and download the files from there. You can print it for personal use. If you have suggestions to improve the design, feel free to create a PR, and I will happily review it.
+
+The model is also available from [Printables][7]
 
 ## Conclusion
 
