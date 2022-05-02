@@ -57,7 +57,7 @@ timeout = 60000
 
   [params.meta]
     # Sets the meta tag description
-    description         = "random thoughts about computer tech, web technologies, iOS, macOS, SwiftUI, javascript, reactjs, nodejs, process automation, jenkins and stuff that worked for me."
+    description         = "random thoughts about computer tech, web technologies, iOS, macOS, SwiftUI, javascript, Reactjs, nodejs, process automation, jenkins and stuff that worked for me."
     # Sets the meta tag author
     author              = "Ingo Richter"
     # If you would like to add more comprehensive favicon support passed root
@@ -87,7 +87,7 @@ timeout = 60000
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "today is tomorrow's past"
-    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
+    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>[Please find my contact information to easily import it into your address book](https://dot.cards/mklyu81dvmylbiknq63newnisvaq8koa)"
     rssIntro              = true
     socialIntro           = true
     # single column layout used on smaller screens.
@@ -190,12 +190,12 @@ timeout = 60000
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 7
 
-#   [[menu.main]]
-#     name              = "Contact"
-#     identifier        = "contact"
-#     url               = "/contact/"
-#     pre               = "<i class='far fa-envelope'></i>"
-#     weight            = 6
+  # [[menu.main]]
+  #   name              = "Contact"
+  #   identifier        = "contact"
+  #   url               = "/contact/"
+  #   pre               = "<i class='far fa-envelope'></i>"
+  #   weight            = 8
 
 [Languages]
   # Each language has its own menu.
@@ -287,7 +287,7 @@ timeout = 60000
   dribbble              = ""
   # Publishing Communities
   wordpress             = ""
-  medium                = "ingorichter"
+  medium                = ""
   # Professional/Business Oriented Communities
   linkedin              = "ingorichter"
   linkedin_company      = ""

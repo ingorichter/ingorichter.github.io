@@ -5,6 +5,8 @@ tags = ["about"]
 id = "about"
 +++
 
+**[Here you can find my contact information to easily import it into your address book](https://dot.cards/mklyu81dvmylbiknq63newnisvaq8koa)**
+
 I’m a software engineer with vast experience in developing and shipping software with a strong focus on customer demands, usability, and quality. I’m working with agile teams to deliver exceptionally high-quality software that adds value to the customer.
 
 I’m a certified Scrum Master with nearly ten years of experience in practicing it.
