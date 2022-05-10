@@ -7,6 +7,7 @@ draft = false
 [[images]]
   src = "cv19wfh/2022/05/day778/rose.jpeg"
   alt = "Sunny Rose"
+  stretch = "cover"
 +++
 
 ## Global Day Off
