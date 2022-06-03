@@ -87,7 +87,7 @@ timeout = 60000
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "today is tomorrow's past"
-    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>[Please find my contact information to easily import it into your address book](https://dot.cards/mklyu81dvmylbiknq63newnisvaq8koa)"
+    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
     rssIntro              = true
     socialIntro           = true
     # single column layout used on smaller screens.
