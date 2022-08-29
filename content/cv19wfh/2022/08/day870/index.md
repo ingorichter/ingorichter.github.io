@@ -8,13 +8,13 @@ draft = false
 
 ## WFH Day 870
 
-Long time no update. I was pretty occupied at work getting some larger projects off the ground. The projects are currently in mid air and need only some occasional course adjustment to arrive at their final destination in the next 3 months.
+Long time no update. I was pretty occupied at work getting some larger projects off the ground. The projects are currently in midair and need only occasional course adjustments to arrive at their final destination in the next three months.
 
-My employer is thankfully shutting down the offices in the US for the 4th of July week. Everybody is out of the office and getting some prescribed rest. I decided to move my PTO beginning to the week after the company shutdown. My family arrived from Germany during the company shutdown week. So, I got a quiet week and was able to work on a lot of stuff uninterrupted. That was really great and I'm thankful that my Manager is flexible to support my needs.
+My employer is thankfully shutting down the offices in the US for the 4th of July week. Everybody is out of the office and getting some prescribed rest. I decided to move my PTO beginning the week after the company shut down. My family arrived from Germany during the company shutdown week. So, I got a quiet week and could work on a lot of stuff uninterrupted. That was great, and I'm thankful my Manager is flexible to support of my needs.
 
-Now I'm back to work for a week after we spent 10 days on Big Island and enjoyed great weather, beautiful beaches and a slow pace. I love Hawaii! Give me a sticker and I'll put it on everything I own ;-)
+Now I'm back to work for a week after we spent ten days on Big Island and enjoyed great weather, beautiful beaches, and a slow pace. I love Hawaii! Give me a sticker, and I'll put it on everything I own ;-)
 
-It was a refreshing break after the fast paced months until the summer break. Now, I keep myself as long as I can in the vacation spirit and think about the much relaxed mood on the Island.
+It was a refreshing break after the fast-paced months until the summer break. Now, I keep myself as long I can in the vacation spirit and think about the relaxed mood on the Island.
 
 Let me share a few pictures of that beautiful place.
 
