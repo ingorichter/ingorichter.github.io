@@ -25,7 +25,11 @@ timeout = 60000
   min                   = "0.62.0"
 
 [outputs]
-  home                  = ["html", "json", "rss"]
+  page                  = ["html"]
+  home                  = ["html", "rss"]
+  section               = ["html", "rss"]
+  taxonomyTerm          = ["html", "rss"]
+  taxonomy              = ["html", "rss"]
 
 [params]
   # Add additional section names to mainSections to include posts from

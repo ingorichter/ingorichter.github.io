@@ -3,7 +3,7 @@ title = "Kicking Nextcloud Cron Script from TrueNAS Cron Job"
 categories = ["TIL"]
 tags = ["TIL", "TrueNAS", "Nextcloud", "Tips"]
 date = 2023-02-01
-draft = true
+draft = false
 +++
 
 # Kicking Nextcloud Cron Script from TrueNAS Cron Job
