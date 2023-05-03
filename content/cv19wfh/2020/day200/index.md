@@ -18,4 +18,4 @@ Let's look at something tiny through a Macro Lens. Should we? Just to distract o
 
 **Shot on Canon 6D with a 90mm Tamron Macro Lens**
 
-{{< imgproc redblossom.jpg Resize "1600x" >}}Red and Small
+{{% imgproc redblossom.jpg Resize "1600x" /%}}Red and Small

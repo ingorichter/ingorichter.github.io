@@ -12,4 +12,4 @@ That is a looong time that we are now hanging out at home. We won't go back to t
 
 Let's add a picture to have something nicer to look at.
 
-{{< imgproc pink-flower.jpg Resize "1600x" >}}Pink Flower
+{{% imgproc pink-flower.jpg Resize "1600x" /%}}Pink Flower

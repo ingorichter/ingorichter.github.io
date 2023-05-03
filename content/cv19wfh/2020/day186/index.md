@@ -15,4 +15,4 @@ I used part of the day to go outside and ride my bicycle for nearly 3 hours over
 I was so tired and my legs cramped when I arrived back at home. Nonetheless, I felt alive, although my muscles being sore, and my body aching. But better this way than dead.
 
 Here is a picture from the top of the mountain that I climbed.
-{{< imgproc mountaintop.jpg Resize "1600x" >}}Top of the mountain
+{{% imgproc mountaintop.jpg Resize "1600x" /%}}Top of the mountain
