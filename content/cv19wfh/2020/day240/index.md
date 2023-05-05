@@ -15,4 +15,4 @@ The most significant change for me recently was to walk and run daily. It's free
 
 This morning a met a longtime friend for a 3 1/2 mile walk around the nearby lake. The weather was not so great (as usual this time of year here in Germany), but walking and talking was a great way to connect with my friend after a long time. So, it was a great day after all.
 
-{{% imgproc FallLeaves.jpg Resize "1600x" /%}}Colorful
+{{% imgproc FallLeaves.jpg Resize "1600x" %}}Colorful{{% /imgproc %}}

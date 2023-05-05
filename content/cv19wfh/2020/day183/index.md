@@ -14,4 +14,4 @@ The air quality was much better than the last couple of days. Time to go on my e
 
 And now something for sore eyes.
 
-{{% imgproc wallflower.jpg Resize "1600x" /%}}Flower on the Wall
+{{% imgproc wallflower.jpg Resize "1600x" %}}Flower on the Wall{{% /imgproc %}}

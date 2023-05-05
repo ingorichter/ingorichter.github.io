@@ -13,4 +13,4 @@ What a day. A lot of meetings in the morning. After I finished all of them right
 I'm happy that I was able to do some core exercises for 20 minutes. It was giving me a different form of challenge, and it was tiring. I should sleep well tonight. And I hope that I'll be able to lift my arms tomorrow morning.
 
 And now something for the eyes. I believe that looking at something green should be relaxing to the eyes. ;-)
-{{% imgproc macro.jpg Resize "1600x" /%}}Macroshot of Dandelion
+{{% imgproc macro.jpg Resize "1600x" %}}Macroshot of Dandelion{{% /imgproc %}}
