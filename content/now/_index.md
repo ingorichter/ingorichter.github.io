@@ -21,6 +21,7 @@ draft = false
 ## 🧰 What I'm making
 
 - React App to provide a simple Game Score Card for board or card games
+- Fixing my 3D Printer Extruder issue
 
 ## 🔬 What I'm learning
 
