@@ -194,6 +194,13 @@ timeout = 60000
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 7
 
+  [[menu.main]]
+    name              = "Now"
+    identifier        = "now"
+    url               = "now"
+    pre               = "<i class='fas fa-clock'></i>"
+    weight            = 8
+
   # [[menu.main]]
   #   name              = "Contact"
   #   identifier        = "contact"
@@ -270,6 +277,13 @@ timeout = 60000
       url               = "/resume/resume.pdf"
       pre               = "<i class='far fa-file'></i>"
       weight            = 7
+
+    [[Languages.de.menu.main]]
+      name              = "Now"
+      identifier        = "now"
+      url               = "now"
+      pre               = "<i class='far fa-clock'></i>"
+      weight            = 8
 
 # Sets Social Media icons to appear and link to your account. Value should be your
 # username unless otherwise noted. These are the icons affected by socialAppearAtTop

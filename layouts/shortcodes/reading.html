@@ -1,0 +1,9 @@
+{{- $title := .Get "title" -}}
+{{- $author := .Get "author" -}}
+{{- $id := .Get "id" -}}
+
+{{- with .Parent -}}
+<li><a href="https://openlibrary.org/books/{{ $id }}">{{ $title }} - {{ $author }}</a></li>
+{{- else -}}
+<a href="#">{{ $title }} - {{ $author }}</a>
+{{- end -}}
