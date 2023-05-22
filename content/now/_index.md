@@ -1,6 +1,6 @@
 +++
 title = "What Ingo is up to"
-date = 2023-05-14
+date = 2023-05-21
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -22,9 +22,9 @@ draft = false
 ## 🧰 What I'm making
 
 - React App to provide a simple Game Score Card for board or card games
-- Fixing my 3D Printer Extruder issue (I'm getting closer...)
+- Experimenting with SVG layer separation based on color of the image
 
 ## 🔬 What I'm learning
 
-- Experiment with [OpenAI API](https://platform.openai.com/docs/api-reference)
+- Front End Master - TypeScript
 - Transition my old Synology NAS to a new TrueNAS machine
