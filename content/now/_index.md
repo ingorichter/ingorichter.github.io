@@ -27,5 +27,6 @@ draft = false
 
 ## 🔬 What I'm learning
 
+- Visited the Exhibition about [Ansel Adams](https://www.anseladams.com/de-young-museum/) in San Francisco
 - Front End Master - TypeScript (this is a lot of stuff)
 - Transition my old Synology NAS to a new TrueNAS machine
