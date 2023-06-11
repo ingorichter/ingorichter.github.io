@@ -16,6 +16,12 @@ googleAnalytics = "UA-78867595-1"
 
 timeout = 60000
 
+[taxonomies]
+  author = "authors"
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
 [markup.goldmark.renderer]
   unsafe                = true
 
@@ -26,7 +32,7 @@ timeout = 60000
 
 [outputs]
   page                  = ["html"]
-  home                  = ["html", "rss"]
+  home                  = ["html", "json", "rss"]
   section               = ["html", "rss"]
   taxonomyTerm          = ["html", "rss"]
   taxonomy              = ["html", "rss"]
