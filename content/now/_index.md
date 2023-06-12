@@ -1,6 +1,6 @@
 +++
 title = "What Ingo is up to"
-date = 2023-05-28
+date = 2023-06-11
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -15,18 +15,16 @@ draft = false
 
 ## 📺 What I'm watching
 
-- [Woman of the Dead](https://www.netflix.com/title/81239598)
-- [Ted Lasso - Season 3](https://tv.apple.com/us/show/ted-lasso/umc.cmc.vtoh0mn0xn7t3c643xqonfzy)
-- [Succession - Season 4](https://www.hbo.com/succession/season-4)
+- [Fubar](https://www.netflix.com/title/81397077)
 
 ## 🧰 What I'm making
 
-- Designed a piece in FreeCad to increase the mounting height of the external Carplay Display mounted on the Dashboard of our car
-- React App to provide a simple Game Score Card for board or card games
+- Working on a web app to build workout routines with timing and repetition information
 - Experimenting with SVG layer separation based on color of the image
+- I want a new theme for my blog, since the current theme is no longer maintained
 
 ## 🔬 What I'm learning
 
-- Visited the Exhibition about [Ansel Adams](https://www.anseladams.com/de-young-museum/) in San Francisco
 - Front End Master - TypeScript (this is a lot of stuff)
-- Transition my old Synology NAS to a new TrueNAS machine
+- How to use FreeCAD
+- Transition my old Synology NAS to a the TrueNAS machine. I still have one service to transition and the provided app doesn't work for me. So, I have to find another way to get it going. Probably in the good old fashioned docker-compose way
