@@ -6,6 +6,7 @@ theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 pluralizeListTitles     = false
 disableLanguages        = []
+timezone                = "America/Los_Angeles"
 # languageCode = "en-us"
 
 # # Set the followings to true as part of your site SEO
@@ -15,6 +16,12 @@ disqusShortname = "ingorichterio"
 googleAnalytics = "UA-78867595-1"
 
 timeout = 60000
+
+[Author]
+name = "Ingo Richter"
+email = "ingo@ingo-richter.io"
+location = "Greater Bay Area"
+bio = "simple is harder than complex"
 
 [taxonomies]
   author = "authors"
@@ -31,16 +38,16 @@ timeout = 60000
   min                   = "0.62.0"
 
 [outputs]
-  page                  = ["html"]
+  page                  = ["html", "rss"]
   home                  = ["html", "json", "rss"]
   section               = ["html", "rss"]
-  taxonomyTerm          = ["html", "rss"]
   taxonomy              = ["html", "rss"]
+  term                  = ["html", "rss"]
 
 [params]
   # Add additional section names to mainSections to include posts from
   # those sections on the homepage.
-  mainSections          = ["post", "cv19wfh"]
+  mainSections          = ["now", "post", "cv19wfh"]
   enableCDN             = false
 
   # Loads CSS and JavaScript files. The variable is an array so that you can load
@@ -203,7 +210,7 @@ timeout = 60000
   [[menu.main]]
     name              = "Now"
     identifier        = "now"
-    url               = "now"
+    url               = "now/now"
     pre               = "<i class='fas fa-clock'></i>"
     weight            = 8
 

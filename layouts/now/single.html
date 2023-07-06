@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article class="post">
+    <header>
+      <div class="title">
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </div>
+    </header>
+    <div id="content">
+      {{ .Content }}
+    </div>
+    <small>
+    Last updated: {{ .PublishDate.Format "January 02, 2006" }}
+    </small>
+  </article>
+{{ end }}
