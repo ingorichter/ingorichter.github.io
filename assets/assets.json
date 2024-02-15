@@ -1,0 +1,16 @@
+{
+    "styles" : [
+       "css/normalize.css",
+       "css/fonts.css",
+       "css/academicons.css",
+       "css/fontawesome.css",
+       "css/fancybox.css"
+    ],
+    "scripts" : [
+       "js/jquery-3.7.1.min.js",
+       "js/fancybox.js",
+       "js/lunr.js",
+       "js/util.js"
+    ]
+ }
+ 
