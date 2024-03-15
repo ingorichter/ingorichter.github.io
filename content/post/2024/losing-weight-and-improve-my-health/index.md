@@ -2,7 +2,7 @@
 categories = ["Health"]
 date = "2024-02-14T22:38:52-08:00"
 description = "A journey to a healthier life"
-draft = true
+draft = false
 id = "0a55aabd5f7bb877a08ea9e4e6d4297e5ce3ce12"
 link = ""
 tags = ["Health"]
