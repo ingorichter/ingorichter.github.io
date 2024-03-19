@@ -74,7 +74,7 @@ bio = "simple is harder than complex"
 
   [params.meta]
     # Sets the meta tag description
-    description         = "random thoughts about computer tech, web technologies, iOS, macOS, SwiftUI, javascript, Reactjs, nodejs, process automation, jenkins and stuff that worked for me."
+    description         = "web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes"
     # Sets the meta tag author
     author              = "Ingo Richter"
     # If you would like to add more comprehensive favicon support passed root
@@ -104,7 +104,7 @@ bio = "simple is harder than complex"
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "today is tomorrow's past"
-    paragraph = "I help people create remarkable things. Customer focus and quality nerd. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
+    paragraph = "I help people create remarkable things. Focus on the customer and quality. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
     rssIntro              = true
     socialIntro           = true
     # single column layout used on smaller screens.
@@ -115,7 +115,7 @@ bio = "simple is harder than complex"
     # This appears at the top of the sidebar above params.intro.header.
     # A width of less than 100px is recommended from a design perspective.
     [params.intro.pic]
-      src                 = "/img/main/logo-new.webp"
+      src                 = "/img/main/logo-2024.webp"
       # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
       shape               = "hexagon"
       width               = ""
