@@ -20,17 +20,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-
-      - run: gem install asciidoctor
-
-      - name: Run Hugo
-        run: |
-          alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
-        
       - name: Build
         run: hugo --printI18nWarnings --minify
 

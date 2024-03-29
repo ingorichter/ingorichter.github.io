@@ -74,7 +74,7 @@ bio = "simple is harder than complex"
 
   [params.meta]
     # Sets the meta tag description
-    description         = "web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes"
+    description         = "I write about web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes, 3dprinting, penplotter and lasercutting"
     # Sets the meta tag author
     author              = "Ingo Richter"
     # If you would like to add more comprehensive favicon support passed root
