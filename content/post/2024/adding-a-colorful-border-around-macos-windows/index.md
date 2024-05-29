@@ -1,12 +1,12 @@
 +++
 categories = ["TIL"]
-date = "2024-05-27T10:23:58-07:00"
-description = "I found this little tool that allows to add a colorful border for macOS Windows"
+date = "2024-05-28T10:23:58-07:00"
+description = "I found this little tool that allows you to add a colorful border to macOS windows."
 draft = false
 id = "25edb447bdef493cca125917369763e196184c78"
 link = ""
 tags = ["TIL", "macos", "tools"]
-title = "Adding a Colorful Border Around macOS app Windows"
+title = "Adding a Colorful Border Around macOS App Windows"
 +++
 [1]: https://github.com/FelixKratz/JankyBorders "JankyBorders"
 
