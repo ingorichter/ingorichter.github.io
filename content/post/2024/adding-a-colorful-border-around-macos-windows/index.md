@@ -52,7 +52,7 @@ brew services stop borders
 
 > After each change in the config file, you need to restart the `borders` program to apply the changes.
 
-### Colors for active and inactive windows
+### Colors for Active and Inactive Windows
 
 Although there is a way to provide the config on the command line whan launching borders, I recommend to create a config file in the **$HOME/.config/borders** directory. The config file should be named **borderrc**. Technically, it's a shell script that will launch borders with the provided options.
 
@@ -87,7 +87,7 @@ borders "${options[@]}"
 I changed the active border color to blue (RGB 0000FF).
 {{< img src="finder-window-with-blue-border.png" title="Finder Windows with Blue Border" alt="Finder Windows with Blue Border" full="true" round="0">}}
 
-Inactive windows can have a different border color assigned. Let's change the default color to for inactive windows to red (RGB FF0000).
+Inactive windows can have a different border color assigned. Let's change the default color for inactive windows to red (RGB FF0000).
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -106,9 +106,10 @@ borders "${options[@]}"
 ### Gradients
 
 You can also use gradients to provide a color gradient for the border. The value for any color can be a gradient in the form of gradient(top_left=0xffFF0000,bottom_right=0xff00FF00) or gradient(top_right=0xffFF0000,bottom_left=0xff00FF00).
-> It's important to have the exact format of the gradient definition, otherwise the border will not be rendered. I'm using zsh and the gradient definition has be quoted.
 
-The config file should look like this. I increased the border width to 20 to better see the gradient
+> It’s important to have the exact format of the gradient definition; otherwise, the border will not be rendered. I’m using zsh and the gradient definition has to be quoted.
+
+The config file should look like this. I increased the border width to 20 to better see the gradient:
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -126,9 +127,9 @@ borders "${options[@]}"
 
 ### Glow
 
-You can also use a glow effect for the border. Any color can be used to defione a glow effect in the form of glow(0xffFF0000). This glow definition will provide a red glow effect to the border. It looks a bit like a neon light around the window.
+You can also use a glow effect for the border. Any color can be used to define a glow effect in the form of glow(0xffFF0000). This glow definition will provide a red glow effect to the border. It looks a bit like a neon light around the window.
 
-The config file should look like this
+The config file should look like this:
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -144,13 +145,13 @@ borders "${options[@]}"
 
 {{< img src="finder-window-glow.png" title="Finder Window with glow effect" alt="Finder Window with glow effect" full="true" round="0">}}
 
-## Allow and Deny border for specific applications
+## Allow and Deny Borders for Specific Applications
 
-You can also allow and deny applications from having a border. Unfortunately, the naming of this feature is not well thought out, since it's using the blacklist and whitelist notion that should be avoided IMHO.
+You can also allow and deny applications from having a border. Unfortunately, the naming of this feature is not well thought out, since it’s using the blacklist and whitelist notion that should be avoided in my opinion.
 
-Specify the name(s) of the application in the blacklist and whitelist will only allow and deny the spcificly mentioned applications. All other applications will or will not have a border.
+Specify the name(s) of the application in the blacklist, and the whitelist will only allow and deny the specifically mentioned applications. All other applications will or will not have a border.
 
-The config file should look like this
+The config file should look like this:
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -170,7 +171,7 @@ borders "${options[@]}"
 
 ## Conclusion
 
-IMHO the best way to add a border around macOS app windows is to use the **JankyBorders** program. I hope you'll find it useful too. There are more options than I mentioned here. You can read about them by running **man borders** in the terminal.
+In my opinion, the best way to add a border around macOS app windows is to use the **JankyBorders** program. I hope you’ll find it useful too. There are more options than I mentioned here. You can read about them by running `man borders` in the terminal.
 
 If you have any feedback, please let me know.
 
