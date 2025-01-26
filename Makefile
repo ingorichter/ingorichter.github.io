@@ -30,3 +30,7 @@ updateLazysize:
 .PHONY: updateSubmodules
 updateSubmodules:
 	git submodule update --remote
+
+.PHONY: updateGoModules
+updateGoModules:
+	hugo mod get -u ./...
