@@ -59,7 +59,7 @@ Create a module (like a function) and create the base square with `cube` and cen
 The tricky part for me was to figure out how to have rounded corners for the square. OpenSCAD provides the transformation function `minkowski` that will sum up multiple shapes into one shape. More details are available [here][6].
 `minkowski` takes the `cube` and the cylinder from the code above and sums them up into a square with rounded corners. This sum increases the width and height of the square by the radius of the cylinder.
 
-{{< figure src="./static/SquareBase.png" title="Square Base rendered in OpenSCAD" width="600" alt="Square Base Debossed in OpenSCAD" >}}
+{{< img src="SquareBase.png" title="Square Base rendered in OpenSCAD" width="600" alt="Square Base Debossed in OpenSCAD" >}}
 
 ### Add the Hollow Cylinder
 
@@ -76,7 +76,7 @@ module HollowCylinder() {
 
 The solution was not too difficult after I found the `difference` function. Take two cylinders with different diameters and place them in the same position and let the `difference` function figure it out.
 
-{{< figure src="./static/HollowCylinder.png" title="Hollow Cylinder rendered in OpenSCAD" width="600" alt="Hollow Cylinder rendered in OpenSCAD" >}}
+{{< img src="HollowCylinder.png" title="Hollow Cylinder rendered in OpenSCAD" width="600" alt="Hollow Cylinder rendered in OpenSCAD" >}}
 
 ### Add the Text on top of the Base
 
@@ -93,7 +93,7 @@ module CoffeeShopName() {
 
 Placing the text was a bit of trial and error to find the correct position on top of the base square. Then I encountered the issue that the text height wasn't enough to stick out a bit from the surface. After inspecting examples and searching the internet, I found that `linear_extrude` function that can be used to make something flat grow in height.
 
-{{< figure src="./static/TopText.png" title="Top Text rendered in OpenSCAD" width="600" alt="Top Text rendered in OpenSCAD" >}}
+{{< img src="TopText.png" title="Top Text rendered in OpenSCAD" width="600" alt="Top Text rendered in OpenSCAD" >}}
 
 ### Add the debossed Text on the side of the Base
 
@@ -133,13 +133,13 @@ This text placed on the side of the square base took the most time for me to imp
 Once I had the correct position, I used the `difference` function to get the text debossed into the square base.
 It was worth it in the end, and I was happy with the result.
 
-{{< figure src="./static/DebossedText.png" title="Debossed Text rendered in OpenSCAD" width="600" alt="Debossed Text rendered in OpenSCAD" >}}
+{{< img src="DebossedText.png" title="Debossed Text rendered in OpenSCAD" width="600" alt="Debossed Text rendered in OpenSCAD" >}}
 
 ## The Result
 
 The combination of all the code snippets looks like this.
 
-{{< figure src="./static/ScreenshotOpenScadCoffeeDistributionTool.png" title="Coffee Distribution Tool Base rendering in OpenSCAD" width="600" alt="Coffee Distribution Tool Base" >}}
+{{< img src="ScreenshotOpenScadCoffeeDistributionTool.png" title="Coffee Distribution Tool Base rendering in OpenSCAD" width="600" alt="Coffee Distribution Tool Base" >}}
 
 ## OpenSCAD Project Files
 
