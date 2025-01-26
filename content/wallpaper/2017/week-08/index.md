@@ -24,7 +24,7 @@ The image was taken with a [Sony Alpha A7RII](https://www.sony.com/electronics/i
 
 I used Adobe Lightroom 6.8 to sharpen, crop and increase the contrast of the image.
 
-![Static Flow](./static-flow.jpg "Static Flow")
+{{< img src="static-flow.jpg" caption="Static Flow" alt="Static Flow" full="true">}}
 
 Static Flow.
 
