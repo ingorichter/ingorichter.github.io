@@ -11,3 +11,6 @@ hugo.linux
 
 # vscode
 .vscode/
+
+# vendor modules
+/_vendor/
