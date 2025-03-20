@@ -7,12 +7,12 @@ id = "about"
 
 **[Here you can find my contact information to easily import it into your address book](https://dot.cards/mklyu81dvmylbiknq63newnisvaq8koa)**
 
-I'm a software engineer with vast experience in developing and shipping software with a strong focus on customer demands, usability, and quality. I'm working with agile teams to deliver exceptionally high-quality software that adds value for the customer.
+I’m a software engineer with a passion for building high-quality software that puts users first. With over 20 years of experience in software development—spanning commercial and open-source projects—I thrive on solving complex problems and delivering impactful solutions.
 
-I'm a certified Scrum Master with nearly ten years of practice experience.
+Currently, I’m a Senior Computer Scientist at Adobe, working on a TypeScript Analytics SDK for internal use. Previously, I contributed to ShareSheet, [Adobe Experience Design CC (Adobe XD)](https://www.adobe.com/products/experience-design.html>), Photoshop Device Preview, and open-source projects like [Brackets](https://brackets.io") and [TabWrangler](https://github.com/tabwrangler/tabwrangler).
 
-I have a background in software development and have created commercial software and open source for over 20 years. I'm a firm believer in process automation. Test automation is my support system for delivering great software.
+As a Certified Scrum Master with nearly a decade of hands-on experience, I believe in agile methodologies, process automation, and test automation as the backbone of high-quality software.
 
-I love creating software, and I'm thrilled to work on it full-time and then some. When not coding, I regularly ride my bicycle, take photos, use my laser cutter and a 3D printer, or drink great coffee.
+When I’m not coding, I spend time experimenting with 3D printing, laser cutting, and pen plotting. I also enjoy cycling, photography, and, of course, great coffee.
 
-I'm a senior computer scientist at [Adobe](https://www.adobe.com), working on the iOS CreativeSDK used by millions of users. Previous projects I worked on in no specific order:[Adobe Experience Design CC (Adobe XD)](https://www.adobe.com/products/experience-design.html>) and Adobe Photoshop Device Preview. I contributed to [Brackets](https://brackets.io") and [TabWrangler](https://github.com/tabwrangler/tabwrangler).
+Want to connect? Let’s talk about software, automation, or just good coffee!
