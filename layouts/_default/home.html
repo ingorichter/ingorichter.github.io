@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{ .Content }}
+<!-- This is not loaded, since the simple original theme doesn't have this file
+ and uses instead layout/index.html -->
+    <section class="project-list">
+        <h2>Latest Project</h2>
+        <ul>
+            {{ range (where .Site.RegularPages "Type" "in" "projects").Limit 1 }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section class="posts-list">
+        <h2>Latest Post</h2>
+        <ul>
+            {{ range (where .Site.RegularPages "Type" "in" "posts").Limit 1 }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+{{ end }}

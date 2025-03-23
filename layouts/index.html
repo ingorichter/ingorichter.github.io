@@ -1,0 +1,82 @@
+{{ define "main" }}
+<article>
+    <section class="jumbo">
+        <div>
+            {{ $images := .Resources.Match "avatar.webp" }}
+            {{ $image := index $images 0 }}
+            {{ $image := $image.Resize "300x" }}
+            <img src="{{ $image.RelPermalink }}">
+
+            {{ .Content }}
+        </div>
+    </section>
+
+    <section class="fragments">
+        {{ range first 1 ( where .Site.Pages.ByDate.Reverse "Section" "fragments" ) }}
+        <header>
+            <p>
+                <a href="{{ .Permalink }}">
+                    {{ .Date | time.Format ":date_long" }}
+                    {{ .Date | time.Format ":time_short" }}
+                </a>
+            </p>
+
+            <h2 class="mt-0">{{ .Title }}</h2>
+        </header>
+        {{ .Content }}
+
+        {{ if .PrevInSection }}
+        <p class="prev">
+            Previously: <a class="" href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
+        </p>
+        {{ end }}
+
+        {{ end }}
+    </section>
+
+    <section class="list">
+        <ul class="post-list">
+            {{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
+            {{ $.Scratch.Set "lastYear" "" }}
+            {{ $.Scratch.Set "lastMonth" "" }}
+            {{ range .Site.RegularPages }}
+
+            {{ $year := .Date.Year }}
+            {{ $month := .Date.Month }}
+
+            {{ $lastYear := $.Scratch.Get "lastYear"}}
+            {{ $lastMonth := $.Scratch.Get "lastMonth"}}
+            {{ if eq $lastYear "" }}
+            <li class="month">{{ $month }} {{ $year }}</li>
+            {{ else }}
+            {{ if ne $year $lastYear }}
+            <li class="year">{{ $year }}</li>
+            {{ end }}
+
+            {{ if ne $month $lastMonth }}
+            <li class="month">{{ $month }}</li>
+            {{ end }}
+            {{ end }}
+
+            {{ $.Scratch.Set "lastYear" $year }}
+            {{ $.Scratch.Set "lastMonth" $month }}
+
+            <li>
+                <a href="{{ .RelPermalink }}">
+                    <p>
+                        {{ if .Draft }}DRAFT: {{end}}
+                        {{- .LinkTitle }}
+                        {{- with .Params.description }}
+                            <span class="subtitle">
+                                {{- . | markdownify -}}
+                            </span>
+                        {{- end }}
+                    </p>
+                    <time>{{ humanize .Date.Day }}</time>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+
+    {{ end }}

@@ -1,0 +1,3 @@
+{{ $lazysizes := resources.Get "js/external/lazysizes.js" }}
+{{ $scripts := slice $lazysizes | resources.Concat "js/scripts.js" | resources.Minify }}
+<script src="{{ $scripts.RelPermalink }}"></script>
