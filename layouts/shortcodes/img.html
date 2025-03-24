@@ -1,7 +1,7 @@
 {{- $src := .Get "src" -}}
 {{- $alt := .Get "alt" | default "" -}}
-{{- $caption := .Get "caption" | default "" -}}
-{{- $title := .Get "title" | default $caption -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $caption := .Get "caption" | default $title -}}
 {{- $page := .Page -}}
 
 {{- $image := $page.Resources.GetMatch (printf "*%s" $src) -}}

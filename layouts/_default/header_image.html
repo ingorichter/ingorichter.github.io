@@ -1,0 +1,52 @@
+{{- if or .Params.headerimage .Params.featured -}}
+{{- $src := "" -}}
+{{- $alt := "" -}}
+  {{- $stretch := .Site.Params.imageStretch -}}
+  {{- $blur := .Site.Params.removeBlur -}}
+  {{- if .Params.featured -}}
+    {{- if reflect.IsMap .Params.featured -}}
+      {{- $src = (path.Join "img" (cond (eq .Params.featuredpath "date") (.Page.Date.Format "2006/01") (.Params.featuredpath)) (index .Params.featured "src")) | relURL -}}
+      {{- $alt = index .Params.featured "alt" -}}
+      {{- with index .Params.featured "stretch" -}}
+        {{- $stretch = . -}}
+      {{- end -}}
+      {{- with index .Params.featured "removeBlur" -}}
+        {{- $blur = . -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $src = (path.Join "img" (cond (eq .Params.featuredpath "date") (.Page.Date.Format "2006/01") (.Params.featuredpath)) .Params.featured) | relURL -}}
+      {{- $alt = .Params.featuredalt -}}
+      {{- with .Params.featuredstretch -}}
+        {{- $stretch = . -}}
+      {{- end -}}
+      {{- with .Params.removeBlur -}}
+        {{- $blur = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if .Params.headerimage -}}
+    {{- range first 1 .Params.headerimage }}
+      {{- with .src }}
+        {{- $srcPath := strings.TrimPrefix "/" . }}
+        {{- $res := $.Page.Resources.GetMatch $srcPath }}
+        {{- if not $res }}
+          {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" . $.Page.RelPermalink }}
+        {{- end }}
+        {{- $src = $res.Permalink }}
+      {{- end }}
+      {{- $alt = .alt }}
+      {{- with .stretch }}{{ $stretch = . }}{{ end }}
+      {{- with .removeBlur }}{{ $blur = . }}{{ end }}
+    {{- end }}
+  {{- end }}
+
+  <a href="{{ $.Page.RelPermalink }}" class="image"
+    {{ if not ($blur) }}style="--bg-image: url('{{ $src }}');"{{ end }}>
+    <img
+      {{ with $stretch }}
+        class="{{ if or (eq (lower .) "vertical") (eq (lower .) "v") }}stretchV
+                {{ else if or (eq (lower .) "horizontal") (eq (lower .) "h") }}stretchH
+                {{ else if or (eq (lower .) "cover") (eq (lower .) "c") }}cover{{ end }}"
+      {{ end }}
+      src="{{ $src }}" alt="{{ $alt }}">
+  </a>
+{{- end -}}

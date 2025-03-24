@@ -4,10 +4,11 @@ categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
 date = 2022-03-29
 draft = false
-[[images]]
-  src = "cv19wfh/2022/03/day744/birdsofparadise.jpeg"
-  alt = "Birds Of Paradise"
-  stretch = "horizontal"
+[params]
+  [[headerimage]]
+    src = "birdsofparadise.jpeg"
+    alt = "Birds Of Paradise"
+    stretch = "horizontal"
 +++
 
 ## WFH Day 744
