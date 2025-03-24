@@ -10,7 +10,6 @@ title = "Adding a Colorful Border Around macOS App Windows"
 +++
 [1]: https://github.com/FelixKratz/JankyBorders "JankyBorders"
 
-
 <!--more-->
 
 ## TL;DR
@@ -54,7 +53,7 @@ brew services stop borders
 
 ### Colors for Active and Inactive Windows
 
-Although there is a way to provide the config on the command line whan launching borders, I recommend to create a config file in the **$HOME/.config/borders** directory. The config file should be named **borderrc**. Technically, it's a shell script that will launch borders with the provided options.
+Although there is a way to provide the config on the command line whan launching borders, I recommend to create a config file in the **$HOME/.config/borders** directory. The config file should be named **bordersrc**. Technically, it's a shell script that will launch borders with the provided options.
 
 By default, all the colors are solid. But we can change them to be gradients or glow. Very nice feature.
 
