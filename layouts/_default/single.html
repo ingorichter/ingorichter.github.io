@@ -17,12 +17,18 @@
       {{ end }}
     {{ end }}
   {{ end }}
+  <content class="published-date">
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_full" }}
+    Published on <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  </content>
   {{ if .Params.toc }}
     <details>
       <summary>Table of Contents</summary>
       {{ .TableOfContents }}
     </details>
   {{ end }}
+  {{ .Render "header_image" }}
   <content>
     {{ .Content }}
   </content>
@@ -31,4 +37,5 @@
       <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>&nbsp;&nbsp;
     {{ end }}
   </p>
+  {{ .Render "comments" }}
 {{ end }}
