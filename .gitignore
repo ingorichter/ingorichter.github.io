@@ -14,3 +14,10 @@ hugo.linux
 
 # vendor modules
 /_vendor/
+
+# node stuff
+node_modules/
+package-lock.json
+
+# screenshot files
+/screenshots/
