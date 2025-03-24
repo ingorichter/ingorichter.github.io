@@ -11,26 +11,22 @@
         </div>
     </section>
 
-    <section class="fragments">
-        {{ range first 1 ( where .Site.Pages.ByDate.Reverse "Section" "fragments" ) }}
-        <header>
-            <p>
-                <a href="{{ .Permalink }}">
-                    {{ .Date | time.Format ":date_long" }}
-                    {{ .Date | time.Format ":time_short" }}
-                </a>
+    <section class="recents">
+        {{ $draftPages := where .Site.RegularPages.ByDate.Reverse "Draft" false }}
+        {{ range first 1 $draftPages }}
+            <header>
+                {{ partial "published_date.html" . }}
+                <h1>{{ .Title }}</h1>
+            </header>
+            {{ .Summary }}
+            {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}">More ...</a>
+            {{ end }}
+            {{ if .PrevInSection }}
+                <p class="prev">
+                Previously: <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
             </p>
-
-            <h2 class="mt-0">{{ .Title }}</h2>
-        </header>
-        {{ .Content }}
-
-        {{ if .PrevInSection }}
-        <p class="prev">
-            Previously: <a class="" href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}</a>
-        </p>
-        {{ end }}
-
+            {{ end }}
         {{ end }}
     </section>
 

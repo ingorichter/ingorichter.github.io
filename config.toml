@@ -12,6 +12,10 @@ enableRobotsTXT = true
 # https://github.com/gohugoio/hugo/issues/12152
 capitalizeListTitles = false
 
+# just in case I forgot to provide <!--more--> in the post then hugo will automatically
+# truncate the content to the summaryLength
+summaryLength = 50
+
 # enable disqus for now
 [services]
   [services.disqus]

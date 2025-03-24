@@ -82,32 +82,16 @@
   --text-color: #451a03;
   --header-color: #032e45;
   --header-font: "Fraunces", system-ui; */
-  --diminished-text-color: color-mix(in srgb, var(--accent), white 70%);
+  /* Hunter Blaze Orange. https://colorcodes.io/orange/hunter-orange-color-codes/ */
+  --base-color: hsl(31, 100%, 50%);
+  /* --text-color: var(--base-color); */
+  --diminished-text-color: color-mix(in srgb, var(--base-color), white 30%);
 
   --footer-background: var(--text-color);
   --footer-text: var(--background);
 
   --home-listing-header-color: var(--accent);
 }
-
-/* :root {
-    --text-color: var( --sl-color-primary-900 );
-    --link-color: var( --sl-color-primary-600 );
-    --diminished-text-color: var( --sl-color-amber-500 );
-    --header-color: var( --sl-color-amber-900 );
-    --background: var( --sl-color-amber-50 );
-    
-    --footer-background: var( --sl-color-amber-900 );
-    --footer-text: var( --sl-color-amber-50 );
-}
-
-:root {
-    --main-font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    --mono-font-family: Hack, monospace;
-    --background: var(--primary-color-lighter);
-    --text-color: var(--primary-color-darker);
-    --diminished-text-color: var(--primary-color-dark)
-} */
 
 /* Make the body a nice central block */
 /* this is copied from the original css, but with making the middle column wider */
@@ -124,7 +108,7 @@ ul,
 ol {
   font-size: var(--fs-small);
   line-height: 1.6;
-  color: var(--accent);
+  color: var(--base-color);
 }
 
 section.list {
@@ -238,6 +222,7 @@ section {
 
     p {
       margin-top: 0;
+      font-size: var(--fs-small);
     }
 
     div {

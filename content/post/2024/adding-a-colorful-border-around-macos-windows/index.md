@@ -10,8 +10,6 @@ title = "Adding a Colorful Border Around macOS App Windows"
 +++
 [1]: https://github.com/FelixKratz/JankyBorders "JankyBorders"
 
-<!--more-->
-
 ## TL;DR
 
 [JankyBorders][1] is a tool that allows you to add a colored border around macOS app windows. This is helpful, especially in dark mode, to better see the window border and identify which application window is in front and active.
