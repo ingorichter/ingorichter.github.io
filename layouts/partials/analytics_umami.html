@@ -1,0 +1,5 @@
+{{ with .Site.Params.umamiAnalytics }}
+  {{ if and .src .id }}
+    <script async src="{{ .src }}" data-website-id="{{ .id }}"></script>
+  {{ end }}
+{{ end }}

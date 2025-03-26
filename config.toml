@@ -20,7 +20,7 @@ summaryLength = 50
 [services]
   [services.disqus]
     shortname = 'ingorichterio'
-
+  
 [module]
 [module.hugoVersion]
 extended = true
@@ -56,6 +56,10 @@ dateFormat = "2006-01-02"
 hideMadeWithLine = false
 hideRSSLink = false
 style = "custom.css"
+
+[params.umamiAnalytics]
+  id = "98a5f2cb-a53b-4d84-9133-bac4957e9e9f"
+  src = "https://umami.familie-richter.de/script.js"
 
 [params.author]
 name = "Ingo Richter"
