@@ -52,3 +52,29 @@ screenshots:
 	kill `cat hugo.pid`; \
 	rm hugo.pid; \
 	echo "✅ Screenshots captured and Hugo server stopped."
+
+# Dynamically set PATH to include only the first entry from fnm's Node.js binaries if fnm is installed
+NODE_BIN_PATH := $(shell if command -v fnm > /dev/null; then \
+    fnm env --use-on-cd | grep PATH | grep bin | cut -d'"' -f2; \
+    else echo ""; fi)
+
+# Prepend /bin/sh to PATH and include NODE_BIN_PATH if available
+ifneq ($(NODE_BIN_PATH),)
+export PATH := /bin/sh:$(NODE_BIN_PATH):$(PATH)
+else
+export PATH := /bin/sh:$(PATH)
+endif
+
+.PHONY: markdownlint-cli2
+markdownlint-cli2:
+	@echo "🔧 Using npx from: $(NODE_BIN_PATH)"
+	@echo "🔧 Running markdownlint-cli2..."
+	npx markdownlint-cli2 --config .markdownlint.jsonc content/**/*.md
+	@echo "✅ markdownlint-cli2 completed."
+
+.PHONY: markdownlint-cli2-fix
+markdownlint-cli2-fix:
+	@echo "🔧 Using npx from: $(NODE_BIN_PATH)"
+	@echo "🔧 Running markdownlint-cli2 with fix..."
+	npx markdownlint-cli2 --config .markdownlint.jsonc content/**/*.md --fix
+	@echo "✅ markdownlint-cli2 fix completed."
