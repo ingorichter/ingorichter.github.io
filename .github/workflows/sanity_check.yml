@@ -36,5 +36,8 @@ jobs:
       - name: Install Go Modules Dependencies
         run: hugo mod get -u ./...
 
+      - name: Verify Hugo modules
+        run: hugo mod graph
+
       - name: Build
         run: hugo --printI18nWarnings --minify
