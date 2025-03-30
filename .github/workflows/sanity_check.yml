@@ -3,8 +3,15 @@ name: Sanity Check
 on:
   workflow_dispatch: # Allows manual triggering of the workflow
   push:
+    branches: # Specify branches or use a wildcard for all branches
+      - '*' # Matches all branches
+      # Alternatively, you can list specific branches:
+      # - master
+      # - develop
+      # - feature/*
+  pull_request: # Optionally, run on pull requests too
     branches:
-      - master
+      - '*' # Matches all branches
 
 jobs:
   sanity-check:
