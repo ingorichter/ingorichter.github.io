@@ -9,7 +9,7 @@
         {{- if not .IsHome -}}
           {{ with .Title }}{{ . }}&nbsp;|&nbsp;{{ end }}
         {{- end -}}
-      {{ .Site.Title }}
+        {{ .Site.Title }}
       {{- end -}}
     </title>
 
@@ -30,6 +30,10 @@
     {{ with .OutputFormats.Get "rss" -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end -}}
+
+    {{ with .Site.Params.author.fediverse }}
+      <meta name="fediverse:creator" content="{{ . }}" />
+    {{ end }}
 
 
     <!-- A partial to be overwritten by the user.
