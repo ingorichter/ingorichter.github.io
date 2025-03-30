@@ -1,16 +1,13 @@
-name: github pages
+name: Sanity Check
 
 on:
+  workflow_dispatch: # Allows manual triggering of the workflow
   push:
     branches:
       - master
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
-  cancel-in-progress: true
-
 jobs:
-  deploy:
+  sanity-check:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
@@ -26,10 +23,3 @@ jobs:
 
       - name: Build
         run: hugo --printI18nWarnings --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: ingo-richter.io
