@@ -11,19 +11,19 @@ I was building a Reactjs component, that should toggle between two child compone
 
 {{< highlight jsx session"linenos=inline,hl_lines=2 3">}}
 <Toggle>
-	<Comp1>
-	<Comp2>
+ <Comp1>
+ <Comp2>
 </Toggle>
 {{< /highlight >}}
 
 The `render` method of `Toggle` looked like this
 {{< highlight javascript session"linenos=inline,hl_lines=2 3">}}
 render() {
-	const content = React.Children.count(this.props.children) > 0 ? this.props.children[0] : this.props.children[1];
+ const content = React.Children.count(this.props.children) > 0 ? this.props.children[0] : this.props.children[1];
 
-	return (
-		${content}
-	);
+ return (
+  ${content}
+ );
 }
 {{< /highlight >}}
 

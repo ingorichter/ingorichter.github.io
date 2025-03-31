@@ -22,7 +22,7 @@ Writing unit tests for my code mostly follows this pattern
 
 For one of my projects, I was using [jest](https://facebook.github.io/jest/). It's fast now, and it has several features that I highly value. Most of them integrated code coverage and Snapshot testing.
 
-# Snapshot testing? What's that?
+## Snapshot testing? What's that?
 
 When I first saw the part about Snapshot testing, I wasn't interested. Okay, it was more that I thought, well, I don't see a big advantage here over the traditional approach of testing my code. I'm calling functions and make sure that the result of those functions matches my expectations. That's pretty simple with a function that returns a simple result
 Writing unit tests for my code mostly follows this pattern
@@ -39,7 +39,7 @@ test("Verify that 1 + 3 equals 4", () => {
 
 This is simple and doesn’t require much work.
 
-How about this? 
+How about this?
 
 {{< highlight javascript "linenos=inline,linenostart=1,title=test.js">}}
 function createTodoItem(subject, projects, contexts, due) {
@@ -151,7 +151,7 @@ Ran all test suites.
 What happened? Jest was taking a Snapshot for that test and was happy with the result. Under the hood, Jest created a `__snapshots__` directory in my `__tests__` directory and saved the output of the test result. The file is named after the file containing the test. In this case, it’s `newTask-test.js.snap`. Here are the contents of that Snapshot file.
 
 {{< highlight javascript "linenos=inline,linenostart=1,title=test.js">}}
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, <https://goo.gl/fbAQLP>
 
 exports[`Verify that new todo item has all required fields 1`] = `
 Object {
