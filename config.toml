@@ -4,6 +4,7 @@ languageCode = "en"                # zh-Hans
 title = "Today is Tomorrow's Past"
 copyright = "© 2025 Ingo Richter"
 timezone = "America/Los_Angeles"
+timeout = 60
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
