@@ -4,10 +4,11 @@ categories = ["TIL", "3DPrinting"]
 tags = ["TIL", "OpenScad", "3DPrinting", "Axidraw", "Penplotter"]
 date = 2022-04-05
 draft = false
-[[images]]
-  src = "post/2022/3d-printed-axidraw-easel-spacer/bixbybridge.jpeg"
-  alt = "Bixby Bridge along Highway 1 south of Carmel"
-  stretch = "horizontal"
+[params]
+  [[headerimage]]
+    src = "bixbybridge.jpeg"
+    alt = "Bixby Bridge along Highway 1 south of Carmel"
+    stretch = "horizontal"
 +++
 [1]: https://www.OpenSCAD.org/ "OpenSCAD"
 [2]: https://github.com/ingorichter/3dmodels/tree/master/axidraw-easel-bracket "github repo"

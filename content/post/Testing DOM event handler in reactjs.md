@@ -19,35 +19,35 @@ I ran into the situation where I have the `pointerenter` event handler defined, 
 This is how it looked like
 {{< highlight jsx >}}
 class ImageHover extends React.Component {
-	constructor(props) {
-		super(props);
-		
-		this._hoverBoxRef = React.CreateRef();
-	}
+ constructor(props) {
+  super(props);
+  
+  this._hoverBoxRef = React.CreateRef();
+ }
 
-	function _toggleHoverState = (state) => {
-		this.setState({ isNormal: state });
+ function _toggleHoverState = (state) => {
+  this.setState({ isNormal: state });
 
-    function componentDidMount() {
-        this._hoverBoxRef.current.addEventListener('pointerenter', () => this._toggleHoverState(false));
-        this._hoverBoxRef.current.addEventListener('pointerleave', () => this._toggleHoverState(true));
-    }
+  function componentDidMount() {
+    this._hoverBoxRef.current.addEventListener('pointerenter', () => this._toggleHoverState(false));
+    this._hoverBoxRef.current.addEventListener('pointerleave', () => this._toggleHoverState(true));
+  }
 
-    function componentWillUnmount() {
-        this._hoverBoxRef.current.removeEventListener('pointerenter', () => this._toggleHoverState(false));
-        this._hoverBoxRef.current.removeEventListener('pointerleave', () => this._toggleHoverState(true));
-    }
+  function componentWillUnmount() {
+    this._hoverBoxRef.current.removeEventListener('pointerenter', () => this._toggleHoverState(false));
+    this._hoverBoxRef.current.removeEventListener('pointerleave', () => this._toggleHoverState(true));
+  }
 
-	render () {
-		style = this.state.isNormal ? "normal" : "hover";
-		return (
-			<div
-				className={ style }
-				onClick={this.props.onClick}
-				ref={this._hoverBoxRef}
-            />
-		);
-	}
+ render () {
+  style = this.state.isNormal ? "normal" : "hover";
+  return (
+   <div
+    className={ style }
+    onClick={this.props.onClick}
+    ref={this._hoverBoxRef}
+    />
+  );
+ }
 {{< / highlight >}}
 
 To ensure that the component changes the style to `hover` when the `pointerenter` event fires and back to `normal` when `pointerleave` is fired can usually achieved by using the rendered component and call `.simulate("pointerEnter")` when using jest and enzyme.
@@ -57,10 +57,10 @@ Normal test
 {{< highlight jsx >}}
 cb = jest.fn();
 imageHover = mount(<ImageHover imageName={"phone"} onClick={cb} />);
-	
+ 
 it("should change state on pointerEnter", () => {
-	imageHover.simulate("pointerEnter");
-    expect(imageHover.state().isNormal).toEqual(false);
+ imageHover.simulate("pointerEnter");
+ expect(imageHover.state().isNormal).toEqual(false);
 });
 {{< / highlight >}}
 
@@ -71,10 +71,10 @@ cb = jest.fn();
 imageHover = mount(<ImageHover imageName={"phone"} onClick={cb} />);
 
 it("should change state on pointerEnter", () => {
-	const domNode = imageHover.getDOMNode();
-	const event = new Event("pointerenter");
-	domNode.dispatchEvent(event);
-	expect(imageHover.state().isNormal).toEqual(false);
+ const domNode = imageHover.getDOMNode();
+ const event = new Event("pointerenter");
+ domNode.dispatchEvent(event);
+ expect(imageHover.state().isNormal).toEqual(false);
 });
 {{< / highlight >}}
 

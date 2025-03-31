@@ -4,8 +4,9 @@ categories = ["thoughts"]
 tags = ["random", "thoughts", "end of year"]
 date = 2022-12-31
 draft = true
-[[images]]
-  src = "post/2022/the-last-day-of-2022/unicorn.jpg"
+[params]
+[[headerimage]]
+  src = "unicorn.jpg"
   alt = "Unicorn (toy or not)"
 +++
 

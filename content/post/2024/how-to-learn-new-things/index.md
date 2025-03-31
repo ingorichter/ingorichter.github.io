@@ -1,7 +1,7 @@
 +++
 categories = ["Random"]
 date = "2024-04-08T21:54:49-07:00"
-description = ""
+description = "Take notes and repeat, repeat, repeat"
 draft = false
 id = "ed61b9c6b7db14d376b33d3acb91fe3bd18dfc58"
 link = ""

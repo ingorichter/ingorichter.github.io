@@ -1,364 +1,115 @@
-# ## Basic Configuration
-baseURL                 = "https://ingo-richter.io/"
-DefaultContentLanguage  = "en"
-title                   = "today is tomorrow's past"
-theme                   = "hugo-future-imperfect-slim"
-paginate                = 3
-pluralizeListTitles     = false
-disableLanguages        = []
-timezone                = "America/Los_Angeles"
-# languageCode = "en-us"
+# Basic config
+baseURL = "https://ingo-richter.io/"
+languageCode = "en"                # zh-Hans
+title = "Today is Tomorrow's Past"
+copyright = "© 2025 Ingo Richter"
+timezone = "America/Los_Angeles"
+timeout = 60
 
-# # Set the followings to true as part of your site SEO
+# Generate a nice robots.txt for SEO
 enableRobotsTXT = true
-canonifyURLs = true
-disqusShortname = "ingorichterio"
-googleAnalytics = "UA-78867595-1"
 
-timeout = 60000
+# https://github.com/gohugoio/hugo/issues/12152
+capitalizeListTitles = false
 
-[Author]
-name = "Ingo Richter"
-email = "ingo@ingo-richter.io"
-location = "Greater Bay Area"
-bio = "simple is harder than complex"
-
-[taxonomies]
-  author = "authors"
-  category = "categories"
-  series = "series"
-  tag = "tags"
-
-[markup.goldmark.renderer]
-  unsafe                = true
+# just in case I forgot to provide <!--more--> in the post then hugo will automatically
+# truncate the content to the summaryLength
+summaryLength = 50
 
 [module]
-  [module.hugoVersion]
-  extended              = true
-  min                   = "0.62.0"
+[module.hugoVersion]
+extended = true
+min = "0.62.0"
+[[module.imports]]
+path = 'github.com/maolonglong/hugo-simple'
 
-[outputs]
-  page                  = ["html", "rss"]
-  home                  = ["html", "json", "rss"]
-  section               = ["html", "rss"]
-  taxonomy              = ["html", "rss"]
-  term                  = ["html", "rss"]
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+disableKinds = ["taxonomy"]
+# ignoreErrors = ["error-disable-taxonomy"]
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[permalinks]
+blog = "/:slugorcontentbasename/"
+tags = "/blog/:slug"
+
+[markup.goldmark.renderer]
+unsafe = true
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+noClasses = true
+style = "catppuccin-mocha"
 
 [params]
-  # Add additional section names to mainSections to include posts from
-  # those sections on the homepage.
-  mainSections          = ["now", "post", "cv19wfh"]
-  enableCDN             = false
+title = "Today is Tomorrow's Past"
+description = "I write about web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes, 3dprinting, penplotter and lasercutting"
+favicon = "images/favicon.png"
+dateFormat = "2006-01-02"
+hideMadeWithLine = false
+hideRSSLink = false
+style = "custom.css"
 
-  # Loads CSS and JavaScript files. The variable is an array so that you can load
-  # multiple/additional files if necessary. The standard theme files can be loaded
-  # by adding the value, "default". Default includes the add-on.css and and-on.js.
-  # Example: ["default", "/path/to/file"]
-  cssFiles              = ["default", "css/img.css", "css/baguetteBox.min.css"]
-  jsFiles               = ["default"]
-  
-  # Sets options for highlight.js
-  highlightjs           = true
-  highlightjsTheme      = "github"
-  highlightjsLang       = ["xml", "css", "javascript", "ini", "crystal", "bash"]
-  # Sets where "View More Posts" links to
-  viewMorePostsLink     = "post"
-  # Activate Estimated Reading Times, which appear in the post headers
-  readingTime           = true
-  # Sets which Social Share links appear in posts.
-  # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
-  toc                   = true
-  tocWords              = 400
-  hideEmptyStats        = false
+[params.author]
+name = "Ingo Richter"
+email = "ingo@ingo-richter.io"
+fediverse = "@ingorichter@mastodon.social"
+location = "Greater Bay Area"
+bio = "simple is harder than complex"
+paragraph = "I help people create remarkable things. Focus on the customer and quality. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
 
-  [params.meta]
-    # Sets the meta tag description
-    description         = "I write about web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes, 3dprinting, penplotter and lasercutting"
-    # Sets the meta tag author
-    author              = "Ingo Richter"
-    # If you would like to add more comprehensive favicon support passed root
-    # directory favicon.ico, utlize this funtion. It is recommened to use
-    # https://realfavicongenerator.net to generate your icons as that is the basis
-    # for the theme's naming.
-    favicon             = true
-    svg                 = true
-    faviconVersion      = "1"
-    msColor             = "#ffffff" # Copy from the https://realfavicongenerator.net
-    iOSColor            = "#ffffff" # Copy from the https://realfavicongenerator.net
-    # sidebar, copyright & license
-    copyright = "Ingo Richter"
-    showBuiltWith = true
-    dateformat = "Jan 2, 2006"
+[menus]
+[[menus.main]]
+name = "Home"
+pageRef = "/"
+weight = 10
+[[menus.main]]
+name = "About"
+pageRef = "/about"
+weight = 20
+[[menus.main]]
+name = "Resume"
+URL = "/resume/resume.pdf"
+weight = 30
+[[menus.main]]
+name = "Posts"
+pageRef = "/post"
+weight = 40
+[[menus.main]]
+name = "CV19WFH"
+pageRef = "/cv19wfh"
+weight = 50
+[[menus.main]]
+name = "Wallpaper"
+pageRef = "/wallpaper"
+weight = 60
+[[menus.main]]
+name = "Categories"
+pageRef = "/categories"
+weight = 70
 
-  [params.header]
-    # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "today is tomorrow's past"
-    # Sets navbarTitle to match the section of the website
-    dynamicTitles       = true
-    searchMenu          = true
-    shareMenu           = true
-    languageMenu        = true
+[services.rss]
+limit = 42
 
-  # These are optional params related to the sidebar. They are recommended, but not
-  # required for proper functionality. HTML is supported within the params.
-  [params.intro]
-    header                = "today is tomorrow's past"
-    paragraph = "I help people create remarkable things. Focus on the customer and quality. Opinions are my own. <i class='fa fa-camera-retro' aria-hidden='true'></i> Photography is my other passion.<i class='fa fa-hand-peace-o'></i>"
-    rssIntro              = true
-    socialIntro           = true
-    # single column layout used on smaller screens.
-    hideWhenSingleColumn  = false
-    # But you may want to always display the intro on the homepage.
-    alwaysOnHomepage      = false
+[pagination]
+pagerSize = 16
 
-    # This appears at the top of the sidebar above params.intro.header.
-    # A width of less than 100px is recommended from a design perspective.
-    [params.intro.pic]
-      src                 = "/img/main/logo-2024.webp"
-      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
-      shape               = "hexagon"
-      width               = ""
-      imperfect           = true
-      alt                 = "today is tomorrow's past"
+[outputs]
+page = ["html", "rss"]
+home = ["html", "json", "rss"]
+section = ["html", "rss"]
+taxonomy = ["html", "rss"]
+term = ["html", "rss"]
 
-  [params.sidebar]
-    about               = "Always something to think about"
-    # Sets the number of recent posts to show in the sidebar. The default value is 5.
-    postAmount          = 5
-    # set to show or to hide categories in the sidebar
-    categories          = true
-    # Sets Categories to sort by number of posts instead of alphabetical
-    categoriesByCount   = true
+# enable disqus for now
+[services]
+[services.disqus]
+shortname = 'ingorichterio'
 
-  [params.footer]
-    # Sets RSS icons to appear on the sidebar with the social media buttons
-    rssFooter           = true
-    # Sets Social Media icons to appear on the sidebar
-    socialFooter        = true
-
-  # Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
-  # due to its ease of use. Feel free to check out both and decide which you would
-  # prefer to use. See staticman.yml for additional settings.
-  [params.staticman]
-    # If using GitHub, go to https://github.com/apps/staticman-net
-    # If using GitLab, just add the GitLab bot, NO need to hit `/connect/v3/...`
-    enabled             = false
-    api                 = ""  # without trailing slash, defaults to "staticman3.herokuapp.com"
-    gitProvider         = "github"  # either "github" or "gitlab"
-    username            = ""
-    repo                = ""
-    branch              = ""
-
-    [params.staticman.recaptcha]
-      # Both keys must be present to enable recaptcha
-      siteKey           = "" # Site Key
-      encryptedKey      = ""
-
-[menu]
-  # Sets the menu items in the navigation bar
-  # Identifier prepends a Font Awesome icon to the menu item
-  [[menu.main]]
-    name              = "Home"
-    identifier        = "home"
-    url               = ""
-    pre               = "<i class='fa fa-home'></i>"
-    weight            = 1
-
-  [[menu.main]]
-    name              = "About"
-    identifier        = "about"
-    url               = "about"
-    pre               = "<i class='far fa-id-card'></i>"
-    weight            = 2
-
-  [[menu.main]]
-    name              = "Resume"
-    identifier        = "resume"
-    url               = "/resume/resume.pdf"
-    pre               = "<i class='far fa-file'></i>"
-    weight            = 3
-
-  [[menu.main]]
-    name              = "Posts"
-    identifier        = "post"
-    url               = "post"
-    pre               = "<i class='far fa-newspaper'></i>"
-    weight            = 4
-
-  [[menu.main]]
-    name              = "CV19WFH"
-    identifier        = "CV19WFH"
-    url               = "cv19wfh"
-    pre               = "<i class='fas fa-house-damage'></i>"
-    weight            = 5
-
-  [[menu.main]]
-    name              = "Wallpaper"
-    identifier        = "wallpaper"
-    url               = "wallpaper"
-    pre               = "<i class='fa fa-camera-retro'></i>"
-    weight            = 6
-
-  [[menu.main]]
-    name              = "Categories"
-    identifier        = "categories"
-    url               = "categories"
-    pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 7
-
-  [[menu.main]]
-    name              = "Now"
-    identifier        = "now"
-    url               = "now/now"
-    pre               = "<i class='fas fa-clock'></i>"
-    weight            = 8
-
-  # [[menu.main]]
-  #   name              = "Contact"
-  #   identifier        = "contact"
-  #   url               = "/contact/"
-  #   pre               = "<i class='far fa-envelope'></i>"
-  #   weight            = 8
-
-[Languages]
-  # Each language has its own menu.
-  [Languages.en]
-    LanguageCode        = "en"
-    LanguageName        = "English"
-    weight              = 1
-
-    [Languages.en.params]
-      resume = "Resume"
-      description = "random thoughts about computer tech, web technologies, javascript, reactjs, nodejs, electron shell, webdev, process automation, jenkins and stuff that worked for me."
-
-  [Languages.de]
-    LanguageCode        = "de"
-    LanguageName        = "Deutsch"
-    title               = "today is tomorrow's past"
-    # description         = "Ein Thema von HTML5 UP, portiert von Julio Pescador.  Vereinfacht und verbessert von Patrick Collins. Mehrsprachig von StatnMap. Unterstützt von: Hugo. "
-    weight              = 2
-
-    [Languages.de.params]
-      resume = "Lebenslauf"
-
-    [[Languages.de.menu.main]]
-      name              = "Startseite"
-      identifier        = "home"
-      url               = ""
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
-
-    [[Languages.de.menu.main]]
-      name              = "Über mich"
-      identifier        = "about"
-      url               = "about"
-      pre               = "<i class='far fa-id-card'></i>"
-      weight            = 2
-
-    [[Languages.de.menu.main]]
-      name              = "Posts"
-      identifier        = "post"
-      url               = "post"
-      pre               = "<i class='far fa-newspaper'></i>"
-      weight            = 3
-
-    [[Languages.de.menu.main]]
-      name              = "Bildschirmhintergründe"
-      identifier        = "wallpaper"
-      url               = "wallpaper"
-      pre               = "<i class='fa fa-camera-retro'></i>"
-      weight            = 4
-
-    [[Languages.de.menu.main]]
-      name              = "Kategorien"
-      identifier        = "categories"
-      url               = "categories"
-      pre               = "<i class='fas fa-sitemap'></i>"
-      weight            = 5
-
-    # [[Languages.de.menu.main]]
-    #   name              = "Kontakt"
-    #   identifier        = "contact"
-    #   url               = "/contact/"
-    #   pre               = "<i class='far fa-envelope'></i>"
-    #   weight            = 6
-
-    [[Languages.de.menu.main]]
-      name              = "Lebenslauf"
-      identifier        = "resume"
-      url               = "/resume/resume.pdf"
-      pre               = "<i class='far fa-file'></i>"
-      weight            = 7
-
-    [[Languages.de.menu.main]]
-      name              = "Now"
-      identifier        = "now"
-      url               = "now"
-      pre               = "<i class='far fa-clock'></i>"
-      weight            = 8
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted. These are the icons affected by socialAppearAtTop
-# and socialAppearAtBottom.
-# # The social media icons will appear on the sidebar
-
-[social]
-  # Coding Communities
-  github                = "ingorichter"
-  gitlab                = "ingorichter"
-  stackoverflow         = "175020/ingorichter" # User Number
-  bitbucket             = "ingorichter"
-  jsfiddle              = ""
-  codepen               = ""
-  # Visual Art Communities
-  deviantart            = ""
-  flickr                = "ingorichter"
-  behance               = ""
-  dribbble              = ""
-  # Publishing Communities
-  wordpress             = ""
-  medium                = ""
-  # Professional/Business Oriented Communities
-  linkedin              = "ingorichter"
-  linkedin_company      = ""
-  foursquare            = ""
-  xing                  = "Ingo_Richter"
-  slideshare            = ""
-  # Social Networks
-  facebook              = ""
-  googleplus            = ""
-  reddit                = "irichter"
-  quora                 = ""
-  youtube               = ""
-  vimeo                 = ""
-  whatsapp              = "" # WhatsApp Number
-    # WeChat and QQ need testing.
-    wechat              = ""
-    qq                  = "" # User ID Number
-  instagram             = "wayne.schlegel"
-  tumblr                = ""
-  twitter               = "ingorichter"
-  skype                 = ""
-  snapchat              = ""
-  pinterest             = "ingorichter"
-  telegram              = "ingorichter"
-  vine                  = ""
-  googlescholar         = ""
-  orcid                 = ""
-  researchgate          = ""
-  keybase               = "ingorichter"
-  mastodon              = "mastodon.social/@ingorichter"
-  # Email
-  email                 = "ingo+blog@ingo-richter.io"
-
-[security]
-  enableInlineShortcodes = false
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
-    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
-  [security.funcs]
-    getenv = ['^HUGO_']
-  [security.http]
-    methods = ['(?i)GET|POST']
-    urls = ['.*']
+[params.umamiAnalytics]
+id = "98a5f2cb-a53b-4d84-9133-bac4957e9e9f"
+src = "https://umami.familie-richter.de/script.js"

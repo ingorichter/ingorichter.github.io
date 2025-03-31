@@ -4,9 +4,10 @@ categories = ["TIL", "Programming"]
 tags = ["TIL", "Swift", "Objective-C", "iOS"]
 date = 2022-02-28
 draft = false
-[[images]]
-  src = "post/2022/til-adding-swift-code-to-objective-c-project/NevadaFallsYosemite.jpg"
-  alt = "Nevada Falls Yosemite National Park"
+[params]
+[[headerimage]]
+  src = "NevadaFallsYosemite.jpg"
+  alt = "Nevada Falls in Yosemite as seen from above"
   stretch = "horizontal"
 +++
 

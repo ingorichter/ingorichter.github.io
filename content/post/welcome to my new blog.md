@@ -17,4 +17,4 @@ I hope you will find something useful here.
 
 Hope to see you soon. Stay tuned.
 
-- Ingo
+Ingo

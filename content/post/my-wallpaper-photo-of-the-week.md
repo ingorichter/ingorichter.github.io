@@ -18,6 +18,7 @@ Every Monday, I'll post the photo, that will be my Desktop background for one we
 Please read below if you want to license a photo or use it for something different altogether.
 
 ### Motivation
+
 Why am I releasing some of my pictures for free? The reason is, that I took so many photos in the past couple of years, that I think it's really a shame to burry them somewhere on my computer. I don't look at them that often, but every time I do, I'm surprised and happy for what I found.
 
 Some people told me, that they like my photos. I always feel humbled by that. I want to enjoy some of the photos myself by using them as wallpaper for my desktop. Perhaps you find a photo that you like too.
@@ -29,4 +30,5 @@ Some final Notes:
 - Share your thoughts in the comment section below
 
 ### Copyright and Licensing
+
 Please contact me if you want to use a photo in a commercial context (you will make money with it). Using it as wallpaper on your phone, tablet, notebook, desktop machine is alright. You are not allowed to remove the watermark.

@@ -19,6 +19,7 @@ I wanted to increase the size of the hard disk from 50 GB to 100 GB. That's a ma
 I've launched the VM image and checked the hard disk size. To my surprise, the size was still 50 GB and not the promised 100 GB.
 
 ## What happened
+
 The request to change the hard disk size didn't make it to macOS. I started to examine the disk with `diskutil`.
 
 {{< highlight bash session"linenos=inline,hl_lines=2 3" >}}

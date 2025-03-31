@@ -19,7 +19,7 @@ The image was taken with a [Sony Alpha A7II](https://www.sony.com/electronics/in
 
 I used Lightroom to crop the image a little bit. I made some adjustements on the white balance and bumped the sharpness slightly up.
 
-![Waves hit the rock and make a big splash](./waves_hit_the_rocks_in_santa_cruz.jpg "Waves hit the rock")
+{{< img src="waves_hit_the_rocks_in_santa_cruz.jpg" caption="Waves hit the rock and make a big splash" alt="Waves hit the rock" full="true">}}
 
 Santa Cruz Beach
 

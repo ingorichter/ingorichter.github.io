@@ -21,7 +21,7 @@ The doctors's recommendation was essentially to stop eating and start the day hu
 
 ### 3 week fasting
 
-A friend of my wife gave me a plan for a three-week fast. This involved cutting down caloric intake to a bare minimum. It was challenging in the first couple of days, but I have some intermittent fasting experience, and it wasn't too bad. 
+A friend of my wife gave me a plan for a three-week fast. This involved cutting down caloric intake to a bare minimum. It was challenging in the first couple of days, but I have some intermittent fasting experience, and it wasn't too bad.
 
 ### How it worked out
 

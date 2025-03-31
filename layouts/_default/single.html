@@ -1,0 +1,37 @@
+{{ define "main" }}
+  {{ if eq .Type "blog" }}
+    {{ if not .Params.menu }}
+      <p>
+        <i>
+          <time
+            style="color: var(--text-light);"
+            datetime="{{ .Date.Format "2006-01-02" }}"
+            pubdate
+          >
+            {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+          </time>
+        </i>
+      </p>
+    {{ end }}
+  {{ end }}
+  {{ partial "published_date.html" . }}
+  {{ if .Params.toc }}
+    <details>
+      <summary>Table of Contents</summary>
+      {{ .TableOfContents }}
+    </details>
+  {{ end }}
+  {{ .Render "header_image" }}
+  <content>
+    {{ .Content }}
+  </content>
+  {{ $tags := .GetTerms "tags" }}
+  {{ if gt (len $tags) 0 }}
+    <p>
+      {{ range $tags }}
+        <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>&nbsp;&nbsp;
+      {{ end }}
+    </p>
+  {{ end }}
+  {{ .Render "comments" }}
+{{ end }}
