@@ -35,10 +35,22 @@ updateSubmodules:
 updateGoModules:
 	hugo mod get -u ./...
 
-.PHONY: screenshots
-screenshots:
-.PHONY: screenshots
+.PHONY: screenshotsBaseline
+screenshotsBaseline:
+	@echo "🔧 Starting Hugo server in background..."
+	nohup hugo server --minify --disableFastRender > hugo.log 2>&1 & \
+	echo $$! > hugo.pid; \
+	echo "⏳ Waiting for Hugo server to become available..."; \
+	until curl --silent --head http://localhost:1313 | grep "200 OK" > /dev/null; do \
+	  sleep 1; \
+	done; \
+	echo "🚀 Hugo server is up! Running screenshot script..."; \
+	node screenshot.js --baseline; \
+	kill `cat hugo.pid`; \
+	rm hugo.pid; \
+	echo "✅ Screenshots captured and Hugo server stopped."
 
+.PHONY: screenshots
 screenshots:
 	@echo "🔧 Starting Hugo server in background..."
 	nohup hugo server --minify --disableFastRender > hugo.log 2>&1 & \

@@ -1,5 +1,11 @@
 {
   "dependencies": {
-    "puppeteer": "^24.4.0"
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0",
+    "puppeteer": "^24.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }

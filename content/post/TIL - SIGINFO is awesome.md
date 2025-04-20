@@ -2,8 +2,8 @@
 date = "2016-10-11T09:15:51-07:00"
 draft = false
 title = "TIL - SIGINFO is awesome"
-tags  = [ "Notes", "Tips", "Programming", "shell", "bash", "cli"]
-categories = [ "Tips", "Shell", "Bash" ]
+tags  = [ "howto", "Programming", "shell", "cli"]
+categories = [ "Tips" ]
 +++
 
 ## TIL - SIGINFO is awesome

@@ -4,8 +4,15 @@ const fs = require("fs");
 const path = require("path");
 
 const BASE_URL = "http://localhost:1313";
-const OUTPUT_DIR = "screenshots";
+const isBaseline = process.argv.includes("--baseline");
+const OUTPUT_DIR = path.join("screenshots", isBaseline ? "baseline" : "current");
 const visited = new Set();
+
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
 
 async function waitForImagesToLoad(page) {
   await page.evaluate(() => {
@@ -52,7 +59,7 @@ async function crawlAndScreenshot(page, url) {
       }, 100);
     });
   });
-  
+
   await page.screenshot({ path: filepath, fullPage: true });
 
   const links = await page.$$eval('a[href^="/"]', (as) =>
@@ -66,7 +73,7 @@ async function crawlAndScreenshot(page, url) {
 }
 
 (async () => {
-  if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR);
+  ensureDir(OUTPUT_DIR);
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
