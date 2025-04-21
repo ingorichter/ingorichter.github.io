@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        hugo-version: ['latest', '0.145.0', '0.144.0']
+        hugo-version: ['latest', '0.146.5', '0.146.4']
     steps:
       - uses: actions/checkout@v4
         with:
