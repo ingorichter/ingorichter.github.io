@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>All Categories</h1>
+  <ul>
+    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <li>
+        <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}/">
+          {{ $name }} ({{ len $taxonomy }})
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
