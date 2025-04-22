@@ -3,6 +3,7 @@
 /public/
 /resources/_gen/
 hugo_stats.json
+hugo.log
 
 # Executable may be added to repository
 hugo.exe
