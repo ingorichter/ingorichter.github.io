@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update on today is tomorrow's past</title><link>https://ingo-richter.io/categories/update/</link><description>Recent content in Update on today is tomorrow's past</description><generator>Hugo</generator><language>en</language><managingEditor>ingo@ingo-richter.io (Ingo Richter)</managingEditor><webMaster>ingo@ingo-richter.io (Ingo Richter)</webMaster><lastBuildDate>Wed, 14 Feb 2024 00:00:00 -0800</lastBuildDate><atom:link href="https://ingo-richter.io/categories/update/index.xml" rel="self" type="application/rss+xml"/><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/now/</link><pubDate>Wed, 14 Feb 2024 00:00:00 -0800</pubDate><author>ingo@ingo-richter.io (Ingo Richter)</author><guid>https://ingo-richter.io/now/now/</guid><description>📖 What I&amp;rsquo;m reading The 12-week year - Brian Moran Das Haus an der Moschee - Kader Abdolah Built to Move - Juliet Starrett and Kelly Starrett Palo Alto - Malcom Harris 📺 What I&amp;rsquo;m watching Love &amp;amp; Anarchy Money Heist Curb Your Enthusiasm 🧰 What I&amp;rsquo;m making Started to create some generative Art with vsketch 🔬 What I&amp;rsquo;m learning Practicing Rust Programming How to build a theme for Hugo</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update on Today is Tomorrow's Past</title><link>https://ingo-richter.io/categories/update/</link><description>Recent content in Update on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Wed, 14 Feb 2024 00:00:00 -0800</lastBuildDate><atom:link href="https://ingo-richter.io/categories/update/index.xml" rel="self" type="application/rss+xml"/><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/now/</link><pubDate>Wed, 14 Feb 2024 00:00:00 -0800</pubDate><guid>https://ingo-richter.io/now/now/</guid><description>&lt;h2 id="-what-im-reading">📖 What I&amp;rsquo;m reading&lt;/h2>
+&lt;div class="reading">
+&lt;ul>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL19968189W">The 12-week year - Brian Moran&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL27301291W">Das Haus an der Moschee - Kader Abdolah&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL39377234M">Built to Move - Juliet Starrett and Kelly Starrett&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL34341884W">Palo Alto - Malcom Harris&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="-what-im-watching">📺 What I&amp;rsquo;m watching&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.netflix.com/title/81069541">Love &amp;amp; Anarchy&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.netflix.com/title/80192098">Money Heist&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.imdb.com/title/tt0264235/">Curb Your Enthusiasm&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="-what-im-making">🧰 What I&amp;rsquo;m making&lt;/h2>
+&lt;ul>
+&lt;li>Started to create some generative Art with &lt;a href="https://vsketch.readthedocs.io/en/latest/">vsketch&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="-what-im-learning">🔬 What I&amp;rsquo;m learning&lt;/h2>
+&lt;ul>
+&lt;li>Practicing Rust Programming&lt;/li>
+&lt;li>How to build a theme for Hugo&lt;/li>
+&lt;/ul></description></item></channel></rss>

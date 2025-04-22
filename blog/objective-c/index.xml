@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Objective-C on Today is Tomorrow's Past</title><link>https://ingo-richter.io/blog/objective-c/</link><description>Recent content in Objective-C on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Mon, 28 Feb 2022 00:00:00 -0800</lastBuildDate><atom:link href="https://ingo-richter.io/blog/objective-c/index.xml" rel="self" type="application/rss+xml"/><item><title>TIL - Adding Swift Code to Objective-C Project</title><link>https://ingo-richter.io/post/2022/til-adding-swift-code-to-objective-c-project/</link><pubDate>Mon, 28 Feb 2022 00:00:00 -0800</pubDate><guid>https://ingo-richter.io/post/2022/til-adding-swift-code-to-objective-c-project/</guid><description>&lt;h2 id="tldr">TL;DR&lt;/h2>
+&lt;p>Adding Swift Code to Objective-C Project&lt;/p>
+&lt;ol>
+&lt;li>Ensure your Swift class derives direct or indirect from NSObject&lt;/li>
+&lt;li>Ensure your Swift class is &lt;code>public&lt;/code> to ensure the &lt;code>YourProjectName-Swift.h&lt;/code> header generation&lt;/li>
+&lt;li>Prefix the class to expose it to Objective-C. Any Property or method needs its own &lt;code>@objc&lt;/code> annotation to be visible from Objective-C.&lt;/li>
+&lt;li>Use the &lt;code>@objcMembers&lt;/code> annotation to expose all properties and methods of the Swift class&lt;/li>
+&lt;/ol>
+&lt;h2 id="reminder-for-myself">Reminder for myself&lt;/h2>
+&lt;p>I learned a couple of essential things about mixing Objective-C and Swift in one project.
+I was using Swift for unit tests already, and that worked fine.
+Now, I wanted to implement a new class in Swift. But I wanted to use that class in an existing Objective-C class.&lt;/p></description></item></channel></rss>
