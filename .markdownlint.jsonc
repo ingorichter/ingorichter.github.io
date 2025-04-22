@@ -1,0 +1,28 @@
+{
+    // Disable line length rule (Hugo posts often include long URLs, code, etc.)
+    "MD013": false,
+  
+    // Allow inline HTML (used in Hugo shortcodes or formatting)
+    "MD033": false,
+  
+    // Allow headings to increment by more than one level (some themes require this)
+    "MD001": false,
+  
+    // Don't require ordered list items to increment by 1 (useful for example steps)
+    "MD029": {
+      "style": "ordered"
+    },
+  
+    // Ignore YAML frontmatter (commonly used in Hugo posts)
+    "MD041": false,
+  
+    // Enable consistent heading style (ATX = # style)
+    "MD003": {
+      "style": "atx"
+    },
+  
+    // Consistent emphasis style (either * or _)
+    "MD049": {
+      "style": "consistent"
+    }
+  }

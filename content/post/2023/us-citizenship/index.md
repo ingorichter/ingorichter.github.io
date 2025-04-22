@@ -1,5 +1,5 @@
 +++
-title = "Us Citizenship"
+title = "US Citizenship"
 categories = ["citizenship"]
 tags = ["citizenship", "life", "germany", "us"]
 date = 2023-09-05

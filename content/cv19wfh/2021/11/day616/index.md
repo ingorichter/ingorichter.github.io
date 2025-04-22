@@ -4,10 +4,11 @@ categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
 date = 2021-11-21
 draft = false
-[[images]]
-  src = "cv19wfh/2021/11/day616/aussenmuehle.jpg"
-  alt = "Aussenmühle"
-  stretch = "horizontal"
+[params]
+  [[headerimage]]
+    src = "aussenmuehle.jpg"
+    alt = "Aussenmühle"
+    stretch = "horizontal"
 +++
 
 ## WFH Day 616

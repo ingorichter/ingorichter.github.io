@@ -4,10 +4,11 @@ categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
 date = 2022-02-15
 draft = false
-[[images]]
-  src = "cv19wfh/2022/02/day702/powerpole.jpg"
-  alt = "Plane Wing"
-  stretch = "horizontal"
+[params]
+  [images]
+    src = "cv19wfh/2022/02/day702/powerpole.jpg"
+    alt = "Plane Wing"
+    stretch = "horizontal"
 +++
 
 ## WFH Day 702

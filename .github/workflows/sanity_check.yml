@@ -1,0 +1,49 @@
+name: Sanity Check
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+  push:
+    branches: # Specify branches or use a wildcard for all branches
+      - '*' # Matches all branches
+      # Alternatively, you can list specific branches:
+      # - master
+      # - develop
+      # - feature/*
+  pull_request: # Optionally, run on pull requests too
+    branches:
+      - '*' # Matches all branches
+
+jobs:
+  sanity-check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        hugo-version: ['latest', '0.146.5', '0.146.4']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Cache Hugo modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/hugo
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}-${{ matrix.hugo-version }}          
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ matrix.hugo-version }}
+          extended: true
+
+      - name: Install Go Modules Dependencies
+        run: hugo mod get -u ./...
+
+      - name: Verify Hugo modules
+        run: hugo mod graph
+
+      - name: Build
+        run: hugo --printI18nWarnings --minify

@@ -1,11 +1,12 @@
 +++
 title = "Happy Thanksgiving 🦃"
 categories = ["TIL"]
-tags = ["thanksgiving, turkeyday"]
+tags = ["thanksgiving", "turkeyday"]
 date = 2021-11-25
 draft = false
-[[images]]
-  src = "post/2021/happy-thanksgiving/liebe.jpeg"
+[params]
+[[headerimage]]
+  src = "liebe.jpeg"
   alt = "Liebe|Love"
   stretch = "horizontal"
 +++

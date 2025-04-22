@@ -3,9 +3,22 @@
 /public/
 /resources/_gen/
 hugo_stats.json
+hugo.log
 
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
 hugo.linux
 
+# vscode
+.vscode/
+
+# vendor modules
+/_vendor/
+
+# node stuff
+node_modules/
+package-lock.json
+
+# screenshot files
+/screenshots/

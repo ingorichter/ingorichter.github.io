@@ -1,0 +1,9 @@
+{{ with .Site.Params.umamiAnalytics }}
+  {{ if and .src .id }}
+    {{ if eq hugo.Environment "production" }}
+      <script id="analytics" async src="{{ .src }}" data-website-id="{{ .id }}"></script>
+    {{ else }}
+      <span class=notice>Umami is disabled in development mode</p>
+    {{ end}}
+  {{ end }}
+{{ end }}

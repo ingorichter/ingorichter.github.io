@@ -4,10 +4,11 @@ categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
 date = 2022-05-02
 draft = false
-[[images]]
-  src = "cv19wfh/2022/05/day778/rose.jpeg"
-  alt = "Sunny Rose"
-  stretch = "cover"
+[params]
+  [[headerimage]]
+    src = "rose.jpeg"
+    alt = "Sunny Rose"
+    stretch = "cover"
 +++
 
 ## Global Day Off

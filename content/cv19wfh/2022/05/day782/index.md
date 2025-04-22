@@ -4,8 +4,9 @@ categories = ["CV19WFH"]
 tags = ["WFH", "Corona", "COVID19"]
 date = 2022-05-06
 draft = false
-[[images]]
-  src = "cv19wfh/2022/05/day782/rose-in-the-sun.jpg"
+[params]
+[[headerimage]]
+  src = "rose-in-the-sun.jpg"
   alt = "Rose in the Sun"
   stretch = "cover"
 +++

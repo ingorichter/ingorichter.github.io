@@ -1,0 +1,280 @@
+/* @link https://utopia.fyi/space/calculator?c=400,16,1.333,1240,26,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+@layer base {
+  :root {
+    /* Space 3xs: 4px → 7px */
+    --space-3xs: clamp(0.25rem, 0.1607rem + 0.3571vw, 0.4375rem);
+    /* Space 2xs: 8px → 13px */
+    --space-2xs: clamp(0.5rem, 0.3512rem + 0.5952vw, 0.8125rem);
+    /* Space xs: 12px → 20px */
+    --space-xs: clamp(0.75rem, 0.5119rem + 0.9524vw, 1.25rem);
+    /* Space s: 16px → 26px */
+    --space-s: clamp(1rem, 0.7024rem + 1.1905vw, 1.625rem);
+    /* Space m: 24px → 39px */
+    --space-m: clamp(1.5rem, 1.0536rem + 1.7857vw, 2.4375rem);
+    /* Space l: 32px → 52px */
+    --space-l: clamp(2rem, 1.4048rem + 2.381vw, 3.25rem);
+    /* Space xl: 48px → 78px */
+    --space-xl: clamp(3rem, 2.1071rem + 3.5714vw, 4.875rem);
+    /* Space 2xl: 64px → 104px */
+    --space-2xl: clamp(4rem, 2.8095rem + 4.7619vw, 6.5rem);
+    /* Space 3xl: 96px → 156px */
+    --space-3xl: clamp(6rem, 4.2143rem + 7.1429vw, 9.75rem);
+
+    /* One-up pairs */
+    /* Space 3xs-2xs: 4px → 13px */
+    --space-3xs-2xs: clamp(0.25rem, -0.0179rem + 1.0714vw, 0.8125rem);
+    /* Space 2xs-xs: 8px → 20px */
+    --space-2xs-xs: clamp(0.5rem, 0.1429rem + 1.4286vw, 1.25rem);
+    /* Space xs-s: 12px → 26px */
+    --space-xs-s: clamp(0.75rem, 0.3333rem + 1.6667vw, 1.625rem);
+    /* Space s-m: 16px → 39px */
+    --space-s-m: clamp(1rem, 0.3155rem + 2.7381vw, 2.4375rem);
+    /* Space m-l: 24px → 52px */
+    --space-m-l: clamp(1.5rem, 0.6667rem + 3.3333vw, 3.25rem);
+    /* Space l-xl: 32px → 78px */
+    --space-l-xl: clamp(2rem, 0.631rem + 5.4762vw, 4.875rem);
+    /* Space xl-2xl: 48px → 104px */
+    --space-xl-2xl: clamp(3rem, 1.3333rem + 6.6667vw, 6.5rem);
+    /* Space 2xl-3xl: 64px → 156px */
+    --space-2xl-3xl: clamp(4rem, 1.2619rem + 10.9524vw, 9.75rem);
+
+    /* Custom pairs */
+    /* Space s-l: 16px → 52px */
+    --space-s-l: clamp(1rem, -0.0714rem + 4.2857vw, 3.25rem);
+
+    /* @link https://utopia.fyi/type/calculator?c=400,16,1.333,1240,26,1.2,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 9.0045px → 18.0556px */
+    --step--2: clamp(0.5628rem, 0.2934rem + 1.0775vw, 1.1285rem);
+    /* Step -1: 12.003px → 21.6667px */
+    --step--1: clamp(0.7502rem, 0.4626rem + 1.1504vw, 1.3542rem);
+    /* Step 0: 16px → 26px */
+    --step-0: clamp(1rem, 0.7024rem + 1.1905vw, 1.625rem);
+    /* Step 1: 21.328px → 31.2px */
+    --step-1: clamp(1.333rem, 1.0392rem + 1.1752vw, 1.95rem);
+    /* Step 2: 28.4302px → 37.44px */
+    --step-2: clamp(1.7769rem, 1.5087rem + 1.0726vw, 2.34rem);
+    /* Step 3: 37.8975px → 44.928px */
+    --step-3: clamp(2.3686rem, 2.1594rem + 0.837vw, 2.808rem);
+    /* Step 4: 50.5174px → 53.9136px */
+    --step-4: clamp(3.1573rem, 3.0563rem + 0.4043vw, 3.3696rem);
+    /* Step 5: 67.3396px → 64.6963px */
+    --step-5: clamp(4.0435rem, 4.2874rem + -0.3147vw, 4.2087rem);
+
+    /* Font size */
+    --fs-2x-small: var(--step--2);
+    --fs-x-small: var(--step--1);
+    --fs-small: var(--step-0);
+    --fs-medium: var(--step-1);
+    --fs-large: var(--step-2);
+    --fs-x-large: var(--step-3);
+    --fs-2x-large: var(--step-4);
+    --fs-3x-large: var(--step-5);
+  }
+}
+
+/* Theme defaults */
+
+:root {
+  /* --main-font-family: "Merriweather", system-ui;
+  --sl-font-sans: var(--main-font-family);
+  --background: #fafaf9;
+  --text-color: #451a03;
+  --header-color: #032e45;
+  --header-font: "Fraunces", system-ui; */
+  /* Hunter Blaze Orange. https://colorcodes.io/orange/hunter-orange-color-codes/ */
+  --base-color: hsl(31, 100%, 50%);
+  /* --text-color: var(--base-color); */
+  --diminished-text-color: color-mix(in srgb, var(--base-color), white 30%);
+
+  --footer-background: var(--text-color);
+  --footer-text: var(--background);
+
+  --home-listing-header-color: var(--accent);
+}
+
+/* Make the body a nice central block */
+/* this is copied from the original css, but with making the middle column wider */
+/* why can't this be in the base layer? */
+/* @layer base { */
+/* Make the body a nice central block */
+body {
+  grid-template-columns: 1fr min(70rem, 90%) 1fr;
+}
+/* } */
+
+p,
+ul,
+ol {
+  font-size: var(--fs-small);
+  line-height: 1.6;
+  color: var(--base-color);
+}
+
+section.list {
+  /* max-width: 1000px; */
+  /* margin: var(--space-xs) auto; */
+}
+
+ul.blog-posts > li {
+  font-size: var(--fs-x-small);
+  color: var(--diminished-text-color);
+}
+
+ul.post-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    font-size: var(--fs-small);
+
+    /* Group shared styles to reduce repetition */
+    &.year,
+    &.month {
+      font-size: var(--fs-x-large);
+      color: var(--text);
+    }
+
+    &.year {
+      text-align: center;
+    }
+
+    &.month {
+      text-align: right;
+      margin: var(--space-m) 0;
+    }
+
+    /* Move common properties to a single declaration */
+    p,
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      display: flex;
+      color: var(--accent);
+      justify-content: space-between;
+      text-decoration: none;
+      margin: var(--space-s) 0;
+      font-size: var(--fs-medium);
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      /* Group related elements */
+      time,
+      span {
+        display: block;
+        line-height: var(--step-2);
+      }
+
+      time {
+        font-size: var(--fs-small);
+      }
+
+      span {
+        color: var(--diminished-text-color);
+        line-height: var(--step-1);
+        font-size: var(--fs-x-small);
+      }
+    }
+  }
+}
+
+/* index.html */
+/* .home { */
+section {
+  clear: both;
+  padding: var(--space-s);
+
+  &.jumbo {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - var(--fs-2x-small) - (var(--space-l-xl) * 7));
+
+    img {
+      float: left;
+      max-width: 100%;
+      margin-right: var(--space-l);
+      border-radius: 10px;
+      position: relative;
+
+      box-shadow: 1px 1.9px 1.9px hsl(0deg 0% 0% / 0.47);
+      /* transition: all 0.3s ease-in-out;  */
+
+      /* &:hover {
+                    margin-left: -15px;
+                    margin-top: -15px;
+                    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+                } */
+
+      @media (max-width: 800px) {
+        float: none;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      font-size: var(--fs-x-small);
+    }
+
+    div {
+      max-width: 1200px;
+    }
+  }
+
+  &.fragments {
+    max-width: 800px;
+    padding-top: var(--space-m-l);
+    margin: 0 auto;
+
+    p a {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    header {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: baseline;
+
+      h2 {
+        order: 1;
+        color: var(--heading-color);
+      }
+
+      p {
+        order: 2;
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        color: var(--diminished-text-color);
+        font-size: var(--fs-x-small);
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+/* } */
+
+/* published date */
+.published-date {
+  font-size: var(--fs-x-small);
+  color: var(--diminished-text-color);
+  text-align: right;
+}

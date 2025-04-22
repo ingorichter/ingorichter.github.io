@@ -22,7 +22,7 @@ The image was taken with a [Sony Alpha A7RII](https://www.sony.com/electronics/i
 
 I used Adobe Lightroom 6.8 to sharpen the image and reduce some luminance noise.
 
-![Glow in the Dark](./glowsticks.jpg "Glow in the Dark")
+{{< img src="glowsticks.jpg" caption="Glow in the Dark" alt="Glow in the Dark" full="true">}}
 
 Glow in the Dark.
 

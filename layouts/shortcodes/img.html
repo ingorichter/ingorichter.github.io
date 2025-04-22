@@ -1,125 +1,32 @@
-{{/* get file that matches the filename as specified as src="" in shortcode */}}
-{{ $originalImage := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
-{{ $title := (.Get "title") }}
-{{ $alt := (.Get "title") | default $title }}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $caption := .Get "caption" | default $title -}}
+{{- $page := .Page -}}
+
+{{- $image := $page.Resources.GetMatch (printf "*%s" $src) -}}
+
 {{ $lightbox := (.Get "lightbox") | default "false" }}
 {{ $round := (.Get "round") | default "10" }}
 
-{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
-{{ $imageSizes := slice "20x" "320x" "480x" "768x" "1024x" "1280x" "1600x" "1920x" }}
+{{- if not $image -}}
+  {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" $src $page.RelPermalink }}
+{{- end -}}
 
-{{ $lqipw     := default "20x" }}
-{{ $image320  := default "320x"}}
-{{ $image480  := default "480x"}}
-{{ $image768  := default "768x"}}
-{{ $image1024 := default "1024x"}}
-{{ $image1280 := default "1280x"}}
-{{ $image1600 := default "1600x"}}
-{{ $image1920 := default "1920x"}}
+{{- $sizes := slice "20x" "320x" "480x" "768x" "1024x" "1280x" "1600x" "1920x" -}}
+{{- $srcset := slice -}}
 
-{{/* resize the src image to the given sizes */}}
-{{ $resized_lqip      := $originalImage.Resize "20x" }}
-{{ $resized_image320  := $originalImage.Resize "320x" }}
-{{ $resized_image480  := $originalImage.Resize "480x" }}
-{{ $resized_image768  := $originalImage.Resize "768x" }}
-{{ $resized_image1024 := $originalImage.Resize "1024x" }}
-{{ $resized_image1280 := $originalImage.Resize "1280x" }}
-{{ $resized_image1600 := $originalImage.Resize "1600x" }}
-{{ $resized_image1920 := $originalImage.Resize "1920x" }}
+{{- range $sizes -}}
+  {{- $resized := $image.Resize . -}}
+  {{- $srcset = $srcset | append (printf "%s %sw" $resized.RelPermalink (strings.TrimSuffix "x" .)) -}}
+{{- end -}}
 
-{{ $medium := $resized_image1024 }}
-
-{{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
-{{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
-
-{{ $img := imageConfig ($originalImage.RelPermalink | printf "content/%s" ) }}
-
-<div class="img" style="background: url(data:image/jpeg;base64,{{ $resized_lqip.Content | base64Encode }}); background-size: cover">
-  <svg width="{{ $img.Width }}" height="{{ $img.Height }}" aria-hidden="true"></svg>
-  <figure>
-    <a href="{{ $originalImage.RelPermalink | relURL }}"
-      {{ if $title }} title="{{ $title }}"{{ end }}
-      data-at-320="{{ $resized_image320.RelPermalink }}"
-      data-at-480="{{ $resized_image480.RelPermalink }}"
-      data-at-768="{{ $resized_image768.RelPermalink }}"
-      data-at-1024="{{ $resized_image1024.RelPermalink }}"
-      data-at-1280="{{ $resized_image1280.RelPermalink }}"
-      data-at-1600="{{ $resized_image1600.RelPermalink }}"
-      data-at-1920="{{ $resized_image1920.RelPermalink }}"
-      >
-      
-      <img
-        class="lazyload"
-        data-sizes="auto"
-        data-src="{{ $medium.RelPermalink }}"
-
-        data-srcset='
-        {{ if ge $originalImage.Width "320" }}
-          {{ with $resized_image320.RelPermalink }}{{.}} 320w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "480" }}
-          {{ with $resized_image480.RelPermalink }}{{.}} 480w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "768" }}
-          {{ with $resized_image768.RelPermalink }}{{.}} 768w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1024" }}
-          {{ with $resized_image1024.RelPermalink }}{{.}} 1024w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1280" }}
-          {{ with $resized_image1280.RelPermalink }}{{.}} 1280w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1600" }}
-          {{ with $resized_image1600.RelPermalink }}{{.}} 1600w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1920" }}
-          {{ with $resized_image1920.RelPermalink }}{{.}} 1920w{{ end }}
-        {{ end }}'
-
-        width="{{ $img.Width }}" height="{{ $img.Height }}"
-        {{ with .Get "alt" }}alt='{{.}}'{{ end }}
-        style="border-radius: {{ $round }}%"
-        >
-        {{ if $title }}<figcaption>{{ $title }}</figcaption>{{ end }}
-    </a>
-  </figure>
-
-  <noscript>
-    <figure>
-      <img
-        loading="lazy"
-        {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}{{ end }}
-        data-srcset='
-        {{ if ge $originalImage.Width "320" }}
-          {{ with $resized_image320.RelPermalink }}{{.}} 320w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "480" }}
-          {{ with $resized_image480.RelPermalink }}{{.}} 480w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "768" }}
-          {{ with $resized_image768.RelPermalink }}{{.}} 768w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1024" }}
-          {{ with $resized_image1024.RelPermalink }}{{.}} 1024w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1280" }}
-          {{ with $resized_image1280.RelPermalink }}{{.}} 1280w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1600" }}
-          {{ with $resized_image1600.RelPermalink }}{{.}} 1600w,{{ end }}
-        {{ end }}
-        {{ if ge $originalImage.Width "1920" }}
-          {{ with $resized_image1920.RelPermalink }}{{.}} 1920w{{ end }}
-        {{ end }}'
-
-        {{ if .Get (print $medium) }}
-          src="{{ $medium.RelPermalink }}"
-        {{ else }}
-          src="{{ $originalImage.RelPermalink }}"
-        {{ end }}
-        width="{{ $img.Width }}" height="{{ $img.Height }}"
-        {{ with .Get "alt" }}alt='{{.}}'{{ end }}>
-        {{ if $title }}<figcaption>{{ $title }}</figcaption>{{ end }}
-    </figure>
-  </noscript>
-</div>
+<figure>
+  <img class="lazyload"
+       data-src="{{ $image.RelPermalink }}"
+       data-srcset="{{ delimit $srcset ", " }}"
+       alt="{{ $alt }}">
+  {{- if $caption -}}
+    <figcaption>{{ $caption }}</figcaption>
+  {{- end -}}
+</figure>
