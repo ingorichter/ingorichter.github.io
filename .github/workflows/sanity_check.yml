@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Cache Hugo modules
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/hugo
           key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}-${{ matrix.hugo-version }}          
