@@ -23,7 +23,7 @@ What I did in this situation
 - `git stash pop` my work in progress
 - continue working on the feature
 
-# Introducing Worktrees
+## Introducing Worktrees
 
 I was reading git release notes, and I stumbled upon something I haven’t heard before in the git context: worktree. It’s not a new feature. It was introduced back in 2015, but I discovered it a couple of weeks ago. It reminded me of the time when I used Perforce, and I had to create a Workspace for everything I was working on (okay, it wasn’t that bad).
 

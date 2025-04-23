@@ -1,33 +1,53 @@
 {{ define "main" }}
-<h2>{{ .Title }}</h2>
+  <article>
+    <section class="intro">
+      {{ .Content }}
+    </section>
 
-<h3>{{ .Content }}</h3>
+    <section class="list">
+      <ul class="post-list">
+        {{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
+        {{ $.Scratch.Set "lastYear" "" }}
+        {{ $.Scratch.Set "lastMonth" "" }}
+        {{ range where .Site.RegularPages "Section" "wallpaper" }}
 
-{{ $dateFormat := default "Jan 2" (index .Site.Params "date_format") }}
-{{ $.Scratch.Set "lastYear" ""}}
+          {{ $year := .Date.Year }}
+          {{ $month := .Date.Month }}
 
-{{ range .Pages.GroupByDate "2006-01-02" "asc" }}
+          {{ $lastYear := $.Scratch.Get "lastYear" }}
+          {{ $lastMonth := $.Scratch.Get "lastMonth" }}
+          {{ if eq $lastYear "" }}
+            <li class="month">{{ $month }} {{ $year }}</li>
+          {{ else }}
+            {{ if ne $year $lastYear }}
+              <li class="year">{{ $year }}</li>
+            {{ end }}
 
-<ul>
-  {{ range .Pages }}
-  {{ $year := .Date.Year }}
-  {{ $lastYear := $.Scratch.Get "lastYear"}}
+            {{ if ne $month $lastMonth }}
+              <li class="month">{{ $month }}</li>
+            {{ end }}
+          {{ end }}
 
-    {{ if ne $year $lastYear }}
-  <div class="row mt-2">
-    <div class="d-none d-sm-block col-sm-2 offset-sm-2 text-right align-top">
-    </div>
-    <div class="col">
-      <p class="text-muted mt-5 text-body">{{ $year }}</p>
-      {{ $.Scratch.Set "lastYear" $year }}
-    </div>
-  </div>
-  {{ end }}
+          {{ $.Scratch.Set "lastYear" $year }}
+          {{ $.Scratch.Set "lastMonth" $month }}
 
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
 
-    {{ .Content }}
-  {{ end }}
-</ul>
-{{ end }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <p>
+                {{ if .Draft }}DRAFT:{{ end }}
+                {{- .LinkTitle }}
+                {{- with .Params.description }}
+                  <span class="subtitle">
+                    {{- . | markdownify -}}
+                  </span>
+                {{- end }}
+              </p>
+              <time>{{ humanize .Date.Day }}</time>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  </article>
 {{ end }}

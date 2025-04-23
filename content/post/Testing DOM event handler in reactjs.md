@@ -57,7 +57,7 @@ Normal test
 {{< highlight jsx >}}
 cb = jest.fn();
 imageHover = mount(<ImageHover imageName={"phone"} onClick={cb} />);
- 
+
 it("should change state on pointerEnter", () => {
  imageHover.simulate("pointerEnter");
  expect(imageHover.state().isNormal).toEqual(false);

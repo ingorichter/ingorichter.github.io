@@ -24,5 +24,10 @@
     // Consistent emphasis style (either * or _)
     "MD049": {
       "style": "consistent"
+    },
+
+    // MD050/strong-style Strong style [Expected: asterisk; Actual: underscore]
+    "MD050": {
+      "style": "underscore"
     }
   }

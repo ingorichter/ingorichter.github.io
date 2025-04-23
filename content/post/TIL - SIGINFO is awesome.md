@@ -1,14 +1,16 @@
 +++
+author = "Ingo Richter"
+
 date = "2016-10-11T09:15:51-07:00"
 draft = false
-title = "TIL - SIGINFO is awesome"
+title = "SIGINFO is awesome"
 tags  = [ "howto", "Programming", "shell", "cli"]
 categories = [ "Tips" ]
 +++
 
 ## TIL - SIGINFO is awesome
 
-Today I learnt something really awesome. If you use a Unix based operating system, then you will be able to send any process a signal. This might be either `Ctrl+C` or **SIGINT** to interrupt that process. Or you can send **SIGINFO**  to report the progress of it's operation. Why this is awesome? Did you ever copy a huge amount of data and `cp` didn't tell you how much has data has been copied so far? **SIGINT** to the rescue.
+Today I learnt something really awesome. If you use a Unix based operating system, then you will be able to send any process a signal. This might be either `Ctrl+C` or __SIGINT__ to interrupt that process. Or you can send __SIGINFO__  to report the progress of it's operation. Why this is awesome? Did you ever copy a huge amount of data and `cp` didn't tell you how much has data has been copied so far? __SIGINT__ to the rescue.
 
 ```shell
 irichter@irichter-MacBookPro:~/Documents/Virtual Machines » cp -a dev-setup.vmwarevm dev-setup-2.vmwarevm
