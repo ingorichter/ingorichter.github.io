@@ -93,6 +93,23 @@
   --home-listing-header-color: var(--accent);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+
 /* Make the body a nice central block */
 /* this is copied from the original css, but with making the middle column wider */
 /* why can't this be in the base layer? */
@@ -107,7 +124,7 @@ p,
 ul,
 ol {
   font-size: var(--fs-small);
-  line-height: 1.6;
+  line-height: var(--space-m);
   color: var(--base-color);
 }
 
