@@ -9,10 +9,17 @@ preview:
 previewlocal:
 	hugo --printI18nWarnings --baseURL=http://localhost:8000
 
-# .PHONY: newpost
+.PHONY: newpost
 # make newpost title="This is the title"
 newpost:
 	hugo new post/$$(date +"%Y")/$$(echo '${title}' | tr '[:upper:]' '[:lower:]' | sed -e 's/ /-/g')/index.md
+
+.PHONY: wallpaper
+# make wallpaper
+wallpaper:
+	@YEAR=$$(date +"%Y"); \
+	WEEK=$$(date +"%V"); \
+	HUGO_YEAR=$$YEAR HUGO_WEEK=$$WEEK hugo new wallpaper/$$YEAR/week-$$WEEK/index.md -k wallpaper
 
 # make cv19 title="This is the title"
 STARTDATE="2020-16-03"
@@ -89,4 +96,4 @@ markdownlint-cli2-fix:
 	@echo "🔧 Using npx from: $(NODE_BIN_PATH)"
 	@echo "🔧 Running markdownlint-cli2 with fix..."
 	npx markdownlint-cli2 --config .markdownlint.jsonc content/**/*.md --fix
-	@echo "✅ markdownlint-cli2 fix completed."
+	@echo "✅ markdownlint-cli2 fix completed.

@@ -1,17 +1,19 @@
 +++
-title = "Weekly Wallpaper Week XX/2018"
-description = "My Wallpaper for the XX week of 2018"
+title = "Weekly Wallpaper Week {{ getenv "HUGO_WEEK" }}/{{ getenv "HUGO_YEAR" }}"
+description = "My Wallpaper for the {{ getenv "HUGO_WEEK" }}th week of {{ getenv "HUGO_YEAR" }}"
 date = "{{ .Date }}"
 categories = ["Wallpaper"]
-tags = ["Photography", "Desktop", "Background", "Photo", "Free", "Content", "Wallpaper"]
+tags = ["Photography", "Photo", "Wallpaper"]
 +++
 
-## Wallpaper Week XX/2018
+## Wallpaper Week {{ getenv "HUGO_WEEK" }}/{{ getenv "HUGO_YEAR" }}
 
 ### About the Image
 
-![Image Link Name](/image-file.jpg "Image Name")
+### Howdy
+
+{{< img src="IMAGE_NAME.jpg" caption="[CAPTION]" alt="[CAPTION]" full="true">}}
 
 Thanks for reading! 📷
 
-Feel free to share, leave a comment or just enjoy looking at it.
+Feel free to share, leave a comment, or just enjoy looking at it.

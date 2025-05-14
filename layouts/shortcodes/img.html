@@ -21,12 +21,36 @@
   {{- $srcset = $srcset | append (printf "%s %sw" $resized.RelPermalink (strings.TrimSuffix "x" .)) -}}
 {{- end -}}
 
+
 <figure>
-  <img class="lazyload"
-       data-src="{{ $image.RelPermalink }}"
-       data-srcset="{{ delimit $srcset ", " }}"
-       alt="{{ $alt }}">
+  <img
+    class="lazyload"
+    data-src="{{ $image.RelPermalink }}"
+    data-srcset="{{ delimit $srcset ", " }}"
+    alt="{{ $alt }}"
+  />
   {{- if $caption -}}
     <figcaption>{{ $caption }}</figcaption>
   {{- end -}}
 </figure>
+  {{ with $image.Exif }}
+  <details>
+    <summary>Shot Details</summary>
+    <ul>
+      {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
+      {{ with .Tags.ApertureValue }}
+        <li>Aperture: {{ lang.FormatNumber 2 . }}</li>
+      {{ end }}
+      {{ with .Tags.BrightnessValue }}
+        <li>Brightness: {{ lang.FormatNumber 2 . }}</li>
+      {{ end }}
+      {{ with .Tags.ExposureTime }}<li>Exposure Time: {{ . }}</li>{{ end }}
+      {{ with .Tags.FNumber }}<li>F Number: {{ . }}</li>{{ end }}
+      {{ with .Tags.FocalLength }}<li>Focal Length: {{ . }}</li>{{ end }}
+      {{ with .Tags.ISOSpeedRatings }}
+        <li>ISO Speed Ratings: {{ . }}</li>
+      {{ end }}
+      {{ with .Tags.LensModel }}<li>Lens Model: {{ . }}</li>{{ end }}
+    </ul>
+  </details>
+  {{ end }}
