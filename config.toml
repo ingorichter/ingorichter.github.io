@@ -24,7 +24,7 @@ min = "0.62.0"
 path = 'github.com/maolonglong/hugo-simple'
 
 # Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-disableKinds = ["taxonomy"]
+# disableKinds = ["taxonomy"]
 # ignoreErrors = ["error-disable-taxonomy"]
 [taxonomies]
 tag = "tags"
