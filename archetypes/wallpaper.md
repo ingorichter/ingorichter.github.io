@@ -8,9 +8,9 @@ tags = ["Photography", "Photo", "Wallpaper"]
 
 ## Wallpaper Week {{ getenv "HUGO_WEEK" }}/{{ getenv "HUGO_YEAR" }}
 
-### About the Image
-
 ### Howdy
+
+### About the Image
 
 {{< img src="IMAGE_NAME.jpg" caption="[CAPTION]" alt="[CAPTION]" full="true">}}
 
