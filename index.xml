@@ -1,34 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ingo Richter on Today is Tomorrow's Past</title><link>https://ingo-richter.io/</link><description>Recent content in Ingo Richter on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Sun, 01 Jun 2025 21:53:11 -0700</lastBuildDate><atom:link href="https://ingo-richter.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Weekly Wallpaper Week 22/2025</title><link>https://ingo-richter.io/wallpaper/2025/week-22/</link><pubDate>Sun, 01 Jun 2025 21:53:11 -0700</pubDate><guid>https://ingo-richter.io/wallpaper/2025/week-22/</guid><description>&lt;h2 id="wallpaper-week-222025">Wallpaper Week 22/2025&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ingo Richter on Today is Tomorrow's Past</title><link>https://ingo-richter.io/</link><description>Recent content in Ingo Richter on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Tue, 03 Jun 2025 00:00:00 -0700</lastBuildDate><atom:link href="https://ingo-richter.io/index.xml" rel="self" type="application/rss+xml"/><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/</link><pubDate>Tue, 03 Jun 2025 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/now/</guid><description>&lt;h2 id="-what-im-reading">📖 What I&amp;rsquo;m reading&lt;/h2>
+&lt;div class="reading">
+&lt;ul>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL20841388W" target="_blank" rel="noopener">Komisch, alles chemisch! - Mai Thi Nguyen-Kim&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://openlibrary.org/books/OL23653990W" target="_blank" rel="noopener">The Ten Equations That Rule the World - David J. T. Sumpter&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="-what-im-watching">📺 What I&amp;rsquo;m watching&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.imdb.com/title/tt31510819/" target="_blank" rel="noopener">Mobland&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="-what-im-making">🧰 What I&amp;rsquo;m making&lt;/h2>
+&lt;ul>
+&lt;li>Polishing my Ansible script to configure all my computers&lt;/li>
+&lt;li>Fixing my 3D Printer after the filament sensor cable broke and had to be replaced&lt;/li>
+&lt;/ul>
+&lt;h2 id="-what-im-learning">🔬 What I&amp;rsquo;m learning&lt;/h2>
+&lt;ul>
+&lt;li>Practicing Rust programming&lt;/li>
+&lt;/ul></description></item><item><title>Weekly Wallpaper Week 22/2025</title><link>https://ingo-richter.io/wallpaper/2025/week-22/</link><pubDate>Sun, 01 Jun 2025 21:53:11 -0700</pubDate><guid>https://ingo-richter.io/wallpaper/2025/week-22/</guid><description>&lt;h2 id="wallpaper-week-222025">Wallpaper Week 22/2025&lt;/h2>
 &lt;h3 id="howdy">Howdy&lt;/h3>
 &lt;p>I&amp;rsquo;ve spent last Saturday afternoon riding my bicycle in a bigger loop in the East Bay. For a water and coffee break, I stopped on &lt;a href="https://en.wikipedia.org/wiki/Alameda_(island)">Alameda&lt;/a>. The coffee shop was close to the beach, and I took the opportunity to find a spot on the beach to take some pictures of the bay and San Francisco in the far distance. Since the city was covered in afternoon fog, the whole scenery looked slightly apocalyptic with the sunset happening to the west of San Francisco.&lt;/p></description></item><item><title>Weekly Wallpaper Week 20/2025</title><link>https://ingo-richter.io/wallpaper/2025/week-20/</link><pubDate>Tue, 13 May 2025 23:01:09 -0700</pubDate><guid>https://ingo-richter.io/wallpaper/2025/week-20/</guid><description>&lt;h2 id="wallpaper-week-202025">Wallpaper Week 20/2025&lt;/h2>
 &lt;h3 id="howdy">Howdy&lt;/h3>
 &lt;p>I went for a short hike last weekend in &lt;a href="https://en.wikipedia.org/wiki/Marin_County%2C_California" title="Marin County">Marin County, CA&lt;/a>. We had beautiful weather with temperatures around 70°F and a light breeze that helped during the midday hike.&lt;/p>
 &lt;p>The hike from the parking lot was roughly 1.8 miles and mostly flat. There were other trails going higher over the mountain ridge, but we were not in the mood for climbing.&lt;/p></description></item><item><title>Adding a Colorful Border Around macOS App Windows</title><link>https://ingo-richter.io/post/2024/adding-a-colorful-border-around-macos-windows/</link><pubDate>Tue, 28 May 2024 10:23:58 -0700</pubDate><guid>https://ingo-richter.io/post/2024/adding-a-colorful-border-around-macos-windows/</guid><description>&lt;h2 id="tldr">TL;DR&lt;/h2>
 &lt;p>&lt;a href="https://github.com/FelixKratz/JankyBorders" title="JankyBorders">JankyBorders&lt;/a> is a tool that allows you to add a colored border around macOS app windows. This is helpful, especially in dark mode, to better see the window border and identify which application window is in front and active.&lt;/p>
-&lt;p>With a simple configuration file, it’s possible to specify the colors for the active and inactive windows. The program has more customizable options than I will discuss here. I focus on defining the colors for the active window and the inactive windows. I will also show how to use gradients and glow for borders.&lt;/p></description></item><item><title>How to Learn New Things</title><link>https://ingo-richter.io/post/2024/how-to-learn-new-things/</link><pubDate>Mon, 08 Apr 2024 21:54:49 -0700</pubDate><guid>https://ingo-richter.io/post/2024/how-to-learn-new-things/</guid><description/></item><item><title>Losing Weight and Improve My Health</title><link>https://ingo-richter.io/post/2024/losing-weight-and-improve-my-health/</link><pubDate>Wed, 14 Feb 2024 22:38:52 -0800</pubDate><guid>https://ingo-richter.io/post/2024/losing-weight-and-improve-my-health/</guid><description/></item><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/now/</link><pubDate>Wed, 14 Feb 2024 00:00:00 -0800</pubDate><guid>https://ingo-richter.io/now/now/</guid><description>&lt;h2 id="-what-im-reading">📖 What I&amp;rsquo;m reading&lt;/h2>
-&lt;div class="reading">
-&lt;ul>
-&lt;li>&lt;a href="https://openlibrary.org/books/OL19968189W">The 12-week year - Brian Moran&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://openlibrary.org/books/OL27301291W">Das Haus an der Moschee - Kader Abdolah&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://openlibrary.org/books/OL39377234M">Built to Move - Juliet Starrett and Kelly Starrett&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://openlibrary.org/books/OL34341884W">Palo Alto - Malcom Harris&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/div>
-&lt;h2 id="-what-im-watching">📺 What I&amp;rsquo;m watching&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://www.netflix.com/title/81069541">Love &amp;amp; Anarchy&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.netflix.com/title/80192098">Money Heist&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.imdb.com/title/tt0264235/">Curb Your Enthusiasm&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="-what-im-making">🧰 What I&amp;rsquo;m making&lt;/h2>
-&lt;ul>
-&lt;li>Started to create some generative Art with &lt;a href="https://vsketch.readthedocs.io/en/latest/">vsketch&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="-what-im-learning">🔬 What I&amp;rsquo;m learning&lt;/h2>
-&lt;ul>
-&lt;li>Practicing Rust Programming&lt;/li>
-&lt;li>How to build a theme for Hugo&lt;/li>
-&lt;/ul></description></item><item><title>US Citizenship</title><link>https://ingo-richter.io/post/2023/us-citizenship/</link><pubDate>Tue, 05 Sep 2023 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/post/2023/us-citizenship/</guid><description>&lt;h2 id="im-a-us-citizen-now---">I&amp;rsquo;m a US Citizen Now 🇩🇪 + 🇺🇸&lt;/h2>
+&lt;p>With a simple configuration file, it’s possible to specify the colors for the active and inactive windows. The program has more customizable options than I will discuss here. I focus on defining the colors for the active window and the inactive windows. I will also show how to use gradients and glow for borders.&lt;/p></description></item><item><title>How to Learn New Things</title><link>https://ingo-richter.io/post/2024/how-to-learn-new-things/</link><pubDate>Mon, 08 Apr 2024 21:54:49 -0700</pubDate><guid>https://ingo-richter.io/post/2024/how-to-learn-new-things/</guid><description/></item><item><title>Losing Weight and Improve My Health</title><link>https://ingo-richter.io/post/2024/losing-weight-and-improve-my-health/</link><pubDate>Wed, 14 Feb 2024 22:38:52 -0800</pubDate><guid>https://ingo-richter.io/post/2024/losing-weight-and-improve-my-health/</guid><description/></item><item><title>US Citizenship</title><link>https://ingo-richter.io/post/2023/us-citizenship/</link><pubDate>Tue, 05 Sep 2023 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/post/2023/us-citizenship/</guid><description>&lt;h2 id="im-a-us-citizen-now---">I&amp;rsquo;m a US Citizen Now 🇩🇪 + 🇺🇸&lt;/h2>
 &lt;h3 id="tldr">TL;DR&lt;/h3>
 &lt;p>On July 31, 2023, I received my US Citizenship certificate during the Oath Ceremony at the USCIS Field Office in San Francisco. The whole process from filing BBG to certificate took ~22 Months. There was a delay in the biometrics appointment since I was in Germany for a more extended period. I now have German and US Citizenship and can freely roam between countries.&lt;/p></description></item><item><title>It Is Already May</title><link>https://ingo-richter.io/post/2023/it-is-already-may/</link><pubDate>Tue, 02 May 2023 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/post/2023/it-is-already-may/</guid><description>&lt;h1 id="its-already-may">It&amp;rsquo;s already May&lt;/h1>
 &lt;p>Woah, we have already surpassed the four-month mark for this year. A lot of things have happened in the last four months.&lt;/p>
