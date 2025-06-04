@@ -91,6 +91,10 @@ weight = 60
 name = "Categories"
 pageRef = "/categories"
 weight = 70
+[[menus.main]]
+name = "Now"
+pageRef = "/now"
+weight = 80
 
 [services.rss]
 limit = 42

@@ -3,7 +3,7 @@
 {{- $id := .Get "id" -}}
 
 {{- with .Parent -}}
-<li><a href="https://openlibrary.org/books/{{ $id }}">{{ $title }} - {{ $author }}</a></li>
+<li><a href="https://openlibrary.org/books/{{ $id }}" target="_blank" rel="noopener">{{ $title }} - {{ $author }}</a></li>
 {{- else -}}
 <a href="#">{{ $title }} - {{ $author }}</a>
 {{- end -}}
