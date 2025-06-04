@@ -9,6 +9,10 @@ preview:
 previewlocal:
 	hugo --printI18nWarnings --baseURL=http://localhost:8000
 
+.PHONY: build
+build:
+	hugo --printI18nWarnings --minify
+
 .PHONY: newpost
 # make newpost title="This is the title"
 newpost:
@@ -97,3 +101,10 @@ markdownlint-cli2-fix:
 	@echo "🔧 Running markdownlint-cli2 with fix..."
 	npx markdownlint-cli2 --config .markdownlint.jsonc content/**/*.md --fix
 	@echo "✅ markdownlint-cli2 fix completed.
+
+.PHONY: pythonenv
+pythonenv:
+	@echo "🔧 Setting up Python virtual environment..."
+	python -m venv .venv
+	@echo "✅ Python virtual environment created."
+	.venv/bin/pip install -r scripts/requirements.txt
