@@ -22,3 +22,6 @@ package-lock.json
 
 # screenshot files
 /screenshots/
+
+# macOS
+.DS_Store
