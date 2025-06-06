@@ -2,6 +2,7 @@ import os
 import feedparser
 import requests
 from atproto import Client as AtprotoClient  # For Bluesky
+from urllib.parse import urljoin
 
 # 1. Parse RSS feed
 feed = feedparser.parse("public/index.xml")
@@ -12,6 +13,12 @@ latest = feed.entries[0]  # newest first
 
 title = latest.title
 link = latest.link
+
+site_url = "https://ingo-richter.io"  # blog URL
+
+# Ensure link starts with https://
+if not link.startswith('http'):
+    link = urljoin(site_url, link)
 
 # 2. Announce to Mastodon
 mastodon_token = os.environ["MASTODON_TOKEN"]
@@ -25,7 +32,6 @@ resp = requests.post(
 )
 resp.raise_for_status()
 
-# kslc-dsu4-wb3i-7vl3
 # 3. Announce to Bluesky (using atproto)
 bsky_handle = os.environ.get("BLUESKY_HANDLE")
 bsky_app_password = os.environ.get("BLUESKY_APP_PASSWORD")
