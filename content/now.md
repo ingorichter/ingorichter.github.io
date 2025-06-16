@@ -1,7 +1,7 @@
 +++
 title = "What Ingo is up to"
 description = "Things I'm currently reading, watching, making or learning"
-date = 2025-06-03
+date = 2025-06-15
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -10,19 +10,23 @@ draft = false
 ## 📖 What I'm reading
 
 {{% list class="reading" %}}
-{{% reading title="Komisch, alles chemisch!" author="Mai Thi Nguyen-Kim" type="openlib" id="OL20841388W" %}}
+{{% reading title="So Good They Can't Ignore You" author="Cal Newport" type="openlib" id="OL16283407W" %}}
 {{% reading title="The Ten Equations That Rule the World" author="David J. T. Sumpter" type="openlib" id="OL23653990W" %}}
 {{% /list %}}
 
 ## 📺 What I'm watching
 
-- <a href="https://www.imdb.com/title/tt31510819/" target="_blank" rel="noopener">Mobland</a>
+- <a href="https://www.primevideo.com/detail/Luis-Enrique-You-Have-No-F-Idea/0K661C0J7GPRHVQ7W3YI35QOS7" target="_blank" rel="noopener">Luis Enrique: You Have No F****** Idea</a>
+- <a href="https://www.netflix.com/title/81397077" target="_blank" rel="noopener">FUBAR 2</a>
+- <a href="https://www.imdb.com/title/tt33096033/" target="_blank" rel="noopener">Long Way Home</a>
 
 ## 🧰 What I'm making
 
 - Polishing my Ansible script to configure all my computers
-- Fixing my 3D Printer after the filament sensor cable broke and had to be replaced
+- finishing my missing AOC 2024 puzzles
+- Developing an API Mock Server just for fun
 
 ## 🔬 What I'm learning
 
 - Practicing Rust programming
+- Data Analytics
