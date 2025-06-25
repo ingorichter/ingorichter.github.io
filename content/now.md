@@ -31,4 +31,4 @@ draft = false
 
 - Practicing Rust programming
 - Data Analytics
-- Building a Website from Scratch
+- Transfer all my docker stacks to my TrueNAS machine
