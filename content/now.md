@@ -17,13 +17,13 @@ draft = false
 
 ## 📺 What I'm watching
 
-- <a href="https://www.imdb.com/title/tt31710249/" target="_blank" rel="noopener">Stick</a>
-- <a href="https://www.netflix.com/title/81397077" target="_blank" rel="noopener">FUBAR 2</a>
-- <a href="https://www.imdb.com/title/tt33096033/" target="_blank" rel="noopener">Long Way Home</a>
+- {{< imdb id="tt31710249" title="Stick" >}}
+- {{< netflix id="81397077" title="FUBAR 2" >}}
+- {{< imdb id="tt33096033" title="Long Way Home">}}
 
 ## 🧰 What I'm making
 
-- small macOS app to clean up my Desktop periodically. Practicing my Swift skills 
+- small macOS app to clean up my Desktop periodically. Practicing my Swift skills
 - finishing my missing AOC 2024 puzzles
 - Developing an API Mock Server just for fun
 
