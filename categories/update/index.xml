@@ -1,26 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update on Today is Tomorrow's Past</title><link>https://ingo-richter.io/categories/update/</link><description>Recent content in Update on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Wed, 25 Jun 2025 00:00:00 -0700</lastBuildDate><atom:link href="https://ingo-richter.io/categories/update/index.xml" rel="self" type="application/rss+xml"/><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/</link><pubDate>Wed, 25 Jun 2025 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/now/</guid><description>&lt;h2 id="-what-im-reading">📖 What I&amp;rsquo;m reading&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Update on Today is Tomorrow's Past</title><link>https://ingo-richter.io/categories/update/</link><description>Recent content in Update on Today is Tomorrow's Past</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2025 Ingo Richter</copyright><lastBuildDate>Tue, 22 Jul 2025 00:00:00 -0700</lastBuildDate><atom:link href="https://ingo-richter.io/categories/update/index.xml" rel="self" type="application/rss+xml"/><item><title>What Ingo is up to</title><link>https://ingo-richter.io/now/</link><pubDate>Tue, 22 Jul 2025 00:00:00 -0700</pubDate><guid>https://ingo-richter.io/now/</guid><description>&lt;h2 id="-what-im-reading">📖 What I&amp;rsquo;m reading&lt;/h2>
 &lt;div class="reading">
 &lt;ul>
 &lt;li>&lt;a href="https://openlibrary.org/books/OL16283407W" target="_blank" rel="noopener">So Good They Can&amp;#39;t Ignore You - Cal Newport&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://openlibrary.org/books/OL23653990W" target="_blank" rel="noopener">The Ten Equations That Rule the World - David J. T. Sumpter&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://openlibrary.org/books/OL42273190W" target="_blank" rel="noopener">22 Bahnen - Caroline Wahl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bookshop.org/p/books/nordstadt-annika-b-sing/5f1283d90af39bbf?ean=9783969990896" target="_blank" rel="noopener">Nordstadt - Annika Büsing&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;h2 id="-what-im-watching">📺 What I&amp;rsquo;m watching&lt;/h2>
 &lt;ul>
-&lt;li>&lt;a href="https://www.imdb.com/title/tt31710249/" target="_blank" rel="noopener">Stick&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.netflix.com/title/81397077" target="_blank" rel="noopener">FUBAR 2&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.imdb.com/title/tt33096033/" target="_blank" rel="noopener">Long Way Home&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.imdb.com/title/tt31710249/" target="_blank" rel="noopener">Stick&lt;/a>
+&lt;/li>
+&lt;li>&lt;a href="https://www.netflix.com/title/81397077/" target="_blank" rel="noopener">FUBAR 2&lt;/a>
+&lt;/li>
+&lt;li>&lt;a href="https://www.imdb.com/title/tt33096033/" target="_blank" rel="noopener">Long Way Home&lt;/a>
+&lt;/li>
 &lt;/ul>
 &lt;h2 id="-what-im-making">🧰 What I&amp;rsquo;m making&lt;/h2>
 &lt;ul>
 &lt;li>small macOS app to clean up my Desktop periodically. Practicing my Swift skills&lt;/li>
-&lt;li>finishing my missing AOC 2024 puzzles&lt;/li>
 &lt;li>Developing an API Mock Server just for fun&lt;/li>
 &lt;/ul>
 &lt;h2 id="-what-im-learning">🔬 What I&amp;rsquo;m learning&lt;/h2>
 &lt;ul>
 &lt;li>Practicing Rust programming&lt;/li>
 &lt;li>Data Analytics&lt;/li>
-&lt;li>Transfer all my docker stacks to my TrueNAS machine&lt;/li>
+&lt;li>Transfer all my docker stacks to my TrueNAS machine (ongoing and long effort so far)&lt;/li>
 &lt;/ul></description></item></channel></rss>
