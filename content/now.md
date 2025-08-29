@@ -1,7 +1,7 @@
 +++
 title = "What Ingo is up to"
 description = "Things I'm currently reading, watching, making and learning"
-date = 2025-07-22
+date = 2025-08-29
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -12,14 +12,13 @@ draft = false
 {{% list class="reading" %}}
 {{% reading title="So Good They Can't Ignore You" author="Cal Newport" type="openlib" id="OL16283407W" %}}
 {{% reading title="The Ten Equations That Rule the World" author="David J. T. Sumpter" type="openlib" id="OL23653990W" %}}
-<li><a href="https://bookshop.org/p/books/nordstadt-annika-b-sing/5f1283d90af39bbf?ean=9783969990896" target="_blank" rel="noopener">Nordstadt - Annika Büsing</a></li>
+{{% reading title="Make It Stick" author="Peter C. Brown, Henry L. Roediger, and Mark A. Daniel" type="openlib" id="OL17879515W" %}}
 {{% /list %}}
 
 ## 📺 What I'm watching
 
-- {{< imdb id="tt31710249" title="Stick" >}}
-- {{< netflix id="81397077" title="FUBAR 2" >}}
-- {{< imdb id="tt33096033" title="Long Way Home">}}
+- {{< generic-link href="https://www.hbomax.com/shows/peacemaker-2022/s2/a939d96b-7ffb-4481-96f6-472838d104ca" title="Peacemaker" >}}
+- {{< netflix id="81901691" title="SEC Football any given Saturday" >}}
 
 ## 🧰 What I'm making
 
