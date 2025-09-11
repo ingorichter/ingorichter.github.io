@@ -1,7 +1,7 @@
 +++
 title = "What Ingo is up to"
 description = "Things I'm currently reading, watching, making and learning"
-date = 2025-08-29
+date = 2025-09-10
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -22,11 +22,12 @@ draft = false
 
 ## 🧰 What I'm making
 
+- Developing a small web app to keep track of round based game scores
 - small macOS app to clean up my Desktop periodically. Practicing my Swift skills
-- Developing an API Mock Server just for fun
 
 ## 🔬 What I'm learning
 
-- Practicing Rust programming
+- How to sell things online
 - Data Analytics
-- Transfer all my docker stacks to my TrueNAS machine (ongoing and long effort so far)
+- Converting a flaky Playwright test suite into a reliable test suite
+- Experiment with {{< generic-link href="https://github.com/github/spec-kit" title="spec-kit" >}}
