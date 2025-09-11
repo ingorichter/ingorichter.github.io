@@ -6,7 +6,7 @@ date = 2023-02-01
 draft = false
 +++
 
-# Kicking Nextcloud Cron Script from TrueNAS Cron Job
+## Kicking Nextcloud Cron Script from TrueNAS Cron Job
 
 ## Tl;DR
 

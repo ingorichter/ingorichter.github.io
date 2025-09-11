@@ -11,7 +11,7 @@ title = "Don't say it. Do it!"
 
 <!--more-->
 
-## Don't say it. Do it!
+## Don't say it. Do it
 
 - Don’t talk too much about the things you want to do.
 - Don’t overthink everything.

@@ -1,5 +1,6 @@
 # Basic config
 baseURL = "https://ingo-richter.io/"
+canonifyURLs = true
 languageCode = "en"                # zh-Hans
 title = "Today is Tomorrow's Past"
 copyright = "© 2025 Ingo Richter"
