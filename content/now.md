@@ -1,7 +1,7 @@
 +++
 title = "What Ingo is up to"
 description = "Things I'm currently reading, watching, making and learning"
-date = 2025-09-10
+date = 2025-09-15
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -18,7 +18,7 @@ draft = false
 ## 📺 What I'm watching
 
 - {{< generic-link href="https://www.hbomax.com/shows/peacemaker-2022/s2/a939d96b-7ffb-4481-96f6-472838d104ca" title="Peacemaker" >}}
-- {{< netflix id="81901691" title="SEC Football any given Saturday" >}}
+- {{< imdb id="tt32580215" title="Chabos" >}}
 
 ## 🧰 What I'm making
 
