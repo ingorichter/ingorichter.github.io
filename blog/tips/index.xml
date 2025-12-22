@@ -3,7 +3,8 @@
 &lt;p&gt;I&amp;rsquo;m running &lt;a href="https://truecharts.org/charts/stable/nextcloud/"&gt;TrueCharts Nextcloud&lt;/a&gt; in my TrueNAS SCALE at home. After the setup, I discovered that none of the cron jobs was running. I&amp;rsquo;m using the Nextcloud News App and never saw any new stories. I didn&amp;rsquo;t find a way to make the Nextcloud cron work, so I decided to have a cron job that runs every hour to kick the Nextclodu cron job in the Nextcloud docker container.&lt;/p&gt;</description></item><item><title>Effective Git - Worktrees</title><link>https://ingo-richter.io/post/effective-git---worktrees/</link><pubDate>Wed, 10 May 2017 21:19:27 -0700</pubDate><guid>https://ingo-richter.io/post/effective-git---worktrees/</guid><description>&lt;p&gt;You know this situation: you are working on new feature branch of your product. A bunch of files has been changed, nothing has settled yet and lots of uncommitted changes. This is how work in progress looks like. Everything could be alright, but then you are asked to check out that high priority issue that a customer reported.&lt;/p&gt;</description></item><item><title>Efficient JavaScript Unit Testing with Jest and Snapshots</title><link>https://ingo-richter.io/post/efficient-unit-testing-with-jest-and-snapshots/</link><pubDate>Thu, 06 Apr 2017 11:55:51 -0700</pubDate><guid>https://ingo-richter.io/post/efficient-unit-testing-with-jest-and-snapshots/</guid><description>&lt;p&gt;Let&amp;rsquo;s start with a bold statement:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;We all love to write unit great tests for our code. More or less.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;— Unknown Programmer&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;— Unknown Programmer&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Writing unit tests for my code mostly follows this pattern&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Write a test and make it fail (red)&lt;/li&gt;
