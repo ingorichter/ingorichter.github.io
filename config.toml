@@ -1,7 +1,7 @@
 # Basic config
 baseURL = "https://ingo-richter.io/"
 canonifyURLs = true
-languageCode = "en"                # zh-Hans
+locale = "en"                      # zh-Hans
 title = "Today is Tomorrow's Past"
 copyright = "© 2025 Ingo Richter"
 timezone = "America/Los_Angeles"
@@ -96,6 +96,10 @@ weight = 70
 name = "Now"
 pageRef = "/now"
 weight = 80
+[[menus.main]]
+name = "Breathing"
+URL = "https://breathing.ingo-richter.io"
+weight = 90
 
 [services.rss]
 limit = 42
@@ -105,7 +109,7 @@ pagerSize = 16
 
 [outputs]
 page = ["html", "rss"]
-home = ["html", "json", "rss"]
+home = ["html", "rss"]
 section = ["html", "rss"]
 taxonomy = ["html", "rss"]
 term = ["html", "rss"]

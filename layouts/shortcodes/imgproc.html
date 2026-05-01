@@ -25,15 +25,15 @@
   </small>
 	</figcaption>
 </figure>
-{{ with $original.Exif }}
+{{ with $original.Meta }}
 <ul>
   {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
-  {{ with .Tags.ApertureValue }}<li>Aperture: {{ lang.FormatNumber 2 . }}</li>{{ end }}
-  {{ with .Tags.BrightnessValue }}<li>Brightness: {{ lang.FormatNumber 2 . }}</li>{{ end }}
-  {{ with .Tags.ExposureTime }}<li>Exposure Time: {{ . }}</li>{{ end }}
-  {{ with .Tags.FNumber }}<li>F Number: {{ . }}</li>{{ end }}
-  {{ with .Tags.FocalLength }}<li>Focal Length: {{ . }}</li>{{ end }}
-  {{ with .Tags.ISOSpeedRatings }}<li>ISO Speed Ratings: {{ . }}</li>{{ end }}
-  {{ with .Tags.LensModel }}<li>Lens Model: {{ . }}</li>{{ end }}
+  {{ with index .Exif "ApertureValue" }}<li>Aperture: {{ lang.FormatNumber 2 . }}</li>{{ end }}
+  {{ with index .Exif "BrightnessValue" }}<li>Brightness: {{ . }}</li>{{ end }}
+  {{ with index .Exif "ExposureTime" }}<li>Exposure Time: {{ . }}</li>{{ end }}
+  {{ with index .Exif "FNumber" }}<li>F Number: {{ . }}</li>{{ end }}
+  {{ with index .Exif "FocalLength" }}<li>Focal Length: {{ . }}</li>{{ end }}
+  {{ with index .Exif "ISO" }}<li>ISO: {{ . }}</li>{{ end }}
+  {{ with index .Exif "LensModel" }}<li>Lens Model: {{ . }}</li>{{ end }}
 </ul>
 {{ end }}
