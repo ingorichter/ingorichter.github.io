@@ -243,3 +243,8 @@ section {
   color: var(--text-light);
   text-align: right;
 }
+
+details ul {
+  font-size: var(--fs-x-small);
+  line-height: var(--space-s);
+}
