@@ -2,6 +2,10 @@
 title: "Ingo Richter"
 ---
 
-I’m Ingo — a senior computer scientist with decades of experience shipping code that matters. I’ve built scalable SDKs, led agile teams, and automated more things than I can count. When I’m not wrangling TypeScript or writing Rust, you’ll find me designing laser-cut ornaments, plotting pen art, or chasing sunlight on a titanium road bike.
+Hi, I’m Ingo — software engineer, tinkerer, and someone who has automated enough things to know that automation always takes longer than you think.
 
-I’m obsessed with clean workflows, great tools, and making things better—whether that’s debugging CI pipelines or helping teams stay focused on what really matters. I build, I share, and yes—I’m on a mission to make all this experience count (and maybe even get a little wealthy along the way).
+I’ve spent the last couple of decades writing software, building SDKs, and helping teams ship things they’re proud of. These days I mostly live in TypeScript and Rust. I have opinions about CI pipelines, clean code, and the right way to organize a project — though I’ve been wrong enough times to hold them loosely.
+
+When I’m not staring at a terminal, I’m probably designing something for the laser cutter or 3D printer, watching a pen plotter draw something I sketched, chasing light with a camera, or out on my lovely titanium road bike pretending I’m faster than I am.
+
+This is where I share what I’m building, what broke, what I figured out, and what I’m still figuring out. Pull up a chair.

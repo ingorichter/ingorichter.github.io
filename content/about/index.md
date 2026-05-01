@@ -7,12 +7,14 @@ id = "about"
 
 **[Here you can find my contact information to easily import it into your address book](https://dot.cards/mklyu81dvmylbiknq63newnisvaq8koa)**
 
-I’m a software engineer with a passion for building high-quality software that puts users first. With over 20 years of experience in software development—spanning commercial and open-source projects—I thrive on solving complex problems and delivering impactful solutions.
+I’m a software engineer at Adobe, where I’m currently working on reimagining how people share documents. Before that I built a TypeScript Analytics SDK for internal teams — which taught me a lot about how developers actually use the tools you build for them (spoiler: not always the way you intended).
 
-Currently, I’m a Senior Computer Scientist at Adobe, working on a TypeScript Analytics SDK for internal use. Previously, I contributed to ShareSheet, [Adobe Experience Design CC (Adobe XD)](https://www.adobe.com/products/experience-design.html>), Photoshop Device Preview, and open-source projects like [Brackets](https://brackets.io") and [TabWrangler](https://github.com/tabwrangler/tabwrangler).
+Over the years I’ve shipped code for ShareSheet, [Adobe XD](https://www.adobe.com/products/experience-design.html), and Photoshop Device Preview, and contributed to open-source projects like [Brackets](https://brackets.io) and [TabWrangler](https://github.com/tabwrangler/tabwrangler). More than 20 years in, I still find software genuinely interesting — which I consider a win.
 
-As a Certified Scrum Master with nearly a decade of hands-on experience, I believe in agile methodologies, process automation, and test automation as the backbone of high-quality software.
+I care a lot about the craft: clean code, good tooling, test automation, and the kind of process that helps teams do their best work without burning out. I’ve been a Scrum Master, led teams, and made plenty of process mistakes along the way. The lessons from the mistakes stuck the most.
 
-When I’m not coding, I spend time experimenting with 3D printing, laser cutting, and pen plotting. I also enjoy cycling, photography, and, of course, great coffee.
+Outside of work, I’m into 3D printing, laser cutting, and pen plotting — there’s something satisfying about making physical things from a screen full of coordinates. I also spend time with a camera chasing light before it disappears, and out on my lovely titanium road bike convincing myself the next hill will be the last one.
 
-Want to connect? Let’s talk about software, automation, or just good coffee!
+Coffee, obviously.
+
+Want to talk software, automation, or anything else? I’m genuinely interested.
