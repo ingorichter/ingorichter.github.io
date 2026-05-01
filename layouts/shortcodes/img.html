@@ -27,6 +27,7 @@
     class="lazyload"
     data-src="{{ $image.RelPermalink }}"
     data-srcset="{{ delimit $srcset ", " }}"
+    data-sizes="auto"
     alt="{{ $alt }}"
   />
   {{- if $caption -}}
