@@ -1,9 +1,18 @@
 {{- $title := .Get "title" -}}
 {{- $author := .Get "author" -}}
 {{- $id := .Get "id" -}}
+{{- $provider := .Get "provider" | default "openlibrary" -}}
+{{- $url := "" -}}
+{{- if eq $provider "amazon" -}}
+  {{- $url = printf "https://www.amazon.com/dp/%s" $id -}}
+{{- else if eq $provider "url" -}}
+  {{- $url = $id -}}
+{{- else -}}
+  {{- $url = printf "https://openlibrary.org/books/%s" $id -}}
+{{- end -}}
 
 {{- with .Parent -}}
-<li><a href="https://openlibrary.org/books/{{ $id }}" target="_blank" rel="noopener">{{ $title }} - {{ $author }}</a></li>
+<li><a href="{{ $url }}" target="_blank" rel="noopener">{{ $title }} - {{ $author }}</a></li>
 {{- else -}}
-<a href="#">{{ $title }} - {{ $author }}</a>
+<li></li><a href="{{ $url }}">{{ $title }} - {{ $author }}</a></li>
 {{- end -}}

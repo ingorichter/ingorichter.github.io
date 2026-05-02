@@ -1,7 +1,7 @@
 +++
 title = "What Ingo is up to"
 description = "Things I'm currently reading, watching, making and learning"
-date = 2025-09-15
+date = 2026-05-01
 tags = ["NOW"]
 categories = ["Life", "Update", "Progress"]
 draft = false
@@ -10,24 +10,21 @@ draft = false
 ## 📖 What I'm reading
 
 {{% list class="reading" %}}
-{{% reading title="So Good They Can't Ignore You" author="Cal Newport" type="openlib" id="OL16283407W" %}}
-{{% reading title="The Ten Equations That Rule the World" author="David J. T. Sumpter" type="openlib" id="OL23653990W" %}}
-{{% reading title="Make It Stick" author="Peter C. Brown, Henry L. Roediger, and Mark A. Daniel" type="openlib" id="OL17879515W" %}}
+{{% reading title="Der Flügelschlag des Paarfalters" author="Andreas Rainer" provider="amazon" id="B0GQ3B44S3" %}}
+{{% reading title="Apple: The First 50 Years" author="David Pogue" provider="openlib" id="OL61717642M" %}}
 {{% /list %}}
 
 ## 📺 What I'm watching
 
-- {{< generic-link href="https://www.hbomax.com/shows/peacemaker-2022/s2/a939d96b-7ffb-4481-96f6-472838d104ca" title="Peacemaker" >}}
-- {{< imdb id="tt32580215" title="Chabos" >}}
+- {{< imdb id="tt30459041" title="Your Friends & Neighbors, Season 2" >}}
+- {{< imdb id="tt33086602" title="The Hunt" >}}
 
 ## 🧰 What I'm making
 
-- Developing a small web app to keep track of round based game scores
-- small macOS app to clean up my Desktop periodically. Practicing my Swift skills
+- Fix my ansible setup. I need to provision my new MacBook Pro
+- Fix my blog and prepare new posts
 
 ## 🔬 What I'm learning
 
-- How to sell things online
-- Data Analytics
-- Converting a flaky Playwright test suite into a reliable test suite
-- Experiment with {{< generic-link href="https://github.com/github/spec-kit" title="spec-kit" >}}
+- {{< generic-link href="https://www.topengineermethod.com/#section-1721807067068" title="The Top Engineer" >}} 
+- Learn about AI Skill and Agents
