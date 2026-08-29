@@ -18,7 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        hugo-version: ['latest', '0.146.5', '0.146.4']
+        # Floor is 0.158.0: templates use .Language.Locale (added in v0.158.0)
+        hugo-version: ['latest', '0.164.0', '0.158.0']
     steps:
       - uses: actions/checkout@v6
         with:
