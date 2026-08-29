@@ -1,3 +1,15 @@
 {{ $lazysizes := resources.Get "js/external/lazysizes.js" }}
-{{ $scripts := slice $lazysizes | resources.Concat "js/scripts.js" | resources.Minify }}
+{{ $glightbox := resources.Get "js/external/glightbox.min.js" }}
+{{ $scripts := slice $lazysizes $glightbox | resources.Concat "js/scripts.js" | resources.Minify }}
 <script src="{{ $scripts.RelPermalink }}"></script>
+
+{{ $glightboxCSS := resources.Get "css/external/glightbox.min.css" }}
+<link rel="stylesheet" href="{{ $glightboxCSS.RelPermalink }}" />
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (typeof GLightbox === "function" && document.querySelector(".glightbox")) {
+      GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
+    }
+  });
+</script>

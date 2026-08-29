@@ -38,6 +38,14 @@ updateLazysize:
 # download the javascript library
 	curl -v -L https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.js -o assets/js/external/lazysizes.js
 
+GLIGHTBOX_VERSION ?= 3.3.1
+
+.PHONY: updateGlightbox
+updateGlightbox:
+# download the GLightbox JS + CSS (override version with: make updateGlightbox GLIGHTBOX_VERSION=x.y.z)
+	curl -fL https://cdn.jsdelivr.net/npm/glightbox@$(GLIGHTBOX_VERSION)/dist/js/glightbox.min.js -o assets/js/external/glightbox.min.js
+	curl -fL https://cdn.jsdelivr.net/npm/glightbox@$(GLIGHTBOX_VERSION)/dist/css/glightbox.min.css -o assets/css/external/glightbox.min.css
+
 .PHONY: updateSubmodules
 updateSubmodules:
 	git submodule update --remote

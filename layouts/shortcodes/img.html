@@ -2,56 +2,80 @@
 {{- $alt := .Get "alt" | default "" -}}
 {{- $title := .Get "title" | default "" -}}
 {{- $caption := .Get "caption" | default $title -}}
+{{- $showMeta := .Get "showMeta" | default "true" -}}
 {{- $page := .Page -}}
 
 {{- $image := $page.Resources.GetMatch (printf "*%s" $src) -}}
 
-{{ $lightbox := (.Get "lightbox") | default "false" }}
+{{/* Opt-in lightbox: `full="true"` (legacy) or `lightbox="true"` */}}
+{{ $lightbox := or (.Get "full") (.Get "lightbox") | default "false" }}
 {{ $round := (.Get "round") | default "10" }}
 
 {{- if not $image -}}
   {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" $src $page.RelPermalink }}
 {{- end -}}
 
-{{- $sizes := slice "20x" "320x" "480x" "768x" "1024x" "1280x" "1600x" "1920x" -}}
+{{- $sizes := slice "320x" "480x" "768x" "1024x" "1280x" -}}
 {{- $srcset := slice -}}
 
 {{- range $sizes -}}
-  {{- $resized := $image.Resize . -}}
+  {{- $resized := $image.Resize (printf "%s webp q80" .) -}}
   {{- $srcset = $srcset | append (printf "%s %sw" $resized.RelPermalink (strings.TrimSuffix "x" .)) -}}
 {{- end -}}
 
+{{- $fallback := $image.Resize "1024x webp q80" -}}
+
+{{/* Full-size rendition for the lightbox: webp, capped at 1920w, never upscaled */}}
+{{- $fullWidth := $image.Width -}}
+{{- if gt $fullWidth 1920 -}}{{- $fullWidth = 1920 -}}{{- end -}}
+{{- $full := $image.Resize (printf "%dx webp q82" $fullWidth) -}}
+
 
 <figure>
+  {{- if eq $lightbox "true" -}}
+    <a
+      class="glightbox"
+      href="{{ $full.RelPermalink }}"
+      data-gallery="gallery-{{ $page.RelPermalink | anchorize }}"
+      {{- with $caption }} data-title="{{ . }}"{{ end }}
+    >
+  {{- end -}}
   <img
     class="lazyload"
-    data-src="{{ $image.RelPermalink }}"
+    data-src="{{ $fallback.RelPermalink }}"
     data-srcset="{{ delimit $srcset ", " }}"
     data-sizes="auto"
     alt="{{ $alt }}"
   />
+  {{- if eq $lightbox "true" -}}</a>{{- end -}}
   {{- if $caption -}}
     <figcaption>{{ $caption }}</figcaption>
   {{- end -}}
 </figure>
+{{ if eq $showMeta "true" }}
   {{ with $image.Meta }}
-  <details>
-    <summary>Shot Details</summary>
-    <ul>
-      {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
-      {{ with index .Exif "ApertureValue" }}
-        <li>Aperture: {{ lang.FormatNumber 2 . }}</li>
-      {{ end }}
-      {{ with index .Exif "BrightnessValue" }}
-        <li>Brightness: {{ . }}</li>
-      {{ end }}
-      {{ with index .Exif "ExposureTime" }}<li>Exposure Time: {{ . }}</li>{{ end }}
-      {{ with index .Exif "FNumber" }}<li>F Number: {{ . }}</li>{{ end }}
-      {{ with index .Exif "FocalLength" }}<li>Focal Length: {{ . }}</li>{{ end }}
-      {{ with index .Exif "ISO" }}
-        <li>ISO: {{ . }}</li>
-      {{ end }}
-      {{ with index .Exif "LensModel" }}<li>Lens Model: {{ . }}</li>{{ end }}
-    </ul>
-  </details>
+    <details>
+      <summary>Shot Details</summary>
+      <ul>
+        {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
+        {{ with index .Exif "ApertureValue" }}
+          <li>Aperture: {{ lang.FormatNumber 2 . }}</li>
+        {{ end }}
+        {{ with index .Exif "BrightnessValue" }}
+          <li>Brightness: {{ . }}</li>
+        {{ end }}
+        {{ with index .Exif "ExposureTime" }}
+          <li>Exposure Time: {{ . }}</li>
+        {{ end }}
+        {{ with index .Exif "FNumber" }}<li>F Number: {{ . }}</li>{{ end }}
+        {{ with index .Exif "FocalLength" }}
+          <li>Focal Length: {{ . }}</li>
+        {{ end }}
+        {{ with index .Exif "ISO" }}
+          <li>ISO: {{ . }}</li>
+        {{ end }}
+        {{ with index .Exif "LensModel" }}<li>Lens Model: {{ . }}</li>{{ end }}
+      </ul>
+    </details>
   {{ end }}
+{{ end }}

@@ -247,3 +247,15 @@ details ul {
   font-size: var(--fs-x-small);
   line-height: var(--space-s);
 }
+
+/* Lightbox-wrapped images: the theme only styles `figure > img`, so restore
+   full-width block layout when the img sits inside a `.glightbox` anchor. */
+figure > a.glightbox {
+  display: block;
+}
+
+figure > a.glightbox > img {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+}
