@@ -33,11 +33,6 @@ cv19:
 	$(eval DAYS=$(shell echo "($(shell date +%s) - $(shell date -jf "%Y-%d-%m" "2020-16-03" +%s)) / 86400 + 1" | bc))
 	hugo new cv19wfh/$$(date +"%Y")/$$(date +"%m")/day$(DAYS)/index.md
 
-.PHONY: updateLazysize
-updateLazysize:
-# download the javascript library
-	curl -v -L https://raw.githubusercontent.com/aFarkas/lazysizes/gh-pages/lazysizes.js -o assets/js/external/lazysizes.js
-
 GLIGHTBOX_VERSION ?= 3.3.1
 
 .PHONY: updateGlightbox

@@ -41,10 +41,13 @@
     >
   {{- end -}}
   <img
-    class="lazyload"
-    data-src="{{ $fallback.RelPermalink }}"
-    data-srcset="{{ delimit $srcset ", " }}"
-    data-sizes="auto"
+    src="{{ $fallback.RelPermalink }}"
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(min-width: 78rem) 70rem, 90vw"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}"
+    loading="lazy"
+    decoding="async"
     alt="{{ $alt }}"
   />
   {{- if eq $lightbox "true" -}}</a>{{- end -}}

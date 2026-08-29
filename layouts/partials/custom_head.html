@@ -1,7 +1,5 @@
-{{ $lazysizes := resources.Get "js/external/lazysizes.js" }}
 {{ $glightbox := resources.Get "js/external/glightbox.min.js" }}
-{{ $scripts := slice $lazysizes $glightbox | resources.Concat "js/scripts.js" | resources.Minify }}
-<script src="{{ $scripts.RelPermalink }}"></script>
+<script src="{{ $glightbox.RelPermalink }}" defer></script>
 
 {{ $glightboxCSS := resources.Get "css/external/glightbox.min.css" }}
 <link rel="stylesheet" href="{{ $glightboxCSS.RelPermalink }}" />
