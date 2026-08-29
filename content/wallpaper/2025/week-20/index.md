@@ -26,7 +26,7 @@ The image was taken with my [iPhone 16 Pro Max](https://www.apple.com/iphone-16-
 
 I used Adobe Lightroom 8.3.1 to sharpen, crop, and increase the contrast of the image.
 
-{{< img src="TennesseeBeach.jpg" caption="Tennessee Beach" alt="Tennessee Beach" full="true">}}
+{{< img src="TennesseeBeach.jpg" caption="Tennessee Beach" alt="Tennessee Beach" full="true" download="true">}}
 
 Thanks for reading! 📷
 

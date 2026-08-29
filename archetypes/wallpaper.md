@@ -12,7 +12,7 @@ tags = ["Photography", "Photo", "Wallpaper"]
 
 ### About the Image
 
-{{< img src="IMAGE_NAME.jpg" caption="[CAPTION]" alt="[CAPTION]" full="true">}}
+{{< img src="IMAGE_NAME.jpg" caption="[CAPTION]" alt="[CAPTION]" full="true" download="true" location="[CITY, STATE/COUNTRY]">}}
 
 Thanks for reading! 📷
 

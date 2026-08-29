@@ -11,6 +11,9 @@
 {{ $lightbox := or (.Get "full") (.Get "lightbox") | default "false" }}
 {{ $round := (.Get "round") | default "10" }}
 
+{{/* Opt-in "download original" link below the figure: `download="true"` */}}
+{{ $download := (.Get "download") | default "false" }}
+
 {{- if not $image -}}
   {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" $src $page.RelPermalink }}
 {{- end -}}
@@ -25,9 +28,9 @@
 
 {{- $fallback := $image.Resize "1024x webp q80" -}}
 
-{{/* Full-size rendition for the lightbox: webp, capped at 1920w, never upscaled */}}
+{{/* Full-size rendition for the lightbox: webp, capped at 2560w, never upscaled */}}
 {{- $fullWidth := $image.Width -}}
-{{- if gt $fullWidth 1920 -}}{{- $fullWidth = 1920 -}}{{- end -}}
+{{- if gt $fullWidth 2560 -}}{{- $fullWidth = 2560 -}}{{- end -}}
 {{- $full := $image.Resize (printf "%dx webp q82" $fullWidth) -}}
 
 
@@ -54,13 +57,50 @@
   {{- if $caption -}}
     <figcaption>{{ $caption }}</figcaption>
   {{- end -}}
+  {{- if eq $download "true" -}}
+    {{/* Cap the download rendition at 4000w; link the raw file only when it is already within that. */}}
+    {{- $dl := $image -}}
+    {{- $isOriginal := true -}}
+    {{- if gt $image.Width 4000 -}}
+      {{- $dl = $image.Resize "4000x jpg q90" -}}
+      {{- $isOriginal = false -}}
+    {{- end -}}
+    {{- $sizeLabel := "" -}}
+    {{- if $isOriginal -}}
+      {{- with $page.File -}}
+        {{- $fsPath := path.Join "content" .Dir $src -}}
+        {{- if fileExists $fsPath -}}
+          {{- $bytes := (os.Stat $fsPath).Size -}}
+          {{- $sizeLabel = printf " (%.1f MB)" (div (float $bytes) 1048576.0) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    <p class="img-download">
+      <a href="{{ $dl.RelPermalink }}" download>
+        {{ if $isOriginal }}Download original{{ else }}Download full size{{ end }}
+        &middot; {{ $dl.Width }}&times;{{ $dl.Height }}{{ $sizeLabel }}
+      </a>
+    </p>
+  {{- end -}}
 </figure>
 {{ if eq $showMeta "true" }}
   {{ with $image.Meta }}
+    {{/* Location: explicit `location="..."` param wins, else derive from IPTC place tags */}}
+    {{- $location := $.Get "location" -}}
+    {{- if not $location -}}
+      {{- $parts := slice -}}
+      {{- with .IPTC -}}
+        {{- with index . "City" }}{{ $parts = $parts | append . }}{{ end -}}
+        {{- with index . "Province-State" }}{{ $parts = $parts | append . }}{{ end -}}
+        {{- with index . "Country-PrimaryLocationName" }}{{ $parts = $parts | append . }}{{ end -}}
+      {{- end -}}
+      {{- $location = delimit $parts ", " -}}
+    {{- end -}}
     <details>
       <summary>Shot Details</summary>
       <ul>
         {{ with .Date }}<li>Date: {{ .Format "January 02, 2006" }}</li>{{ end }}
+        {{ with $location }}<li>Location: {{ . }}</li>{{ end }}
         {{ with index .Exif "ApertureValue" }}
           <li>Aperture: {{ lang.FormatNumber 2 . }}</li>
         {{ end }}

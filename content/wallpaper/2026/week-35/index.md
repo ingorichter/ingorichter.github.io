@@ -23,7 +23,7 @@ If you ever plan to go there to take sunrise pictures, I can only recommend not 
 
 The image was taken with my iPhone 17 Pro Max. I used Lightroom on my iPhone to work some image magic and fix the exposure and contrast. I imported it as an HDR version, which gives the image its surreal glow. This emphasizes the warmth of the rising sun and makes the clouds a bit more dramatic.
 
-{{< img src="sunrise-kauai-Poʻipū.jpg" caption="Sunrise in Poʻipū, Kaua'i" alt="Sunrise in Poʻipū, Kaua'i" full="true" >}}
+{{< img src="sunrise-kauai-Poʻipū.jpg" caption="Sunrise in Poʻipū, Kaua'i" alt="Sunrise in Poʻipū, Kaua'i" full="true" download="true" location="Poʻipū, Kauaʻi, Hawaii" >}}
 
 Thanks for reading! 📷 🌸
 

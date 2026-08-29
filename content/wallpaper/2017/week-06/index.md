@@ -23,7 +23,7 @@ The image was taken with a [Sony Alpha A7II](https://www.sony.com/electronics/in
 
 I used Lightroom 6.8 to crop the image. I sharpened the image a little bit and reduced some luminance noise.
 
-{{< img src="daisy-in-little-hands.jpg" caption="Daisy in little hands" alt="Daisy in little hands" full="true">}}
+{{< img src="daisy-in-little-hands.jpg" caption="Daisy in little hands" alt="Daisy in little hands" full="true" download="true">}}
 
 Daisy in little hands.
 

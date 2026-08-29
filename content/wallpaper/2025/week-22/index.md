@@ -23,7 +23,7 @@ I used [Adobe Lightroom](https://lightroom.adobe.com) 8.3.1 to sharpen, crop, an
 
 BTW: don't ask me what happened to the __Focal Length__ in the Shot Details :-)
 
-{{< img src="GloomyAfternoonSF.jpg" caption="View of San Francisco from Alameda in the late afternoon" alt="View of San Francisco from Alameda in the late afternoon" full="true">}}
+{{< img src="GloomyAfternoonSF.jpg" caption="View of San Francisco from Alameda in the late afternoon" alt="View of San Francisco from Alameda in the late afternoon" full="true" download="true">}}
 
 Thanks for reading! 📷
 

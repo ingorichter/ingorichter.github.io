@@ -18,7 +18,7 @@ This week, I have again a photo from Santa Cruz, CA. I’ve taken this photo on 
 
 The photo was slightly rotated to have straight vertical lines. I used the Lightroom Blue Hi-Contrast Filter for B/W conversion.
 
-{{< img src="santa_cruz_wharf_black_and_white.jpg" caption="Santa Cruz Wharf" alt="Santa Cruz Wharf" full="true">}}
+{{< img src="santa_cruz_wharf_black_and_white.jpg" caption="Santa Cruz Wharf" alt="Santa Cruz Wharf" full="true" download="true" location="Santa Cruz, California">}}
 
 Santa Cruz Wharf
 
