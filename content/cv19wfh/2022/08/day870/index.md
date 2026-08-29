@@ -18,21 +18,21 @@ It was a refreshing break after the fast-paced months until the summer break. No
 
 Let me share a few pictures of that beautiful place.
 
-{{< img src="hula-dancers-kailua-kona-airport.jpg" title="Hula Dancers at Kailua Kona Airport" alt="Hula Dancers at Kailua Kona Airport" full="true">}}
+{{< img src="hula-dancers-kailua-kona-airport.jpg" title="Hula Dancers at Kailua Kona Airport" alt="Hula Dancers at Kailua Kona Airport" full="true" showMeta="false" >}}
 
-{{< img src="open-air-kailua-kona-airport.jpg" title="The beautiful Open-Air tropical-style Airport" alt="The beautiful Open-Air tropical-style Airport" full="true">}}
+{{< img src="open-air-kailua-kona-airport.jpg" title="The beautiful Open-Air tropical-style Airport" alt="The beautiful Open-Air tropical-style Airport" full="true" showMeta="false" >}}
 
-{{< img src="hibiscus.jpeg" title="Yellow Hibiscus" alt="Yellow Hibiscus" full="true">}}
+{{< img src="hibiscus.jpeg" title="Yellow Hibiscus" alt="Yellow Hibiscus" full="true" showMeta="false" >}}
 
-{{< img src="kona-coast-sunset.jpg" title="Sunset on the Kona Coast" alt="Sunset on the Kona Coast" full="true">}}
+{{< img src="kona-coast-sunset.jpg" title="Sunset on the Kona Coast" alt="Sunset on the Kona Coast" full="true" showMeta="false" >}}
 
-{{< img src="volcano-lava.jpg" title="Some lava flow in the Volcano National Park. Seen from the closest point along the crater rim" alt="Some lava flow in the Volcano National Park" full="true">}}
+{{< img src="volcano-lava.jpg" title="Some lava flow in the Volcano National Park. Seen from the closest point along the crater rim" alt="Some lava flow in the Volcano National Park" full="true" showMeta="false" >}}
 
-{{< img src="black-sand-beach.jpeg" title="Black Sand Beach in the South of the Island" alt="Black Sand Beach in the South of the Island" full="true">}}
+{{< img src="black-sand-beach.jpeg" title="Black Sand Beach in the South of the Island" alt="Black Sand Beach in the South of the Island" full="true" showMeta="false" >}}
 
-{{< img src="hawaiian-gods.jpg" title="Hawaiian Gods" alt="Hawaiian Gods" full="true">}}
+{{< img src="hawaiian-gods.jpg" title="Hawaiian Gods" alt="Hawaiian Gods" full="true" showMeta="false" >}}
 
-{{< img src="magic-sands-beach-sunset.jpg" title="Sunset on the Magic Sands Beach" alt="Sunset on the Magic Sands Beach" full="true">}}
+{{< img src="magic-sands-beach-sunset.jpg" title="Sunset on the Magic Sands Beach" alt="Sunset on the Magic Sands Beach" full="true" showMeta="false" >}}
 
 I hope that I can someday move permanently to the island...
 

@@ -37,7 +37,7 @@ VSCode already has builtin support to debug a Nodejs application.
 . Select Node.js from the Environment list
 . A new launch.json file will be created for you
 
-{{< img src="vscode-debugging.png" title="VSCode Debugging Menu" alt="VSCode Debugging Menu" full="true">}}
+{{< img src="vscode-debugging.png" title="VSCode Debugging Menu" alt="VSCode Debugging Menu" full="true" showMeta="false">}}
 
 That's all you need to do in Visual Studio Code to connect to your Electron App.
 

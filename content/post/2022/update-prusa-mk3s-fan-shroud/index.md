@@ -14,12 +14,12 @@ You can find it [here](https://www.printables.com/model/62523-delta-p-fan-duct-v
 
 ## Photos
 
-{{< img src="no-shroud.jpg" title="The printhead without the old shroud. There is this white residue on a lot of parts in this area" alt="The printhead without the old shroud. There is this white residue on a lot of parts in this area" full="true">}}
+{{< img src="no-shroud.jpg" title="The printhead without the old shroud. There is this white residue on a lot of parts in this area" alt="The printhead without the old shroud. There is this white residue on a lot of parts in this area" full="true" showMeta="false">}}
 
-{{< img src="new-shroud-parts.jpg" title="The new fan shroud parts before assembly" alt="The new fan shroud parts before assembly" full="true">}}
+{{< img src="new-shroud-parts.jpg" title="The new fan shroud parts before assembly" alt="The new fan shroud parts before assembly" full="true" showMeta="false">}}
 
-{{< img src="new-shroud.jpg" title="The printhead with the new fan shroud" alt="The printhead with the new fan shroud" full="true">}}
+{{< img src="new-shroud.jpg" title="The printhead with the new fan shroud" alt="The printhead with the new fan shroud" full="true" showMeta="false">}}
 
-{{< img src="new-shroud-2.jpg" title="The printhead with the new fan shroud from the other side" alt="The printhead with the new fan shroud from the other side" full="true">}}
+{{< img src="new-shroud-2.jpg" title="The printhead with the new fan shroud from the other side" alt="The printhead with the new fan shroud from the other side" full="true" showMeta="false">}}
 
 Thanks for reading!

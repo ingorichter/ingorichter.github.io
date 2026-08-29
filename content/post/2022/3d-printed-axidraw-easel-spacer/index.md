@@ -32,7 +32,7 @@ I could have used Legos, Wood, or some other material, but I thought it was an e
 
 I took some measurements of the Plotter and the Easel and created a simple sketch that I could use to create a proper model. I planned to design something that I could print with my 3D Printer.
 
-{{< img src="spacer_sketch.png" title="Spacer Sketch" alt="Spacer Sketch" full="true">}}
+{{< img src="spacer_sketch.png" title="Spacer Sketch" alt="Spacer Sketch" full="true" showMeta="false">}}
 
 That was enough information to get started on the design. Since I don't know how to use CAD software correctly, but I know how to write code, I settled for [OpenSCAD][1] to create the model.
 
@@ -42,13 +42,13 @@ Creating a model in OpenSCAD is something anybody can learn. I like that you can
 
 The image below shows the program and the rendered model. There are some similarities between the initial sketch and the rendered model :-)
 
-{{< img src="openscad_screenshot.png" title="OpenSCAD Screenshot with the program and the rendered model" alt="OpenSCAD Screenshot" full="true">}}
+{{< img src="openscad_screenshot.png" title="OpenSCAD Screenshot with the program and the rendered model" alt="OpenSCAD Screenshot" full="true" showMeta="false">}}
 
 I have to admit that the creation took more time than I anticipated. One reason is that I had to learn how to express certain parts of the design in code, e.g., the `frontStopper` module. How to combine the different geometric shapes and the boolean operations to achieve what I wanted. The other reason that it took longer was that I didn't do my initial measurements precisely enough 🤦‍♂️
 
 I had to iterate on the design, as you can see in the screenshot below. That meant printing the model on the 3D Printer and seeing if it fits.
 
-{{< img src="design_iterations.jpg" title="Different designs I created. The initial one at the bottom and the final Spacer at the top" alt="Different designs I created. The initial one at the bottom and the final Spacer at the top" full="true">}}
+{{< img src="design_iterations.jpg" title="Different designs I created. The initial one at the bottom and the final Spacer at the top" alt="Different designs I created. The initial one at the bottom and the final Spacer at the top" full="true" showMeta="false">}}
 
 You can see the different modifications I made along the way. Sometimes subtle, sometimes bolder.
 
@@ -56,13 +56,13 @@ You can see the different modifications I made along the way. Sometimes subtle, 
 
 The image shows what the final Spacer looks like today.
 
-{{< img src="final_spacer_design.jpg" title="The final Spacer Design is bigger than the initial Design." alt="The final Spacer Design is bigger than the initial Design." full="true">}}
+{{< img src="final_spacer_design.jpg" title="The final Spacer Design is bigger than the initial Design." alt="The final Spacer Design is bigger than the initial Design." full="true" showMeta="false">}}
 
 I printed the latest Design version that I am currently using on the Plotter in Silky Blue PLA. 15% Infill and no supports or brim. It took 45 minutes to print one. But I needed three of them. So, I printed one to ensure that everything fits just fines on the Plotter. And afterward, I printed two more to complete the setup.
 
-{{< img src="plotter1.jpg" title="The complete setup with 3 Spacers" alt="The complete setup with 3 Spacers" full="true">}}
+{{< img src="plotter1.jpg" title="The complete setup with 3 Spacers" alt="The complete setup with 3 Spacers" full="true" showMeta="false">}}
 
-{{< img src="plotter_spacer_closeup.jpg" title="Close Up Spacer Shot" alt="Close Up Spacer Shot" full="true">}}
+{{< img src="plotter_spacer_closeup.jpg" title="Close Up Spacer Shot" alt="Close Up Spacer Shot" full="true" showMeta="false">}}
 
 ## Download
 

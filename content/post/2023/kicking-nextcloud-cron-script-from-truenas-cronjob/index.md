@@ -24,4 +24,4 @@ After some experimenting, I came up with this docker command.
 
 Once I verified that the script was working for me, I created a cron job in TrueNAS to execute this script every hour.
 
-{{< img src="cronjob-truenas.png" title="TrueNAS Cron Job Configuration" alt="TrueNAS Cron Job Configuration" full="true">}}
+{{< img src="cronjob-truenas.png" title="TrueNAS Cron Job Configuration" alt="TrueNAS Cron Job Configuration" full="true" showMeta="false">}}

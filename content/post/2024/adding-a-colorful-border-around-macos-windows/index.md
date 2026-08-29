@@ -27,7 +27,7 @@ brew install borders
 
 After installation, type **borders &** and after pressing enter, and a possible small delay, you will see a border around all the open application windows. You will see a white border around your terminal window.
 
-{{< img src="finder-window-with-white-border.png" title="Finder Windows with White Border" alt="Finder Windows with White Border" full="true" round="0">}}
+{{< img src="finder-window-with-white-border.png" title="Finder Windows with White Border" alt="Finder Windows with White Border" full="true" round="0" showMeta="false">}}
 
 > The border might not be easy to see in light mode. I switched to dark mode for demo purposes.
 
@@ -82,7 +82,7 @@ borders "${options[@]}"
 {{< /highlight >}}
 
 I changed the active border color to blue (RGB 0000FF).
-{{< img src="finder-window-with-blue-border.png" title="Finder Windows with Blue Border" alt="Finder Windows with Blue Border" full="true" round="0">}}
+{{< img src="finder-window-with-blue-border.png" title="Finder Windows with Blue Border" alt="Finder Windows with Blue Border" full="true" round="0" showMeta="false">}}
 
 Inactive windows can have a different border color assigned. Let's change the default color for inactive windows to red (RGB FF0000).
 
@@ -98,7 +98,7 @@ options=(
 borders "${options[@]}"
 {{< /highlight >}}
 
-{{< img src="finder-windows-with-active-and-inactive-border.png" title="Finder Windows with active and inactive boder color" alt="Finder Windows with active and inactive border color" full="true" round="0">}}
+{{< img src="finder-windows-with-active-and-inactive-border.png" title="Finder Windows with active and inactive boder color" alt="Finder Windows with active and inactive border color" full="true" round="0" showMeta="false">}}
 
 ### Gradients
 
@@ -120,7 +120,7 @@ options=(
 borders "${options[@]}"
 {{< /highlight >}}
 
-{{< img src="finder-window-gradient-border.png" title="Finder Window with gradient from red to green" alt="Finder Window with gradient from red to green" full="true" round="0">}}
+{{< img src="finder-window-gradient-border.png" title="Finder Window with gradient from red to green" alt="Finder Window with gradient from red to green" full="true" round="0" showMeta="false" >}}
 
 ### Glow
 
@@ -140,7 +140,7 @@ options=(
 borders "${options[@]}"
 {{< /highlight >}}
 
-{{< img src="finder-window-glow.png" title="Finder Window with glow effect" alt="Finder Window with glow effect" full="true" round="0">}}
+{{< img src="finder-window-glow.png" title="Finder Window with glow effect" alt="Finder Window with glow effect" full="true" round="0" showMeta="false">}}
 
 ## Allow and Deny Borders for Specific Applications
 
@@ -164,7 +164,7 @@ options=(
 borders "${options[@]}"
 {{< /highlight >}}
 
-{{< img src="window-blacklist-whitelist.png" title="Safari windows are not allowed to have a border, but the Finder window is" alt="Safari windows are not allowed to have a border, but the Finder window is" full="true" round="0">}}
+{{< img src="window-blacklist-whitelist.png" title="Safari windows are not allowed to have a border, but the Finder window is" alt="Safari windows are not allowed to have a border, but the Finder window is" full="true" round="0" showMeta="false" >}}
 
 ## Conclusion
 

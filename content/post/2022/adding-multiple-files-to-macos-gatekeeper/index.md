@@ -13,7 +13,7 @@ Before I forget what I learned today, I better write it down.
 Gatekeeper on macOS ensures that properly signed and authentic apps and other executable files, including dylibs and kexts, are executed on your Mac.
 But if you want to execute an open-source tool installed by [brew](https://brew.sh) or some other way on your machine, you will usually see something like this confirmation dialog. In this case, for an app **FSNotes** installed with brew.
 
-{{< img src="gatekeeperConfirmation.png" title="macOS Gatekeeper Confirmation Dialog" alt="macOS Gatekeeper Confirmation Dialog" full="true">}}
+{{< img src="gatekeeperConfirmation.png" title="macOS Gatekeeper Confirmation Dialog" alt="macOS Gatekeeper Confirmation Dialog" full="true" showMeta="false">}}
 
 It's required to confirm this dialog before the app is launched.
 Okay, that's fine so far.
