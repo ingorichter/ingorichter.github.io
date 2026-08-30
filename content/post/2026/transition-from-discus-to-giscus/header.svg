@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="820" viewBox="0 0 2400 820" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2ea043" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#2ea043" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" fill-opacity="0.04"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2ea043"/>
+    </marker>
+  </defs>
+
+  <rect width="2400" height="820" fill="#0d1117"/>
+  <rect width="2400" height="820" fill="url(#dots)"/>
+  <ellipse cx="1650" cy="420" rx="740" ry="520" fill="url(#glow)"/>
+
+  <!-- left: Disqus bubble, muted + struck through -->
+  <g opacity="0.9">
+    <path d="M300 210 h560 a40 40 0 0 1 40 40 v220 a40 40 0 0 1 -40 40 h-380 l-90 84 v-84 h-90 a40 40 0 0 1 -40 -40 v-220 a40 40 0 0 1 40 -40 z"
+          fill="#161b22" stroke="#30363d" stroke-width="3"/>
+    <text x="360" y="380" font-size="92" font-weight="bold" fill="#8b949e">Disqus</text>
+    <line x1="352" y1="350" x2="782" y2="350" stroke="#f85149" stroke-width="9" stroke-linecap="round" stroke-opacity="0.85"/>
+    <g font-size="30" fill="#f85149">
+      <rect x="360" y="420" width="156" height="52" rx="26" fill="#21262d"/>
+      <text x="380" y="455">trackers</text>
+      <rect x="534" y="420" width="96" height="52" rx="26" fill="#21262d"/>
+      <text x="552" y="455">ads</text>
+      <rect x="648" y="420" width="214" height="52" rx="26" fill="#21262d"/>
+      <text x="668" y="455">3rd-party</text>
+    </g>
+  </g>
+
+  <!-- arrow -->
+  <path d="M980 400 C 1080 400, 1120 400, 1220 400" fill="none" stroke="#2ea043" stroke-width="10"
+        stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- right: giscus bubble, GitHub green -->
+  <g>
+    <path d="M1300 190 h760 a44 44 0 0 1 44 44 v300 a44 44 0 0 1 -44 44 h-520 l-110 96 v-96 h-130 a44 44 0 0 1 -44 -44 v-300 a44 44 0 0 1 44 -44 z"
+          fill="#161b22" stroke="#2ea043" stroke-width="4"/>
+    <!-- discussion / comment glyph -->
+    <g transform="translate(1352,262)" fill="none" stroke="#2ea043" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 8 h150 a12 12 0 0 1 12 12 v92 a12 12 0 0 1 -12 12 h-96 l-42 36 v-36 h-12 a12 12 0 0 1 -12 -12 v-92 a12 12 0 0 1 12 -12 z"/>
+      <path d="M70 150 l40 34 v-34"/>
+    </g>
+    <text x="1580" y="370" font-size="120" font-weight="bold" fill="#f0f6fc">giscus</text>
+    <text x="1360" y="500" font-size="38" fill="#8b949e">powered by GitHub Discussions</text>
+  </g>
+</svg>
