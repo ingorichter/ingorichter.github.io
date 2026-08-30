@@ -25,3 +25,7 @@ package-lock.json
 
 # macOS
 .DS_Store
+
+# giscus migration artifacts (contain commenter PII)
+/discusexport*.xml
+/.hugo_build.lock

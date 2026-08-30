@@ -1,1 +1,23 @@
-{{ template "_internal/disqus.html" . }}
+{{- $g := .Site.Params.giscus -}}
+{{- if and $g $g.repo $g.repoID (ne .Params.comments false) (not .Params.menu) -}}
+  <section class="comments">
+    <h2>Comments</h2>
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ $g.repo }}"
+      data-repo-id="{{ $g.repoID }}"
+      data-category="{{ $g.category }}"
+      data-category-id="{{ $g.categoryID }}"
+      data-mapping="{{ default "pathname" $g.mapping }}"
+      data-strict="{{ default "1" $g.strict }}"
+      data-reactions-enabled="{{ default "1" $g.reactionsEnabled }}"
+      data-emit-metadata="0"
+      data-input-position="{{ default "top" $g.inputPosition }}"
+      data-theme="{{ default "preferred_color_scheme" $g.theme }}"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+    </script>
+    <noscript>Enable JavaScript to view the comments.</noscript>
+  </section>
+{{- end -}}

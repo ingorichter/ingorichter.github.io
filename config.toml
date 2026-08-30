@@ -101,8 +101,6 @@ weight = 90
 [services]
 [services.rss]
 limit = 42
-[services.disqus]
-shortname = 'ingorichterio'
 
 [pagination]
 pagerSize = 16
@@ -117,3 +115,16 @@ term = ["html", "rss"]
 [params.umamiAnalytics]
 id = "98a5f2cb-a53b-4d84-9133-bac4957e9e9f"
 src = "https://umami.familie-richter.de/script.js"
+
+# Comments via giscus (https://giscus.app). repoID/categoryID come from the
+# giscus.app config generator after enabling Discussions and installing the app.
+[params.giscus]
+repo = "ingorichter/ingorichter.github.io"
+repoID = "MDEwOlJlcG9zaXRvcnkxMDgwNjQ0Mw=="
+category = "Comments"
+categoryID = "DIC_kwDOAKTkq84DEfQE"
+mapping = "pathname"
+strict = "1"
+reactionsEnabled = "1"
+inputPosition = "top"
+theme = "preferred_color_scheme"
