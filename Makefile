@@ -11,7 +11,8 @@ previewlocal:
 
 .PHONY: build
 build:
-	hugo --printI18nWarnings --minify
+	rm -rf public
+	hugo --gc --printI18nWarnings --minify
 
 .PHONY: newpost
 # make newpost title="This is the title"

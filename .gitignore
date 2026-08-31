@@ -29,3 +29,6 @@ package-lock.json
 # giscus migration artifacts (contain commenter PII)
 /discusexport*.xml
 /.hugo_build.lock
+
+# social announce state (persisted via CI cache, not git)
+/scripts/.announce-state.json

@@ -61,11 +61,15 @@
     <figcaption>{{ $caption }}</figcaption>
   {{- end -}}
   {{- if eq $download "true" -}}
-    {{/* Cap the download rendition at 4000w; link the raw file only when it is already within that. */}}
+    {{/* Link the raw original for the download. Only when it is meaningfully wider
+         than 6000px (covers 5K/6K displays) do we serve a capped JPEG instead, so a
+         4032px phone shot is never pointlessly re-encoded down to the cap. */}}
+    {{- $dlCap := 6000 -}}
+    {{- $dlThreshold := div (mul $dlCap 105) 100 -}}
     {{- $dl := $image -}}
     {{- $isOriginal := true -}}
-    {{- if gt $image.Width 4000 -}}
-      {{- $dl = $image.Resize "4000x jpg q90" -}}
+    {{- if gt $image.Width $dlThreshold -}}
+      {{- $dl = $image.Resize (printf "%dx jpg q92" $dlCap) -}}
       {{- $isOriginal = false -}}
     {{- end -}}
     {{- $sizeLabel := "" -}}

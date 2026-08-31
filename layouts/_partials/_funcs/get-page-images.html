@@ -1,0 +1,58 @@
+{{- /*
+  Overrides Hugo's embedded _partials/_funcs/get-page-images.html.
+
+  Same image-selection logic as upstream (front-matter `images`, then a page
+  resource matching *feature* / *cover* / *thumbnail*, then site `params.images`),
+  but every internal raster image is returned as a 1200x630 JPEG rendition so the
+  og:image / twitter:image / schema image tags point at a ~100 KB social card
+  instead of the multi-megabyte original.
+
+  Return type is unchanged: a slice of dicts with .Image / .RelPermalink / .Permalink.
+*/ -}}
+{{- $imgs := slice }}
+{{- $imgParams := .Params.images }}
+{{- $resources := .Resources.ByType "image" -}}
+{{- if not $imgParams }}
+	{{- $featured := $resources.GetMatch "*feature*" -}}
+	{{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+	{{- with $featured }}
+		{{- $imgs = $imgs | append (partial "_funcs/social-image-entry.html" .) }}
+	{{- end }}
+	{{- /* Fall back to the post's headerimage hero, if it is a page resource. */ -}}
+	{{- if not $imgs }}
+		{{- with (index (default slice .Params.headerimage) 0) }}
+			{{- with .src }}
+				{{- with $resources.GetMatch (strings.TrimPrefix "/" .) }}
+					{{- $imgs = $imgs | append (partial "_funcs/social-image-entry.html" .) }}
+				{{- end }}
+			{{- end }}
+		{{- end }}
+	{{- end }}
+{{- end }}
+{{- if and (not $imgParams) (not $imgs) }}
+	{{- with site.Params.images }}
+		{{- $imgParams = first 1 . }}
+	{{- end }}
+{{- end }}
+{{- range $imgParams }}
+	{{- $img := . }}
+	{{- $url := urls.Parse $img }}
+	{{- if eq $url.Scheme "" }}
+		{{- with or ($resources.GetMatch $img) (resources.GetMatch $img) -}}
+			{{- $imgs = $imgs | append (partial "_funcs/social-image-entry.html" .) }}
+		{{- else }}
+			{{- $imgs = $imgs | append (dict
+				"RelPermalink" (relURL $img)
+				"Permalink" (absURL $img)
+				)
+			}}
+		{{- end }}
+	{{- else }}
+		{{- $imgs = $imgs | append (dict
+			"RelPermalink" $img
+			"Permalink" $img
+			)
+		}}
+	{{- end }}
+{{- end }}
+{{- return $imgs }}

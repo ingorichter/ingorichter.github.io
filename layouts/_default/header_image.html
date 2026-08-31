@@ -1,6 +1,7 @@
 {{- if or .Params.headerimage .Params.featured -}}
 {{- $src := "" -}}
 {{- $alt := "" -}}
+{{- $res := false -}}{{/* page-bundle Resource, when the source is one */}}
   {{- $stretch := .Site.Params.imageStretch -}}
   {{- $blur := .Site.Params.removeBlur -}}
   {{- if .Params.featured -}}
@@ -27,11 +28,10 @@
     {{- range first 1 .Params.headerimage }}
       {{- with .src }}
         {{- $srcPath := strings.TrimPrefix "/" . }}
-        {{- $res := $.Page.Resources.GetMatch $srcPath }}
+        {{- $res = $.Page.Resources.GetMatch $srcPath }}
         {{- if not $res }}
           {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" . $.Page.RelPermalink }}
         {{- end }}
-        {{- $src = $res.Permalink }}
       {{- end }}
       {{- $alt = .alt }}
       {{- with .stretch }}{{ $stretch = . }}{{ end }}
@@ -39,14 +39,49 @@
     {{- end }}
   {{- end }}
 
+  {{/* Resize raster header images to a webp rendition + srcset; never upscale.
+       SVG / GIF / static `featured` files pass through untouched. */}}
+  {{- $srcset := "" -}}
+  {{- $width := "" -}}
+  {{- $height := "" -}}
+  {{- if and $res (in (slice "image/jpeg" "image/png" "image/webp" "image/tiff") $res.MediaType.Type) -}}
+    {{- $fallbackWidth := $res.Width -}}
+    {{- if gt $fallbackWidth 1600 -}}{{- $fallbackWidth = 1600 -}}{{- end -}}
+    {{- $fallback := $res.Resize (printf "%dx webp q82" $fallbackWidth) -}}
+    {{- $src = $fallback.RelPermalink -}}
+    {{- $width = $fallback.Width -}}
+    {{- $height = $fallback.Height -}}
+    {{- $set := slice -}}
+    {{- range (slice 480 768 1080 1440 1600) -}}
+      {{- if le . $res.Width -}}
+        {{- $r := $res.Resize (printf "%dx webp q82" .) -}}
+        {{- $set = $set | append (printf "%s %dw" $r.RelPermalink .) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $srcset = delimit $set ", " -}}
+  {{- else if $res -}}
+    {{/* Non-resizable page resource (SVG, GIF): serve as-is. */}}
+    {{- $src = $res.RelPermalink -}}
+  {{- end -}}
+
+  {{- $stretchClass := "" -}}
+  {{- with $stretch -}}
+    {{- $s := lower . -}}
+    {{- if or (eq $s "vertical") (eq $s "v") -}}{{- $stretchClass = "stretchV" -}}
+    {{- else if or (eq $s "horizontal") (eq $s "h") -}}{{- $stretchClass = "stretchH" -}}
+    {{- else if or (eq $s "cover") (eq $s "c") -}}{{- $stretchClass = "cover" -}}
+    {{- end -}}
+  {{- end -}}
+
   <a href="{{ $.Page.RelPermalink }}" class="image"
-    {{ if not ($blur) }}style="--bg-image: url('{{ $src }}');"{{ end }}>
+    {{- if not $blur }} style="--bg-image: url('{{ $src }}');"{{ end }}>
     <img
-      {{ with $stretch }}
-        class="{{ if or (eq (lower .) "vertical") (eq (lower .) "v") }}stretchV
-                {{ else if or (eq (lower .) "horizontal") (eq (lower .) "h") }}stretchH
-                {{ else if or (eq (lower .) "cover") (eq (lower .) "c") }}cover{{ end }}"
-      {{ end }}
-      src="{{ $src }}" alt="{{ $alt }}">
+      {{- with $stretchClass }} class="{{ . }}"{{ end }}
+      src="{{ $src }}"
+      {{- with $srcset }} srcset="{{ . }}" sizes="(min-width: 45rem) 45rem, 90vw"{{ end }}
+      {{- with $width }} width="{{ . }}"{{ end }}
+      {{- with $height }} height="{{ . }}"{{ end }}
+      loading="eager" decoding="async" fetchpriority="high"
+      alt="{{ $alt }}">
   </a>
 {{- end -}}

@@ -16,6 +16,12 @@ capitalizeListTitles = false
 # truncate the content to the summaryLength
 summaryLength = 50
 
+# Do not copy unreferenced page-bundle originals into public/ (saves ~230 MB).
+# Images used via the img/imgproc shortcodes or headerimage still publish their renditions.
+[[cascade]]
+[cascade.build]
+publishResources = false
+
 [module]
 [module.hugoVersion]
 extended = true

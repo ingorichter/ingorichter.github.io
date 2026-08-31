@@ -1,0 +1,21 @@
+{{- /*
+  Takes an image Resource, returns the get-page-images entry dict for it.
+  Raster images are downscaled/cropped to a 1200x630 JPEG social card;
+  SVG / GIF and anything non-resizable pass through untouched.
+
+  For raster images the original's .Permalink / .RelPermalink are never
+  referenced, so the multi-megabyte original is not published.
+*/ -}}
+{{- $r := . -}}
+{{- $rel := "" -}}
+{{- $abs := "" -}}
+{{- if in (slice "image/jpeg" "image/png" "image/webp" "image/tiff") $r.MediaType.Type -}}
+	{{- $card := $r.Fill "1200x630 jpg q85" -}}
+	{{- $rel = $card.RelPermalink -}}
+	{{- $abs = $card.Permalink -}}
+{{- else -}}
+	{{- $rel = $r.RelPermalink -}}
+	{{- $abs = $r.Permalink -}}
+{{- end -}}
+{{- $entry := dict "Image" $r "RelPermalink" $rel "Permalink" $abs -}}
+{{- return $entry -}}
