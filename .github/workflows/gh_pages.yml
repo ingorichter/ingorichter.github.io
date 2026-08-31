@@ -72,7 +72,17 @@ jobs:
       - name: Install Python dependencies
         run: pip install feedparser requests atproto
 
-      - name: Announce Latest Blog Post
+      # Persist which posts were already announced across runs. Unique key per
+      # run so the cache is always written; restore-keys pulls the most recent.
+      - name: Restore announce state
+        uses: actions/cache@v6
+        with:
+          path: scripts/.announce-state.json
+          key: announce-state-${{ github.run_id }}
+          restore-keys: |
+            announce-state-
+
+      - name: Announce New Blog Posts
         env:
           MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
