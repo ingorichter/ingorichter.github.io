@@ -249,14 +249,19 @@ details ul {
 }
 
 /* Lightbox-wrapped images: the theme only styles `figure > img`, so restore
-   full-width block layout when the img sits inside a `.glightbox` anchor. */
+   block layout when the img sits inside a `.glightbox` anchor. Cap by the
+   content column width and the viewport height so portrait phone photos don't
+   dominate the page — the lightbox still opens the full-size rendition. */
 figure > a.glightbox {
   display: block;
 }
 
 figure > a.glightbox > img {
   display: block;
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 80vh;
   margin-inline: auto;
 }
 

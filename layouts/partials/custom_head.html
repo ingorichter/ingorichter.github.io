@@ -1,13 +1,15 @@
-{{ $glightbox := resources.Get "js/external/glightbox.min.js" }}
-<script src="{{ $glightbox.RelPermalink }}" defer></script>
+{{ if .HasShortcode "img" }}
+  {{ $glightbox := resources.Get "js/external/glightbox.min.js" | fingerprint }}
+  <script src="{{ $glightbox.RelPermalink }}" integrity="{{ $glightbox.Data.Integrity }}" defer></script>
 
-{{ $glightboxCSS := resources.Get "css/external/glightbox.min.css" }}
-<link rel="stylesheet" href="{{ $glightboxCSS.RelPermalink }}" />
+  {{ $glightboxCSS := resources.Get "css/external/glightbox.min.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $glightboxCSS.RelPermalink }}" integrity="{{ $glightboxCSS.Data.Integrity }}" />
 
-<script>
-  window.addEventListener("DOMContentLoaded", function () {
-    if (typeof GLightbox === "function" && document.querySelector(".glightbox")) {
-      GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
-    }
-  });
-</script>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      if (typeof GLightbox === "function" && document.querySelector(".glightbox")) {
+        GLightbox({ selector: ".glightbox", loop: true, touchNavigation: true });
+      }
+    });
+  </script>
+{{ end }}

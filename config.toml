@@ -49,7 +49,7 @@ endLevel = 3
 [markup.highlight]
 lineNos = true
 lineNumbersInTable = false
-noClasses = true
+noClasses = false
 style = "catppuccin-mocha"
 
 [params]

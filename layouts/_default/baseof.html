@@ -19,8 +19,9 @@
     {{ $simple := resources.Get "simple.css" }}
     {{ $style := resources.Get "style.css" }}
     {{ $custom := resources.Get "custom.css" }}
-    {{ $css := slice $simple $style $custom | resources.Concat "bundle.css" | minify }}
-    <link href="{{ $css.RelPermalink }}" rel="stylesheet" />
+    {{ $syntax := resources.Get "syntax.css" }}
+    {{ $css := slice $simple $style $custom $syntax | resources.Concat "bundle.css" | minify | fingerprint }}
+    <link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}" />
 
     {{ with .Params.style }}
       {{ $extra := resources.Get . | minify }}
