@@ -14,6 +14,9 @@
 {{/* Opt-in "download original" link below the figure: `download="true"` */}}
 {{ $download := (.Get "download") | default "false" }}
 
+{{/* Optional max width for the figure, e.g. `width="320px"` or `width="60%"` */}}
+{{ $width := .Get "width" }}
+
 {{- if not $image -}}
   {{ errorf "Image '%s' not found in page bundle for %q. Ensure the image is placed in the same folder as index.md" $src $page.RelPermalink }}
 {{- end -}}
@@ -34,7 +37,7 @@
 {{- $full := $image.Resize (printf "%dx webp q82" $fullWidth) -}}
 
 
-<figure>
+<figure{{ with $width }} style="max-width: {{ . }}; margin-inline: auto;"{{ end }}>
   {{- if eq $lightbox "true" -}}
     <a
       class="glightbox"
