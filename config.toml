@@ -54,7 +54,6 @@ style = "catppuccin-mocha"
 
 [params]
 description = "I write about web technologies, iOS, macOS, SwiftUI, javascript, typescript, reactjs, nodejs, process automation, jenkins, docker, kubernetes, 3dprinting, penplotter and lasercutting"
-favicon = "images/favicon.png"
 dateFormat = "2006-01-02"
 style = "custom.css"
 

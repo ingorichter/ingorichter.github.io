@@ -2,10 +2,17 @@
 <article>
     <section class="jumbo">
         <div>
-            {{ $images := .Resources.Match "avatar.webp" }}
-            {{ $image := index $images 0 }}
-            {{ $image := $image.Resize "300x" }}
-            <img src="{{ $image.RelPermalink }}">
+            {{ $src := .Resources.GetMatch "avatar.*" }}
+            {{ $image := $src.Fill "300x400 smart webp q85" }}
+            {{ $image2x := $src.Fill "600x800 smart webp q80" }}
+            <img
+                src="{{ $image.RelPermalink }}"
+                srcset="{{ $image.RelPermalink }} 1x, {{ $image2x.RelPermalink }} 2x"
+                width="{{ $image.Width }}"
+                height="{{ $image.Height }}"
+                alt="Ingo Richter"
+                fetchpriority="high"
+            />
 
             {{ .Content }}
         </div>

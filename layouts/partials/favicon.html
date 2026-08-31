@@ -1,3 +1,5 @@
-{{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ relURL . }}" />
-{{ end }}
+<link rel="icon" href="{{ relURL "favicon/favicon.ico" }}" sizes="any" />
+<link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon/favicon-16x16.png" }}" />
+<link rel="icon" type="image/png" sizes="32x32" href="{{ relURL "favicon/favicon-32x32.png" }}" />
+<link rel="apple-touch-icon" href="{{ relURL "favicon/apple-touch-icon.png" }}" />
+<link rel="manifest" href="{{ relURL "favicon/site.webmanifest" }}" />
